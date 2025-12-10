@@ -28,15 +28,18 @@
     <header class="header header--festival">
         <div class="wrapper header__inner">
 
+            <!-- Logo dans le header sur les sous-pages -->
             <a class="header__logo-link" href="index.html">
                 <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
             </a>
 
+            <!-- Menu burger (identique à la home) -->
             <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
                 aria-controls="site-menu" aria-expanded="false">
                 <span class="menu-btn__bar menu-btn__bar--top"></span>
                 <span class="menu-btn__bar menu-btn__bar--bottom"></span>
             </button>
+
         </div>
     </header>
 
@@ -329,68 +332,51 @@
     </main>
 
     <!-- ============ FOOTER (version unifiée) ============ -->
-    <footer class="footer footer--festival" id="contact">
-
-        <!-- Image / pattern de fond gérée en CSS -->
-
+    <footer class="footer footer--festival" id="footer">
         <div class="footer__inner">
+
+            <!-- Petites formes décoratives au-dessus du footer -->
+            <div class="footer__motifs" aria-hidden="true">
+                <span class="footer__motif"></span>
+                <span class="footer__motif"></span>
+                <span class="footer__motif"></span>
+            </div>
 
             <p class="footer__text">
                 Entre ciel et terre,<br>
                 <span class="u-highlight">vivez l’expérience Flying Tap Fest.</span>
             </p>
 
-            <nav class="footer__nav">
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <a href="index.html" class="footer__link">Accueil</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="festival.html" class="footer__link">Le festival</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="programme.html" class="footer__link" aria-current="page">Programme</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="artistes.html" class="footer__link">Artistes</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="scenes.html" class="footer__link">Scènes</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="infos-pratiques.html" class="footer__link">Infos pratiques</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="contact.html" class="footer__link">Contact</a>
-                    </li>
+            <nav class="footer__nav" aria-label="Navigation du pied de page">
+                <ul class="footer__list footer__list--pages">
+                    <li><a class="footer__link" href="index.html">Accueil</a></li>
+                    <li><a class="footer__link" href="festival.html">Le festival</a></li>
+                    <li><a class="footer__link" href="programme.html">Programme</a></li>
+                    <li><a class="footer__link" href="artistes.html">Artistes</a></li>
+                    <li><a class="footer__link" href="scenes.html">Scènes</a></li>
+                    <li><a class="footer__link" href="infos-pratiques.html">Infos pratiques</a></li>
+                    <li><a class="footer__link" href="contact.html">Contact</a></li>
                 </ul>
+                <div class="footer__logo">
+                    <img src="assets/icons/formebeige.svg" alt="Flying Tap Fest" class="footer__logo-img">
+                </div>
+
 
                 <ul class="footer__list footer__list--social">
-                    <li class="footer__item">
-                        <a class="footer__link footer__link--silent" href="#">Instagram</a>
-                    </li>
-                    <li class="footer__item">
-                        <a class="footer__link footer__link--silent" href="#">Facebook</a>
-                    </li>
-                    <li class="footer__item">
-                        <a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
+                    <li><a class="footer__link footer__link--silent" href="#">Instagram</a></li>
+                    <li><a class="footer__link footer__link--silent" href="#">Facebook</a></li>
+                    <li><a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
                     </li>
                 </ul>
             </nav>
 
             <address class="footer__infos">
-                <p>
-                    <a class="footer__mail" href="mailto:contact@flyingtapfest.fr">
-                        contact@flyingtapfest.fr
-                    </a>
-                </p>
+                <p><a class="footer__mail" href="mailto:contact@flyingtapfest.fr">contact@flyingtapfest.fr</a></p>
                 <p class="footer__address">
                     Montbéliard, France<br>
                     Site du Flying Tap Fest
                 </p>
-                <p class="footer__copy">
-                    © 2026 Flying Tap Fest
-                </p>
+                <p class="footer__copy">© 2026 Flying Tap Fest</p>
             </address>
 
         </div>

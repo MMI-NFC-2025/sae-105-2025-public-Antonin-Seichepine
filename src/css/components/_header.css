@@ -5,14 +5,42 @@
     inset-inline: 0;
     top: 0;
     z-index: 20;
+}
+
+/* Par défaut : header du festival avec dégradé orange */
+.header--festival {
+    background: linear-gradient(180deg,
+            var(--gradient-hero) 0%,
+            var(--principal) 100%);
+}
+
+/* Cas particulier de la home : header transparent sur le hero */
+.header--home {
     background: transparent;
 }
 
 .header__inner {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-block: 1.25rem;
+}
+
+/* Home : pas de logo, burger collé à droite */
+.header--home .header__inner {
+    justify-content: flex-end;
+}
+
+/* Logo dans le header (sous-pages) */
+.header__logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__logo {
+    height: 65px;
+    /* ajuste selon ta maquette */
+    width: auto;
 }
 
 /* ================== BOUTON BURGER ================== */
@@ -27,10 +55,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* permet de descendre les barres */
     gap: 6px;
     padding-top: 3px;
-    /* ajuste la hauteur finale des barres */
     cursor: pointer;
 }
 
@@ -39,9 +65,10 @@
     height: 2px;
     background-color: var(--text-button);
     border-radius: 2px;
+    transition: transform 0.2s ease-out;
 }
 
-/* Animation éventuelle du burger */
+/* Animation du burger quand le menu est ouvert (classe ajoutée en JS) */
 .menu-btn--open .menu-btn__bar--top {
     transform: rotate(45deg) translateY(4px);
 }
