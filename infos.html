@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Infos pratiques – Flying Tap Fest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Barlow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/favicons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+</head>
+
+<body class="page page--festival page--infos" id="top">
+
+    <!-- ============ HEADER GLOBAL ============ -->
+    <header class="header header--festival">
+        <div class="wrapper header__inner">
+
+            <a class="header__logo-link" href="index.html">
+                <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
+            </a>
+
+            <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
+                aria-controls="site-menu" aria-expanded="false">
+                <span class="menu-btn__bar menu-btn__bar--top"></span>
+                <span class="menu-btn__bar menu-btn__bar--bottom"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============== MENU MOBILE GLOBAL ============== -->
+    <nav class="site-menu menu" id="site-menu" aria-hidden="true" hidden>
+        <div class="site-menu__overlay"></div>
+
+        <div class="site-menu__panel">
+            <div class="site-menu__top">
+                <a href="index.html" class="site-menu__logo">
+                    <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
+                </a>
+
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">
+                    ✕
+                </button>
+            </div>
+
+            <p class="site-menu__intro typo-body">
+                Naviguez entre les univers du Flying Tap Fest.
+            </p>
+
+            <ul class="site-menu__list">
+                <li class="site-menu__item">
+                    <a href="index.html" class="site-menu__link">Accueil</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="festival.html" class="site-menu__link">Le festival</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="programme.html" class="site-menu__link">Programme</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="artistes.html" class="site-menu__link">Artistes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="scenes.html" class="site-menu__link">Scènes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="infos-pratiques.html" class="site-menu__link" aria-current="page">
+                        Infos pratiques
+                    </a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="contact.html" class="site-menu__link">Contact</a>
+                </li>
+            </ul>
+
+            <p class="site-menu__baseline typo-footer-text">
+                Entre ciel et terre, vivez l’expérience Flying Tap Fest.
+            </p>
+        </div>
+    </nav>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main main--festival main--infos">
+
+        <!-- HERO INFOS PRATIQUES -->
+        <section class="hero hero--subpage hero--infos" aria-labelledby="infos-title">
+            <div class="hero__background" aria-hidden="true">
+                <!-- fond orange géré en CSS -->
+            </div>
+
+            <div class="wrapper hero__inner hero__inner--subpage">
+                <h1 id="infos-title" class="hero__subtitle typo-h2">
+                    Infos pratiques
+                </h1>
+
+                <div class="hero__motif hero__motif--infos" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
+                </div>
+
+                <p class="hero__intro typo-body">
+                    Tout ce qu’il faut pour préparer votre visite.
+                </p>
+            </div>
+
+            <!-- Vague de séparation -->
+            <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
+        </section>
+
+        <!-- TARIFS -->
+        <section class="infos-section infos-section--tarifs">
+            <div class="section-wrapper">
+
+                <div class="infos-section__icon" aria-hidden="true">
+                    <img src="assets/icons/ticket.svg" alt="">
+                </div>
+
+                <h2 class="infos-section__title typo-h2">Tarifs</h2>
+
+                <p class="infos-section__text typo-body">
+                    Des tarifs accessibles pour profiter du festival en toute simplicité.
+                </p>
+
+                <div class="infos-cards">
+                    <article class="infos-card infos-card--tarif">
+                        <h3 class="infos-card__title typo-card-title">Pass 1 jour</h3>
+                        <p class="infos-card__value typo-card-desc">18€</p>
+                    </article>
+
+                    <article class="infos-card infos-card--tarif">
+                        <h3 class="infos-card__title typo-card-title">Pass 2 jours</h3>
+                        <p class="infos-card__value typo-card-desc">30€</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HÉBERGEMENTS -->
+        <section class="infos-section infos-section--hebergements">
+            <div class="section-wrapper">
+
+                <div class="infos-section__icon" aria-hidden="true">
+                    <img src="assets/icons/maison.svg" alt="">
+                </div>
+
+                <h2 class="infos-section__title typo-h2">Hébergements</h2>
+
+                <p class="infos-section__text typo-body">
+                    Plusieurs options d’hébergement sont disponibles à proximité du parc.
+                </p>
+
+                <div class="infos-cards">
+                    <article class="infos-card infos-card--hebergement">
+                        <h3 class="infos-card__title typo-card-title">Camping municipal</h3>
+                        <p class="infos-card__description typo-card-desc">10 min à pied du festival</p>
+                    </article>
+
+                    <article class="infos-card infos-card--hebergement">
+                        <h3 class="infos-card__title typo-card-title">Hôtels partenaires</h3>
+                        <p class="infos-card__description typo-card-desc">Du 2★ au 4★</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TRANSPORT -->
+        <section class="infos-section infos-section--transport">
+            <div class="section-wrapper">
+
+                <div class="infos-section__icon" aria-hidden="true">
+                    <img src="assets/icons/bus.svg" alt="">
+                </div>
+
+                <h2 class="infos-section__title typo-h2">Transport</h2>
+
+                <p class="infos-section__text typo-body">
+                    Plusieurs options de transport permettent de rejoindre facilement le festival.
+                </p>
+
+                <div class="infos-cards">
+                    <article class="infos-card infos-card--transport">
+                        <h3 class="infos-card__title typo-card-title">Train</h3>
+                        <p class="infos-card__description typo-card-desc">Gare à 15 minutes à pied</p>
+                    </article>
+
+                    <article class="infos-card infos-card--transport">
+                        <h3 class="infos-card__title typo-card-title">Bus</h3>
+                        <p class="infos-card__description typo-card-desc">Lignes 1 et 3 arrêt “Parc”</p>
+                    </article>
+
+                    <article class="infos-card infos-card--transport">
+                        <h3 class="infos-card__title typo-card-title">Voiture</h3>
+                        <p class="infos-card__description typo-card-desc">Parking gratuit</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="infos-section infos-section--faq">
+            <div class="section-wrapper">
+
+                <h2 class="infos-section__title typo-h2">FAQ</h2>
+
+                <div class="faq">
+
+                    <article class="faq-item">
+                        <button class="faq-item__button" type="button">
+                            <span class="faq-item__question typo-body">
+                                Les ateliers sont-ils ouverts à tous&nbsp;?
+                            </span>
+                            <span class="faq-item__icon" aria-hidden="true">+</span>
+                        </button>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-item__button" type="button">
+                            <span class="faq-item__question typo-body">
+                                Le spectacle de drones est-il inclus dans le billet&nbsp;?
+                            </span>
+                            <span class="faq-item__icon" aria-hidden="true">+</span>
+                        </button>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-item__button" type="button">
+                            <span class="faq-item__question typo-body">
+                                Peut-on venir avec des enfants&nbsp;?
+                            </span>
+                            <span class="faq-item__icon" aria-hidden="true">+</span>
+                        </button>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-item__button" type="button">
+                            <span class="faq-item__question typo-body">
+                                Le festival est-il accessible PMR&nbsp;?
+                            </span>
+                            <span class="faq-item__icon" aria-hidden="true">+</span>
+                        </button>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MOTIF + RAPPEL CTA -->
+        <section class="infos-section infos-section--cta">
+            <div class="section-wrapper">
+
+                <div class="infos-section__motif" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="">
+                </div>
+
+                <p class="infos-section__cta-text typo-body">
+                    Entre ciel et terre, vivez l’expérience Flying Tap Fest.
+                </p>
+
+                <a href="contact.html" class="btn btn--secondary typo-btn">
+                    Voir les infos
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER GLOBAL (version unifiée) ============ -->
+    <footer class="footer footer--festival" id="contact">
+
+        <!-- Image / pattern de fond gérée en CSS -->
+
+        <div class="footer__inner">
+
+            <p class="footer__text">
+                Entre ciel et terre,<br>
+                <span class="u-highlight">vivez l’expérience Flying Tap Fest.</span>
+            </p>
+
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="index.html" class="footer__link">Accueil</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="festival.html" class="footer__link">Le festival</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="programme.html" class="footer__link">Programme</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="artistes.html" class="footer__link">Artistes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="scenes.html" class="footer__link">Scènes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="infos-pratiques.html" class="footer__link">Infos pratiques</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__list footer__list--social">
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="#">Instagram</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="#">Facebook</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <address class="footer__infos">
+                <p>
+                    <a class="footer__mail" href="mailto:contact@flyingtapfest.fr">
+                        contact@flyingtapfest.fr
+                    </a>
+                </p>
+                <p class="footer__address">
+                    Montbéliard, France<br>
+                    Site du Flying Tap Fest
+                </p>
+                <p class="footer__copy">
+                    © 2026 Flying Tap Fest
+                </p>
+            </address>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

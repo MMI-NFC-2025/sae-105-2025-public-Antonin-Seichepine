@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artistes – Flying Tap Fest</title>
+    <title>Flying Tap Fest — Moonstep</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Font Barlow -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +22,9 @@
     <link rel="manifest" href="assets/favicons/site.webmanifest">
 </head>
 
-<body class="page page--festival page--artists" id="top">
+<body class="page page--festival page--artist-detail" id="top">
 
-    <!-- ============ HEADER (cohérent avec les autres pages) ============ -->
+    <!-- ============ HEADER GLOBAL ============ -->
     <header class="header header--festival">
         <div class="wrapper header__inner">
 
@@ -68,7 +68,7 @@
                     <a href="programme.html" class="site-menu__link">Programme</a>
                 </li>
                 <li class="site-menu__item">
-                    <a href="artistes.html" class="site-menu__link" aria-current="page">Artistes</a>
+                    <a href="artistes.html" class="site-menu__link">Artistes</a>
                 </li>
                 <li class="site-menu__item">
                     <a href="scenes.html" class="site-menu__link">Scènes</a>
@@ -88,120 +88,64 @@
     </nav>
 
     <!-- ============ MAIN ============ -->
-    <main class="main main--festival main--artists">
+    <main class="main main--festival main--artist-detail">
 
-        <!-- HERO ARTISTES -->
-        <section class="hero hero--subpage hero--artists" aria-labelledby="artists-title">
-            <div class="hero__background" aria-hidden="true">
-                <!-- fond orange + scallops haut gérés en CSS -->
-            </div>
+        <!-- TITRE + VISUEL ARTISTE -->
+        <section class="artist-hero" aria-labelledby="artist-title">
+            <div class="wrapper artist-hero__inner">
+                <h1 id="artist-title" class="artist-hero__title typo-h2-upper">“Moonstep”</h1>
 
-            <div class="wrapper hero__inner hero__inner--subpage">
-                <h1 class="hero__subtitle typo-h2-upper" id="artists-title">
-                    Artistes
-                </h1>
+                <figure class="artist-hero__image">
+                    <img src="assets/img/artiste1.webp" alt="Clara Devaux, alias Moonstep, en concert."
+                        class="artist-hero__img">
+                </figure>
 
-                <!-- Motif 4 pétales sous le titre -->
-                <div class="hero__motif hero__motif--artists" aria-hidden="true">
-                    <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
-                </div>
-
-                <p class="hero__intro typo-body">
-                    Découvrez les artistes qui rythmeront le Flying Tap Fest.
+                <p class="artist-hero__meta typo-card-desc">
+                    6&nbsp;juin - 14h00 - Grande scène
                 </p>
             </div>
-
-            <!-- Vague blanche qui sépare orange / fond beige -->
-            <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
         </section>
 
-        <!-- TABS (6 JUIN / 7 JUIN) -->
-        <nav class="artists-tabs" aria-label="Jours du festival">
-            <button class="artists-tabs__tab typo-h3" aria-selected="true">
-                6 juin
-            </button>
-            <button class="artists-tabs__tab typo-h3">
-                7 juin
-            </button>
-        </nav>
+        <!-- DESCRIPTION ARTISTE -->
+        <section class="artist-description">
+            <div class="wrapper artist-description__inner">
+                <p class="typo-body">
+                    Clara Devaux, alias “Moonstep”, est une danseuse de claquettes contemporaines
+                    connue pour son style aérien et son utilisation poétique de la lumière.
+                </p>
+                <p class="typo-body">
+                    Elle associe précision rythmique et projections interactives pour créer
+                    une performance immersive et innovante.
+                </p>
 
-        <!-- JOUR 6 JUIN -->
-        <section class="artists-day" aria-label="Artistes du 6 juin">
+                <p class="artist-description__back">
+                    <a href="artistes-6-juin.html" class="btn btn--secondary typo-btn">
+                        RETOUR AUX ARTISTES
+                    </a>
+                </p>
+            </div>
+        </section>
 
-            <!-- Carte artiste 1 -->
-            <article class="artist-card">
-                <figure class="artist-card__figure">
-                    <img src="assets/img/artiste1.webp" alt="Clara “Moonstep” Devaux" class="artist-card__image">
-                    <figcaption class="artist-card__caption">
-                        <p class="artist-card__time typo-card-desc">
-                            14h00 – Grande scène
-                        </p>
-                        <h3 class="artist-card__name typo-card-title">
-                            Clara “Moonstep” Devaux
-                        </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
-                    </figcaption>
-                </figure>
-            </article>
-
-            <!-- Carte artiste 2 -->
-            <article class="artist-card">
-                <figure class="artist-card__figure">
-                    <img src="assets/img/artiste2.webp" alt="Duo LumenBeat" class="artist-card__image">
-                    <figcaption class="artist-card__caption">
-                        <p class="artist-card__time typo-card-desc">
-                            16h00 – Scène Ciel
-                        </p>
-                        <h3 class="artist-card__name typo-card-title">
-                            Duo LumenBeat
-                        </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
-                    </figcaption>
-                </figure>
-            </article>
-
-            <!-- Carte artiste 3 -->
-            <article class="artist-card">
-                <figure class="artist-card__figure">
-                    <img src="assets/img/artiste3.webp" alt="StepNova Crew" class="artist-card__image">
-                    <figcaption class="artist-card__caption">
-                        <p class="artist-card__time typo-card-desc">
-                            21h00 – Scène Lumière
-                        </p>
-                        <h3 class="artist-card__name typo-card-title">
-                            StepNova Crew
-                        </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
-                    </figcaption>
-                </figure>
-            </article>
-
+        <!-- MOTIF CENTRAL -->
+        <section class="decor-section">
+            <div class="wrapper decor-section__inner">
+                <div class="motif motif--center" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="motif__img">
+                </div>
+            </div>
         </section>
 
         <!-- CTA INFOS PRATIQUES -->
         <section class="section section--cta-infos">
             <div class="wrapper section__inner section__inner--center">
-                <div class="section__motif" aria-hidden="true">
-                    <img src="assets/icons/formeorange.svg" alt="">
-                </div>
-
-                <h2 class="cta__title section__title section__title--center typo-h2">
-                    Tout ce qu’il faut savoir pour venir.
+                <h2 class="cta-infos__title section__title section__title--center typo-h2-upper">
+                    TOUT CE QU’IL FAUT<br>
+                    SAVOIR POUR VENIR.
                 </h2>
 
-                <a href="infos-pratiques.html" class="btn btn--primary cta__btn typo-btn">
-                    Voir les infos
+                <a href="infos-pratiques.html" class="btn btn--primary cta-infos__btn typo-btn">
+                    VOIR LES INFOS
                 </a>
-
-                <div class="section__scallop-bottom" aria-hidden="true">
-                    <!-- Optionnel : scallops bas en CSS ou SVG -->
-                </div>
             </div>
         </section>
 
@@ -231,7 +175,7 @@
                         <a href="programme.html" class="footer__link">Programme</a>
                     </li>
                     <li class="footer__item">
-                        <a href="artistes.html" class="footer__link" aria-current="page">Artistes</a>
+                        <a href="artistes.html" class="footer__link">Artistes</a>
                     </li>
                     <li class="footer__item">
                         <a href="scenes.html" class="footer__link">Scènes</a>

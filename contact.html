@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Tap Fest – Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Barlow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+</head>
+
+<body class="page page--festival page--contact" id="top">
+
+    <!-- ============ HEADER GLOBAL ============ -->
+    <header class="header header--festival">
+        <div class="wrapper header__inner">
+
+            <a class="header__logo-link" href="index.html">
+                <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
+            </a>
+
+            <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
+                aria-controls="site-menu" aria-expanded="false">
+                <span class="menu-btn__bar menu-btn__bar--top" aria-hidden="true"></span>
+                <span class="menu-btn__bar menu-btn__bar--bottom" aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============== MENU MOBILE GLOBAL ============== -->
+    <nav class="site-menu menu" id="site-menu" aria-hidden="true" hidden>
+        <div class="site-menu__overlay"></div>
+
+        <div class="site-menu__panel">
+            <div class="site-menu__top">
+                <a href="index.html" class="site-menu__logo">
+                    <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
+                </a>
+
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">
+                    ✕
+                </button>
+            </div>
+
+            <p class="site-menu__intro typo-body">
+                Naviguez entre les univers du Flying Tap Fest.
+            </p>
+
+            <ul class="site-menu__list">
+                <li class="site-menu__item">
+                    <a href="index.html" class="site-menu__link">Accueil</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="festival.html" class="site-menu__link">Le festival</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="programme.html" class="site-menu__link">Programme</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="artistes.html" class="site-menu__link">Artistes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="scenes.html" class="site-menu__link">Scènes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="infos-pratiques.html" class="site-menu__link">Infos pratiques</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="contact.html" class="site-menu__link" aria-current="page">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <p class="site-menu__baseline typo-footer-text">
+                Entre ciel et terre, vivez l’expérience Flying Tap Fest.
+            </p>
+        </div>
+    </nav>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main main--festival main--contact">
+
+        <!-- HERO / TITRE PAGE -->
+        <section class="hero hero--subpage hero--contact" aria-labelledby="contact-title">
+            <div class="hero__background" aria-hidden="true">
+                <!-- fond orange géré en CSS -->
+            </div>
+
+            <div class="wrapper hero__inner hero__inner--subpage">
+                <h1 id="contact-title" class="hero__subtitle typo-h2">
+                    Contact
+                </h1>
+
+                <div class="hero__motif hero__motif--contact" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
+                </div>
+
+                <p class="hero__intro typo-body">
+                    Une question, une demande ou besoin d’informations ? Notre équipe vous répond au plus vite.
+                </p>
+            </div>
+
+            <!-- vague de séparation -->
+            <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
+        </section>
+
+        <!-- FORMULAIRE -->
+        <section class="section section--contact-form" aria-labelledby="form-contact-title">
+            <div class="wrapper section__inner">
+                <h2 id="form-contact-title" class="sr-only">Formulaire de contact</h2>
+
+                <form class="form form--contact" action="#" method="post" novalidate>
+                    <div class="form__group">
+                        <label class="form__label typo-body" for="contact-name">Nom</label>
+                        <input class="form__input" type="text" id="contact-name" name="name" autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label typo-body" for="contact-email">Adresse mail</label>
+                        <input class="form__input" type="email" id="contact-email" name="email" autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form__group form__group--textarea">
+                        <label class="form__label typo-body" for="contact-message">Message</label>
+                        <textarea class="form__textarea" id="contact-message" name="message" rows="6"
+                            required></textarea>
+                    </div>
+
+                    <button class="btn btn--primary typo-btn" type="submit">
+                        ENVOYER
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- INFORMATIONS DE CONTACT -->
+        <section class="section section--contact-infos" aria-labelledby="infos-contact-title">
+            <div class="wrapper section__inner">
+                <h2 id="infos-contact-title" class="section__subtitle typo-h2">
+                    Informations de contact
+                </h2>
+
+                <ul class="contact-infos">
+                    <li class="contact-infos__item contact-infos__item--mail">
+                        <span class="contact-infos__icon" aria-hidden="true">
+                            <img src="assets/icons/mail.svg" alt="">
+                        </span>
+                        <p class="contact-infos__text typo-body">
+                            contact@flyingtapfest.fr
+                        </p>
+                    </li>
+
+                    <li class="contact-infos__item contact-infos__item--address">
+                        <span class="contact-infos__icon" aria-hidden="true">
+                            <img src="assets/icons/location.svg" alt="">
+                        </span>
+                        <p class="contact-infos__text typo-body">
+                            Parc du Près-la-Rose<br>
+                            25200 Montbéliard, France
+                        </p>
+                    </li>
+
+                    <li class="contact-infos__item contact-infos__item--phone">
+                        <span class="contact-infos__icon" aria-hidden="true">
+                            <img src="assets/icons/call.svg" alt="">
+                        </span>
+                        <p class="contact-infos__text typo-body">
+                            +33&nbsp;3&nbsp;84&nbsp;00&nbsp;00&nbsp;00
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- MOTIF CENTRAL -->
+        <section class="section section--contact-motif">
+            <div class="wrapper section__inner">
+                <div class="motif motif--section" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- RÉSEAUX SOCIAUX -->
+        <section class="section section--contact-social" aria-labelledby="social-title">
+            <div class="wrapper section__inner">
+                <h2 id="social-title" class="section__subtitle typo-h2">
+                    Réseaux sociaux
+                </h2>
+
+                <div class="contact-social__icons">
+                    <a href="#" class="contact-social__link" aria-label="Instagram Flying Tap Fest">
+                        <img src="assets/icons/instagram.svg" alt="">
+                    </a>
+                    <a href="#" class="contact-social__link" aria-label="Facebook Flying Tap Fest">
+                        <img src="assets/icons/facebook.svg" alt="">
+                    </a>
+                </div>
+
+                <p class="contact-social__text typo-body">
+                    Au plaisir d’échanger avec vous.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER GLOBAL (version unifiée) ============ -->
+    <footer class="footer footer--festival" id="contact">
+
+        <!-- Image / pattern de fond gérée en CSS -->
+
+        <div class="footer__inner">
+
+            <p class="footer__text">
+                Entre ciel et terre,<br>
+                <span class="u-highlight">vivez l’expérience Flying Tap Fest.</span>
+            </p>
+
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="index.html" class="footer__link">Accueil</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="festival.html" class="footer__link">Le festival</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="programme.html" class="footer__link">Programme</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="artistes.html" class="footer__link">Artistes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="scenes.html" class="footer__link">Scènes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="infos-pratiques.html" class="footer__link">Infos pratiques</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__list footer__list--social">
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="#">Instagram</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="#">Facebook</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <address class="footer__infos">
+                <p>
+                    <a class="footer__mail" href="mailto:contact@flyingtapfest.fr">
+                        contact@flyingtapfest.fr
+                    </a>
+                </p>
+                <p class="footer__address">
+                    Montbéliard, France<br>
+                    Site du Flying Tap Fest
+                </p>
+                <p class="footer__copy">
+                    © 2026 Flying Tap Fest
+                </p>
+            </address>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
