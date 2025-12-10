@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Programme – Flying Tap Fest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Barlow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/favicons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+</head>
+
+<body class="page page--festival page--programme" id="top">
+
+    <!-- ============ HEADER (cohérent avec les autres pages) ============ -->
+    <header class="header header--festival">
+        <div class="wrapper header__inner">
+
+            <a class="header__logo-link" href="index.html">
+                <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
+            </a>
+
+            <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
+                aria-controls="site-menu" aria-expanded="false">
+                <span class="menu-btn__bar menu-btn__bar--top"></span>
+                <span class="menu-btn__bar menu-btn__bar--bottom"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============== MENU MOBILE GLOBAL ============== -->
+    <nav class="site-menu menu" id="site-menu" aria-hidden="true" hidden>
+        <div class="site-menu__overlay"></div>
+
+        <div class="site-menu__panel">
+            <div class="site-menu__top">
+                <a href="index.html" class="site-menu__logo">
+                    <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
+                </a>
+
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">
+                    ✕
+                </button>
+            </div>
+
+            <p class="site-menu__intro typo-body">
+                Naviguez entre les univers du Flying Tap Fest.
+            </p>
+
+            <ul class="site-menu__list">
+                <li class="site-menu__item">
+                    <a href="index.html" class="site-menu__link">Accueil</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="festival.html" class="site-menu__link">Le festival</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="programme.html" class="site-menu__link" aria-current="page">Programme</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="artistes.html" class="site-menu__link">Artistes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="scenes.html" class="site-menu__link">Scènes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="infos-pratiques.html" class="site-menu__link">Infos pratiques</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="contact.html" class="site-menu__link">Contact</a>
+                </li>
+            </ul>
+
+            <p class="site-menu__baseline typo-footer-text">
+                Entre ciel et terre, vivez l’expérience Flying Tap Fest.
+            </p>
+        </div>
+    </nav>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main main--festival main--programme">
+
+        <!-- HERO PROGRAMME -->
+        <section class="hero hero--subpage hero--programme" aria-labelledby="programme-title">
+            <div class="hero__background" aria-hidden="true">
+                <!-- Optionnel : fond spécifique -->
+            </div>
+
+            <div class="wrapper hero__inner hero__inner--subpage">
+                <h1 class="hero__subtitle typo-h2-upper" id="programme-title">
+                    Programme
+                </h1>
+
+                <!-- Motif 4 pétales sous le titre -->
+                <div class="hero__motif hero__motif--programme" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
+                </div>
+
+                <p class="hero__intro typo-body">
+                    Découvrez les performances qui rythmeront le Flying Tap Fest.
+                </p>
+            </div>
+
+            <!-- Vague blanche qui sépare orange / fond beige (CSS, background SVG) -->
+            <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
+        </section>
+
+        <!-- SECTION PROGRAMME -->
+        <section class="section section--programme">
+            <div class="wrapper section__inner">
+
+                <!-- JOUR 1 : 6 JUIN -->
+                <section class="programme-day" aria-labelledby="programme-6-juin">
+                    <h2 id="programme-6-juin" class="programme-day__title typo-h2-upper">
+                        6 JUIN
+                    </h2>
+
+                    <ul class="programme-day__list">
+
+                        <!-- Carte 1 -->
+                        <li class="programme-day__item">
+                            <article class="event-card">
+                                <div class="event-card__image">
+                                    <img src="assets/img/illu5.webp" alt="Initiation aux claquettes">
+                                    <button class="btn btn--tag typo-btn" type="button">
+                                        EN SAVOIR PLUS
+                                    </button>
+                                </div>
+
+                                <div class="event-card__body">
+                                    <h3 class="event-card__title typo-card-title">
+                                        Initiation aux claquettes
+                                    </h3>
+                                    <p class="event-card__meta typo-card-desc">
+                                        14h – scène atelier
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Carte 2 -->
+                        <li class="programme-day__item">
+                            <article class="event-card">
+                                <div class="event-card__image">
+                                    <img src="assets/img/illu7.webp" alt="Démonstration de claquettes">
+                                    <button class="btn btn--tag typo-btn" type="button">
+                                        EN SAVOIR PLUS
+                                    </button>
+                                </div>
+
+                                <div class="event-card__body">
+                                    <h3 class="event-card__title typo-card-title">
+                                        Démonstration claquettes
+                                    </h3>
+                                    <p class="event-card__meta typo-card-desc">
+                                        16h – scène lumière
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Carte 3 -->
+                        <li class="programme-day__item">
+                            <article class="event-card">
+                                <div class="event-card__image">
+                                    <img src="assets/img/illu8.webp" alt="Concert acoustique">
+                                    <button class="btn btn--tag typo-btn" type="button">
+                                        EN SAVOIR PLUS
+                                    </button>
+                                </div>
+
+                                <div class="event-card__body">
+                                    <h3 class="event-card__title typo-card-title">
+                                        Concert acoustique
+                                    </h3>
+                                    <p class="event-card__meta typo-card-desc">
+                                        18h – Grande scène
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Carte 4 -->
+                        <li class="programme-day__item">
+                            <article class="event-card">
+                                <div class="event-card__image">
+                                    <img src="assets/img/illu6.webp" alt="Spectacle de drones">
+                                    <button class="btn btn--tag typo-btn" type="button">
+                                        EN SAVOIR PLUS
+                                    </button>
+                                </div>
+
+                                <div class="event-card__body">
+                                    <h3 class="event-card__title typo-card-title">
+                                        Spectacle de drones
+                                    </h3>
+                                    <p class="event-card__meta typo-card-desc">
+                                        21h – scène ciel
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <!-- Motifs entre les jours -->
+                <div class="programme__separator" aria-hidden="true">
+                    <img src="assets/icons/droneorange.svg" alt="" class="programme__motif">
+                    <img src="assets/icons/droneorange.svg" alt="" class="programme__motif">
+                    <img src="assets/icons/droneorange.svg" alt="" class="programme__motif">
+                </div>
+
+                <!-- JOUR 2 : 7 JUIN -->
+                <section class="programme-day" aria-labelledby="programme-7-juin">
+                    <h2 id="programme-7-juin" class="programme-day__title typo-h2-upper">
+                        7 JUIN
+                    </h2>
+
+                    <ul class="programme-day__list">
+
+                        <!-- Carte 5 -->
+                        <li class="programme-day__item">
+                            <article class="event-card">
+                                <div class="event-card__image">
+                                    <img src="assets/img/illu4.webp" alt="Tap X Electro Lights">
+                                    <button class="btn btn--tag typo-btn" type="button">
+                                        EN SAVOIR PLUS
+                                    </button>
+                                </div>
+
+                                <div class="event-card__body">
+                                    <h3 class="event-card__title typo-card-title">
+                                        Tap X Electro Lights
+                                    </h3>
+                                    <p class="event-card__meta typo-card-desc">
+                                        14h – scène lumière
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Carte 6 -->
+                        <li class="programme-day__item">
+                            <article class="event-card">
+                                <div class="event-card__image">
+                                    <img src="assets/img/illu3.webp" alt="Showcase Tap Masters">
+                                    <button class="btn btn--tag typo-btn" type="button">
+                                        EN SAVOIR PLUS
+                                    </button>
+                                </div>
+
+                                <div class="event-card__body">
+                                    <h3 class="event-card__title typo-card-title">
+                                        Showcase “Tap Masters”
+                                    </h3>
+                                    <p class="event-card__meta typo-card-desc">
+                                        17h – Grande scène
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Carte 7 -->
+                        <li class="programme-day__item">
+                            <article class="event-card">
+                                <div class="event-card__image">
+                                    <img src="assets/img/illu2.webp" alt="The Beatmakers Live">
+                                    <button class="btn btn--tag typo-btn" type="button">
+                                        EN SAVOIR PLUS
+                                    </button>
+                                </div>
+
+                                <div class="event-card__body">
+                                    <h3 class="event-card__title typo-card-title">
+                                        The Beatmakers Live
+                                    </h3>
+                                    <p class="event-card__meta typo-card-desc">
+                                        18h – Grande scène
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Carte 8 -->
+                        <li class="programme-day__item">
+                            <article class="event-card">
+                                <div class="event-card__image">
+                                    <img src="assets/img/illu1.webp" alt="Grand show lumineux">
+                                    <button class="btn btn--tag typo-btn" type="button">
+                                        EN SAVOIR PLUS
+                                    </button>
+                                </div>
+
+                                <div class="event-card__body">
+                                    <h3 class="event-card__title typo-card-title">
+                                        Grand show lumineux
+                                    </h3>
+                                    <p class="event-card__meta typo-card-desc">
+                                        21h – scène ciel
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <!-- Motif bas de section (gros 4 pétales) -->
+                <div class="programme__bottom-motif" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="programme__bottom-motif-img">
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER (version unifiée) ============ -->
+    <footer class="footer footer--festival" id="contact">
+
+        <!-- Image / pattern de fond gérée en CSS -->
+
+        <div class="footer__inner">
+
+            <p class="footer__text">
+                Entre ciel et terre,<br>
+                <span class="u-highlight">vivez l’expérience Flying Tap Fest.</span>
+            </p>
+
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="index.html" class="footer__link">Accueil</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="festival.html" class="footer__link">Le festival</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="programme.html" class="footer__link" aria-current="page">Programme</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="artistes.html" class="footer__link">Artistes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="scenes.html" class="footer__link">Scènes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="infos-pratiques.html" class="footer__link">Infos pratiques</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__list footer__list--social">
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="#">Instagram</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="#">Facebook</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <address class="footer__infos">
+                <p>
+                    <a class="footer__mail" href="mailto:contact@flyingtapfest.fr">
+                        contact@flyingtapfest.fr
+                    </a>
+                </p>
+                <p class="footer__address">
+                    Montbéliard, France<br>
+                    Site du Flying Tap Fest
+                </p>
+                <p class="footer__copy">
+                    © 2026 Flying Tap Fest
+                </p>
+            </address>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
