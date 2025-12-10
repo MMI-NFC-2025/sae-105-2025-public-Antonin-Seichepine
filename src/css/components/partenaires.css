@@ -1,0 +1,100 @@
+/* =========================================
+   SECTION PARTENAIRES
+   ========================================= */
+
+.section--partners {
+    padding-top: 3rem;
+    padding-bottom: 3.25rem;
+}
+
+.section--partners .section__title {
+    margin-bottom: 0.4rem;
+}
+
+.section--partners .section__text {
+    margin-top: 0.5rem;
+}
+
+/* =========================================
+   CARROUSEL PARTENAIRES
+   ========================================= */
+
+.partners-carousel {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.25rem;
+    /* espace entre flèches */
+}
+
+/* ---------------------------
+   BOUTONS FLÈCHES (plus gros)
+   --------------------------- */
+.carousel__control {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--principal);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.carousel__control img {
+    display: block;
+    width: 22px;
+    height: auto;
+}
+
+/* ---------------------------
+   ZONE CENTRALE LOGO
+   --------------------------- */
+.partners-carousel__track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    min-height: 110px;
+}
+
+/* Un logo = caché par défaut */
+.partners-carousel__item {
+    display: none;
+}
+
+/* Logo actif → affiché */
+.partners-carousel__item.is-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Animation quand il s'affiche */
+    animation: partners-fade-in 0.25s ease-out;
+}
+
+/* Logo (taille fidèle maquette) */
+.partners-carousel__item img {
+    display: block;
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+/* ----------------------------------------
+   ANIMATION D'APPARITION
+   ---------------------------------------- */
+@keyframes partners-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

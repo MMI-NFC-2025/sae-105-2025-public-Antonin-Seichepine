@@ -1,0 +1,117 @@
+/* =========================================
+   SECTION NAV CARDS
+   (Le festival / Programme / Artistes / Infos)
+   ========================================= */
+
+.section--nav-cards {
+    padding-top: 1rem;
+    padding-bottom: 3.25rem;
+}
+
+/* Empilement vertical des cartes */
+.section--nav-cards .section__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Carte individuelle */
+.nav-card {
+    text-align: center;
+    padding-block: 5rem;
+}
+
+/* Ligne de séparation entre les cartes (sauf la première) */
+.nav-card+.nav-card {
+    border-top: 1px solid var(--principal);
+}
+
+/* Icône en haut de la carte (valeur par défaut) */
+.nav-card__icon {
+    margin-bottom: 0.9rem;
+}
+
+.nav-card__icon img {
+    display: block;
+    width: 75px;
+    height: auto;
+    margin-inline: auto;
+}
+
+/* Icône seulement pour la carte 'Le festival' (plus grande) */
+.nav-card--festival .nav-card__icon img {
+    width: 150px;
+    /* taille plus grande que les autres */
+}
+
+/* Titre (LE FESTIVAL / PROGRAMME / …) */
+.nav-card__title {
+    margin-bottom: 0.3rem;
+}
+
+/* Texte descriptif de la carte */
+.nav-card__text {
+    max-width: 14.5rem;
+    margin: 0.25rem auto 1.3rem;
+    font-size: var(--fontsm);
+    color: var(--text-color);
+}
+
+/* =========================
+   Bouton ruban des cartes
+   ========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Bouton principal type ruban */
+.btn--primary {
+    position: relative;
+    padding: 0.55rem 2.4rem;
+    background-color: var(--principal);
+    color: var(--text-button);
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: var(--fontsm);
+    overflow: hidden;
+}
+
+/* Petites formes arrondies sur les côtés du ruban */
+.btn--primary::before,
+.btn--primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    background-color: var(--principal);
+}
+
+.btn--primary::before {
+    left: -9px;
+    border-radius: 50% 0 0 50%;
+}
+
+.btn--primary::after {
+    right: -9px;
+    border-radius: 0 50% 50% 0;
+}
+
+/* Position dans la carte */
+.nav-card__cta {
+    margin-top: 0.2rem;
+}
+
+/* Ligne sous la dernière carte (Infos pratiques) */
+.nav-card--infos {
+    border-bottom: 1px solid var(--principal);
+    padding-bottom: 5rem;
+    /* pour que la ligne respire */
+}

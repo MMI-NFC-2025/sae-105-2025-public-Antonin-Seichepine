@@ -39,3 +39,39 @@ if (menuBtn && siteMenu) {
         if (e.key === 'Escape') closeMenu();
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".partners-carousel");
+    if (!carousel) return;
+
+    const track = carousel.querySelector(".partners-carousel__track");
+    const items = Array.from(track.querySelectorAll(".partners-carousel__item"));
+
+    const prevBtn = carousel.querySelector(".carousel__control--prev");
+    const nextBtn = carousel.querySelector(".carousel__control--next");
+
+    if (!items.length || !prevBtn || !nextBtn) return;
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            const isActive = index === currentIndex;
+            item.classList.toggle("is-active", isActive);
+            item.setAttribute("aria-hidden", isActive ? "false" : "true");
+        });
+    }
+
+    // état initial
+    updateCarousel();
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+    });
+});

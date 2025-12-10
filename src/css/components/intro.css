@@ -1,0 +1,22 @@
+/* =========================================
+   SECTION INTRO — "Découvrez la force..."
+   ========================================= */
+
+.section--intro {
+    padding-top: 2.5rem;
+    padding-bottom: 2.75rem;
+}
+
+/* Titre d’intro : orange, centré, largeur contenue */
+.section--intro .section__title {
+    color: var(--principal);
+    max-width: 18rem;
+    margin: 0 auto 0.5rem;
+}
+
+/* Paragraphe : centré, un peu plus étroit */
+.section--intro .section__text {
+    max-width: 19rem;
+    margin: 0.75rem auto 0;
+    text-align: left;
+}

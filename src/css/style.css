@@ -6,9 +6,13 @@
 
 /* ========== BASE ========== */
 @import url('./base/_global.css');
+@import url('./base/typography.css');
 
 /* ========== COMPONENTS ========== */
 @import url('./components/_header.css');
 @import url('./components/_menu.css');
 @import url('./components/_hero.css');
 @import url('./components/date.css');
+@import url('./components/intro.css');
+@import url('./components/nav-cards.css');
+@import url('./components/partenaires.css');

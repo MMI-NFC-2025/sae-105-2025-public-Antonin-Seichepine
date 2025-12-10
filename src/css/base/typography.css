@@ -1,0 +1,72 @@
+/* ================================
+   TYPOGRAPHIE (basée sur :root)
+   ================================ */
+
+/* H1 hero */
+.typo-header {
+    font-size: var(--font4xl);
+    /* 3rem = 48px */
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--text-button);
+}
+
+/* H2 classiques (intro, etc.) */
+.typo-h2 {
+    font-size: var(--font2xl);
+    /* 1.75rem */
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+/* H2 UPPERCASE (NOS PARTENAIRES, FESTIVAL, PROGRAMME, etc.) */
+.typo-h2-upper {
+    font-size: var(--font2xl);
+    /* même taille partout */
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: var(--principal);
+    /* ORANGE */
+}
+
+/* Corps de texte */
+.typo-body {
+    font-size: var(--fontmd);
+    /* 1.25rem ≈ 20px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+/* Boutons */
+.typo-btn {
+    font-size: var(--fontsm);
+    /* 0.9375rem */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Footer */
+.typo-footer-text {
+    font-size: var(--fontmd);
+    /* 20px */
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* DATES (6 / 7 / JUIN / 2026) */
+.typo-date {
+    font-size: var(--fontbase);
+    /* 1rem = 16px */
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+}
+
+.typo-date--month {
+    font-weight: 800;
+    text-transform: uppercase;
+}
