@@ -1,0 +1,15 @@
+@import url("./vendors/normalize.css");
+@import url("./utils/variables.css");
+
+@import url("./base/base.css");
+@import url("./base/typography.css");
+
+@import url("./layout/layout.css");
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+
+@import url("./components/menu.css");
+@import url("./components/hero-home.css");
+@import url("./components/home-sections.css");
+
+@import url("./pages/page-home.css");
