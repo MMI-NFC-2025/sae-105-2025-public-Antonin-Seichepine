@@ -1,0 +1,124 @@
+/* =========================================
+   PAGE À PROPOS / FESTIVAL
+   ========================================= */
+
+.page--festival.page--about .main--about {
+    background-color: var(--secondaire);
+}
+
+/* ---------- Intro sous le hero ---------- */
+
+.section--intro-about {
+    padding-bottom: 2.8rem;
+}
+
+.section--intro-about .section__text--lead {
+    max-width: 19rem;
+    margin-inline: auto;
+    text-align: left;
+}
+
+/* ---------- Bloc "NOTRE HISTOIRE" + timeline ---------- */
+
+.section--timeline {
+    padding-top: 0.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.section__header--timeline {
+    margin-bottom: 2.1rem;
+}
+
+.section__header--timeline .section__title {
+    color: var(--principal);
+    text-align: left;
+}
+
+.section__header--timeline .section__text {
+    max-width: 18rem;
+    margin-top: 0.75rem;
+    font-size: var(--fontbase);
+    text-align: left;
+}
+
+/* Timeline verticale à droite */
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    padding-right: 1.8rem;
+    /* espace pour la ligne à droite */
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    top: 0.6rem;
+    right: 0;
+    width: 1.5px;
+    height: 100%;
+    background-color: var(--principal);
+}
+
+.timeline__item {
+    position: relative;
+    margin-bottom: 2.4rem;
+}
+
+.timeline__year {
+    color: var(--principal);
+    font-size: var(--fontxl);
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+
+.timeline__content {
+    max-width: 16.5rem;
+}
+
+.timeline__text {
+    font-size: var(--fontmd);
+}
+
+/* Losange bleu entre les années (sauf la dernière) */
+.timeline__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1.5rem;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+}
+
+/* ---------- CTA final vers le programme ---------- */
+
+.section--cta-programme {
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+}
+
+.section--cta-programme .section__inner--center {
+    text-align: center;
+}
+
+.section--cta-programme .section__motif {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.section--cta-programme .section__title {
+    color: var(--principal);
+    max-width: 18rem;
+    margin-inline: auto;
+    margin-bottom: 1.8rem;
+}
+
+.section--cta-programme .section__cta {
+    display: inline-block;
+}
