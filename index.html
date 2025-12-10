@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="src/css/style.css" />
     <script src="src/js/menu.js" defer></script>
 
-
     <!-- Favicons -->
     <link rel="icon" href="assets/favicons/favicon.svg">
     <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
@@ -76,13 +75,11 @@
         </div>
     </nav>
 
-
     <!-- ================= MAIN ================= -->
     <main class="main main--festival">
 
         <!-- ========== HERO ========== -->
         <section class="hero hero--festival" aria-labelledby="hero-title">
-            <!-- Tout le contenu du hero dans le wrapper -->
             <div class="wrapper hero__inner">
 
                 <!-- Motifs drones -->
@@ -106,26 +103,29 @@
                     </span>
                 </h1>
 
-                <a href="#billetterie" class="btn btn--light hero__cta typo-btn">
-                    Accéder à la billetterie
+                <!-- CTA ruban -->
+                <a href="#billetterie" class="hero__cta">
+                    <span class="hero__cta-label">ACCÉDER À LA BILLETTERIE</span>
                 </a>
-
-                <!-- On stylisera ça après -->
-                <div class="hero-dates" aria-label="Dates du festival">
-                    <div class="hero-dates__item"><span class="hero-dates__day typo-h3">6</span></div>
-                    <div class="hero-dates__item"><span class="hero-dates__day typo-h3">7</span></div>
-                    <div class="hero-dates__item hero-dates__item--month">
-                        <span class="hero-dates__label typo-h3">Juin</span>
-                    </div>
-                    <div class="hero-dates__item hero-dates__item--year">
-                        <span class="hero-dates__label typo-h3">2026</span>
-                    </div>
-                </div>
-
             </div>
+        </section>
 
-            <!-- Wave en bas du hero (on verra le style après) -->
-            <div class="hero__wave" aria-hidden="true"></div>
+        <!-- ========== DATES DU FESTIVAL ========== -->
+        <section class="festival-dates" aria-label="Dates du festival">
+            <div class="festival-dates__inner">
+                <div class="festival-dates__item">
+                    <span class="festival-dates__text">6</span>
+                </div>
+                <div class="festival-dates__item">
+                    <span class="festival-dates__text">7</span>
+                </div>
+                <div class="festival-dates__item festival-dates__item--month">
+                    <span class="festival-dates__text">Juin</span>
+                </div>
+                <div class="festival-dates__item festival-dates__item--year">
+                    <span class="festival-dates__text">2026</span>
+                </div>
+            </div>
         </section>
 
         <!-- ========== INTRO ========== -->

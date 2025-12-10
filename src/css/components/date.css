@@ -1,0 +1,66 @@
+/* =========================================
+   SECTION — DATES DU FESTIVAL
+   ========================================= */
+
+.section--dates {
+    /* On tire la section vers le bas pour qu’elle rentre
+       dans les vagues blanches sous le hero */
+    margin-top: 2.2rem;
+    /* AJUSTE CETTE VALEUR selon rendu */
+    padding-top: 2.4rem;
+    /* espace interne autour des dates */
+    padding-bottom: 1.8rem;
+
+    background-color: var(--secondaire);
+}
+
+/* Conteneur interne (wrapper déjà présent dans le HTML) */
+.festival-dates__inner {
+    display: flex;
+    justify-content: space-evenly;
+    /* espace égal à gauche, entre chaque item et à droite */
+    align-items: flex-start;
+    column-gap: 0;
+    /* on laisse flex gérer les espaces */
+}
+
+/* Élément individuel */
+.festival-dates__item {
+    flex: 0 0 auto;
+    /* largeur serrée autour du contenu */
+    position: relative;
+    text-align: center;
+    padding-top: 1.25rem;
+    /* garde comme avant, ça joue vertical seulement */
+}
+
+/* Petit point jaune au-dessus */
+.festival-dates__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--jaune-forme);
+}
+
+/* Texte */
+.festival-dates__text {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+/* "Juin" */
+.festival-dates__item--month .festival-dates__text {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* "2026" */
+.festival-dates__item--year .festival-dates__text {
+    font-weight: 800;
+}

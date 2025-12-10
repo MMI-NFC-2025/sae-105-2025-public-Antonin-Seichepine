@@ -1,25 +1,112 @@
-/* ================== GLOBAL ================== */
+/* ================================
+   GLOBAL BASE STYLES
+   ================================ */
 
+/* Reset simple */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* HTML */
 html {
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
+/* BODY */
 body {
-    margin: 0;
-    font-family: "Barlow", system-ui, sans-serif;
+    font-family: "Barlow", sans-serif;
     color: var(--text-color);
     background-color: var(--secondaire);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* ================================
+   TYPOGRAPHIE
+   ================================ */
+
+.typo-header {
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.typo-h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.typo-h2-upper {
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.typo-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.typo-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.typo-body {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.typo-btn {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Footer text styles */
+.typo-footer-text {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ================================
+   UTILS
+   ================================ */
+
+.u-highlight {
+    color: var(--texte-yellow);
 }
 
 .wrapper {
     width: 100%;
-    max-width: 72rem;
+    max-width: 420px;
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    padding-inline: 1.25rem;
+}
+
+/* Sections */
+.section {
+    padding: 3rem 0;
+}
+
+.section__title {
+    margin-bottom: 0.5rem;
+}
+
+.section__title--center {
+    text-align: center;
+}
+
+.section__text {
+    margin-top: 0.75rem;
+    max-width: 25rem;
+}
+
+.section__text--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }

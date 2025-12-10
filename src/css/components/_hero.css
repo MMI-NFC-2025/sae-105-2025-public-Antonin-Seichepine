@@ -1,51 +1,128 @@
-/* ================== HERO FESTIVAL ================== */
+/* =========================================
+   HERO — Flying Tap Fest
+   ========================================= */
 
 .hero {
     position: relative;
     width: 100%;
-    padding-top: 6rem;
-    /* place pour le header */
-    padding-bottom: 4.5rem;
-    /* place pour les dates + vague */
+    /* plus de min-height: 100vh → le hero s’adapte au contenu */
     text-align: center;
+
+    padding-top: 6rem;
+    /* un peu moins haut */
+    padding-bottom: 3.5rem;
+    /* remonte légèrement le bas du hero */
+
+    display: flex;
+    justify-content: flex-start;
+    color: var(--text-button);
 }
 
-/* Fond dégradé comme sur la maquette */
+/* Dégradé du hero */
 .hero--festival {
     background: linear-gradient(180deg,
             var(--gradient-hero) 0%,
             var(--principal) 100%);
-    color: var(--text-button);
 }
+
+/* =========================================
+   SCALLOPS WAVE (bordure inférieure du hero)
+   ========================================= */
+
+.hero--festival::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    /* chevauche légèrement la section suivante */
+    bottom: -35px;
+
+    /* hauteur totale pour la wave */
+    height: 70px;
+
+    /*
+        On dessine de grands demi-cercles beige.
+        Chaque scallop fait 80px → environ 4–5 scallops sur mobile.
+    */
+    background:
+        radial-gradient(circle at 40px 40px,
+            var(--secondaire) 40px,
+            transparent 41px) repeat-x;
+
+    background-size: 80px 80px;
+    z-index: 0;
+}
+
+/* =========================================
+   CONTENU interne
+   ========================================= */
 
 .hero__inner {
     position: relative;
+    z-index: 2;
+    /* au-dessus des scallops */
 }
 
-/* ================== LOGO ================== */
+/* =========================================
+   LOGO
+   ========================================= */
 
 .hero__logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero__logo-img {
-    width: 110px;
-    /* logo plus gros pour le hero */
+    width: 190px;
+    /* taille optimale mobile */
     height: auto;
 }
 
-/* ================== TITRE ================== */
+/* =========================================
+   MOTIFS (drones)
+   ========================================= */
+
+.hero__motifs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero__motif {
+    position: absolute;
+    width: 26px;
+    opacity: 0.85;
+}
+
+/* placement des drones */
+.hero__motif:nth-child(1) {
+    top: 26%;
+    left: 14%;
+}
+
+.hero__motif:nth-child(2) {
+    top: 15%;
+    right: 12%;
+}
+
+.hero__motif:nth-child(3) {
+    top: 35%;
+    right: 4%;
+}
+
+/* =========================================
+   TITRE HERO
+   ========================================= */
 
 .hero__title {
-    margin: 0 auto;
-    max-width: 18rem;
-    text-align: center;
+    margin: 1.2rem auto 0;
+    max-width: 22rem;
+    font-size: 2.2rem;
     font-weight: 800;
-    line-height: 1.15;
-    /* si la classe typo-header ne suffit pas, on force un peu la taille */
-    font-size: var(--font2xl, 1.75rem);
+    line-height: 1.2;
 }
 
 .hero__title-line {
@@ -56,111 +133,39 @@
     color: var(--texte-yellow);
 }
 
-/* ================== CTA ================== */
+/* =========================================
+   CTA RUBAN (bouton billet)
+   ========================================= */
+
+/* =========================================
+   CTA RUBAN (bouton billet) – SHAPE MAQUETTE
+   ========================================= */
 
 .hero__cta {
+    display: inline-block;
+    margin-top: 2.8rem;
+    text-decoration: none;
+}
+
+.hero__cta-label {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    margin-top: 1.6rem;
-    margin-inline: auto;
-
-    padding: 0.7rem 2.3rem;
-    background-color: var(--secondaire);
-    color: var(--principal);
-
+    padding: 0.9rem 2.6rem;
+    background: var(--secondaire);
+    /* beige */
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.8rem;
     letter-spacing: 0.08em;
-    text-decoration: none;
-
-    border-radius: 999px;
-    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.18);
-}
-
-/* ================== MINI-DRONES ================== */
-
-.hero__motifs {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
-
-/* on les place tous AU-DESSUS du bloc logo+texte,
-   de façon un peu organique (pas alignés) */
-.hero__motif {
-    position: absolute;
-    width: 22px;
-    height: auto;
-    opacity: 0.85;
-}
-
-/* Drone haut gauche */
-.hero__motif:nth-child(1) {
-    top: 14%;
-    left: 15%;
-}
-
-/* Drone haut centre-droite */
-.hero__motif:nth-child(2) {
-    top: 10%;
-    right: 20%;
-}
-
-/* Drone un peu plus bas, vers la droite */
-.hero__motif:nth-child(3) {
-    top: 22%;
-    right: 8%;
-}
-
-/* ================== DATES (base) ================== */
-
-.hero-dates {
-    position: relative;
-    margin-top: 2.3rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.6rem;
-    max-width: 14rem;
-    margin-inline: auto;
-    z-index: 2;
-    /* au-dessus de la vague */
-}
-
-.hero-dates__item {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 999px;
-    background-color: var(--secondaire);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15);
-}
-
-.hero-dates__item--month,
-.hero-dates__item--year {
-    background-color: var(--text-button);
+    font-size: 0.92rem;
     color: var(--principal);
-}
 
-.hero-dates__day,
-.hero-dates__label {
-    margin: 0;
-}
 
-/* ================== VAGUE ================== */
 
-.hero__wave {
-    position: absolute;
-    inset-inline: 0;
-    inset-block-end: -1px;
-    height: 4.5rem;
-    /* adapte l’URL au nom réel de ton SVG de vague */
-    background:
-        url('../../assets/img/hero-wave.svg') bottom center / cover no-repeat,
-        var(--secondaire);
+    /* base rectangle légèrement arrondie */
+    border-radius: 6px;
+    overflow: hidden;
+    /* important pour le cutout */
 }
