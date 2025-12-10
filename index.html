@@ -222,19 +222,23 @@
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="footer footer--festival">
-
-        <!-- L’image de fond sera appliquée via CSS sur .footer--festival -->
-
+    <footer class="footer footer--festival" id="footer">
         <div class="footer__inner">
+
+            <!-- Petites formes décoratives au-dessus du footer -->
+            <div class="footer__motifs" aria-hidden="true">
+                <span class="footer__motif"></span>
+                <span class="footer__motif"></span>
+                <span class="footer__motif"></span>
+            </div>
 
             <p class="footer__text">
                 Entre ciel et terre,<br>
                 <span class="u-highlight">vivez l’expérience Flying Tap Fest.</span>
             </p>
 
-            <nav class="footer__nav">
-                <ul class="footer__list">
+            <nav class="footer__nav" aria-label="Navigation du pied de page">
+                <ul class="footer__list footer__list--pages">
                     <li><a class="footer__link" href="index.html">Accueil</a></li>
                     <li><a class="footer__link" href="festival.html">Le festival</a></li>
                     <li><a class="footer__link" href="programme.html">Programme</a></li>
@@ -262,8 +266,8 @@
             </address>
 
         </div>
-
     </footer>
+
 
 </body>
 

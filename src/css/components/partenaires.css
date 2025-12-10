@@ -28,12 +28,14 @@
     /* espace entre flèches */
 }
 
-/* ---------------------------
-   BOUTONS FLÈCHES (plus gros)
-   --------------------------- */
+/* -----------------------------------------
+   FLÈCHES — VERSION AGRANDIE + ULTRA SMOOTH
+   ----------------------------------------- */
+
 .carousel__control {
-    width: 52px;
-    height: 52px;
+    width: 75px;
+    /* + grand */
+    height: 75px;
     border-radius: 999px;
     border: none;
     background-color: var(--principal);
@@ -42,55 +44,72 @@
     justify-content: center;
     cursor: pointer;
     padding: 0;
+
+    /* animation smooth premium */
+    transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+        box-shadow 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .carousel__control img {
     display: block;
-    width: 22px;
+    width: 28px;
+    /* flèches plus grandes */
     height: auto;
+    transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* ---------------------------
-   ZONE CENTRALE LOGO
-   --------------------------- */
+/* Hover smooth + effet pro */
+.carousel__control:hover {
+    transform: scale(1.18);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.carousel__control:hover img {
+    transform: translateX(1px);
+}
+
+/* -----------------------------------------
+   ZONE CENTRALE DU CARROUSEL
+   ----------------------------------------- */
+
 .partners-carousel__track {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 110px;
-    min-height: 110px;
+    min-width: 120px;
+    min-height: 120px;
+    /* augmente un peu pour les logos */
 }
 
-/* Un logo = caché par défaut */
+/* Tous les logos cachés */
 .partners-carousel__item {
     display: none;
 }
 
-/* Logo actif → affiché */
+/* Logo visible */
 .partners-carousel__item.is-active {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* Animation quand il s'affiche */
-    animation: partners-fade-in 0.25s ease-out;
+    animation: partners-fade-in 0.35s ease-out;
 }
 
-/* Logo (taille fidèle maquette) */
+/* Taille du logo fidèle à la maquette */
 .partners-carousel__item img {
     display: block;
-    width: 96px;
-    height: 96px;
+    width: 105px;
+    /* légèrement plus large */
+    height: 105px;
     object-fit: contain;
 }
 
 /* ----------------------------------------
-   ANIMATION D'APPARITION
+   ANIMATION LOGO
    ---------------------------------------- */
 @keyframes partners-fade-in {
     from {
         opacity: 0;
-        transform: scale(0.85);
+        transform: scale(0.55);
     }
 
     to {

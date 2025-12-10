@@ -1,0 +1,169 @@
+/* =========================================
+   FOOTER — Flying Tap Fest
+   ========================================= */
+
+.footer {
+    position: relative;
+    background-color: var(--principal);
+    color: var(--text-button);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Contenu interne */
+
+.footer__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 420px;
+    margin-inline: auto;
+    padding: 4rem 1.5rem 2.5rem;
+    /* top un peu plus grand pour dégager la wave */
+}
+
+/* =========================================
+   MOTIFS AU-DESSUS DU FOOTER
+   (petites formes losange comme sur la maquette)
+   ========================================= */
+
+.footer__motifs {
+    position: absolute;
+    top: -80px;
+    /* remonte dans la zone beige */
+    left: 0;
+    right: 0;
+    height: 70px;
+    pointer-events: none;
+}
+
+.footer__motif {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--principal);
+    transform: rotate(45deg);
+    border-radius: 2px;
+}
+
+/* Positionnement des trois motifs (ajuste si besoin) */
+.footer__motif:nth-child(1) {
+    top: 18px;
+    left: 20%;
+}
+
+.footer__motif:nth-child(2) {
+    top: 40px;
+    left: 50%;
+}
+
+.footer__motif:nth-child(3) {
+    top: 25px;
+    right: 18%;
+}
+
+/* =========================================
+   BASELINE DU FOOTER (niveau 1)
+   ========================================= */
+
+.footer__text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-bottom: 2.6rem;
+}
+
+.u-highlight {
+    font-weight: 800;
+    color: var(--texte-yellow);
+}
+
+/* =========================================
+   LISTES DE LIENS (reset)
+   ========================================= */
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================================
+   NAVIGATION PRINCIPALE (niveau 2)
+   ========================================= */
+
+.footer__nav {
+    margin-bottom: 2.8rem;
+}
+
+/* Menu pages */
+.footer__list--pages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 2.2rem;
+}
+
+.footer__list--pages .footer__link {
+    text-decoration: none;
+    color: var(--text-button);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+/* =========================================
+   RÉSEAUX SOCIAUX (niveau 3)
+   ========================================= */
+
+.footer__list--social {
+    display: flex;
+    justify-content: center;
+    gap: 1.9rem;
+}
+
+.footer__list--social .footer__link--silent {
+    text-decoration: none;
+    color: var(--text-button);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.8;
+}
+
+/* Hover léger (desktop) */
+
+.footer__link,
+.footer__link--silent {
+    transition: opacity 0.2s ease;
+}
+
+.footer__link:hover,
+.footer__link--silent:hover {
+    opacity: 0.9;
+}
+
+/* =========================================
+   INFOS + COPYRIGHT (niveau 4)
+   ========================================= */
+
+.footer__infos {
+    margin-top: 2.1rem;
+    font-style: normal;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.footer__mail {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer__address {
+    margin-top: 0.3rem;
+}
+
+.footer__copy {
+    margin-top: 0.6rem;
+    opacity: 0.8;
+}
