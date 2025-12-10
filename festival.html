@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>À propos – Flying Tap Fest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Barlow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="src/css/style.css" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/favicons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+</head>
+
+<body class="page page--festival page--about" id="top">
+
+    <!-- ============ HEADER (avec logo, version sous-page) ============ -->
+    <header class="header header--festival">
+        <div class="wrapper header__inner">
+
+            <!-- Logo dans le header sur les sous-pages -->
+            <a class="header__logo-link" href="index.html">
+                <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
+            </a>
+
+            <!-- Bouton menu type Housemood -->
+            <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
+                aria-controls="site-menu" aria-expanded="false">
+                <span class="menu-btn__bar menu-btn__bar--top"></span>
+                <span class="menu-btn__bar menu-btn__bar--bottom"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============== MENU MOBILE GLOBAL (identique à la home) ============== -->
+    <nav class="site-menu menu" id="site-menu" aria-hidden="true" hidden>
+        <div class="site-menu__overlay"></div>
+
+        <div class="site-menu__panel">
+            <div class="site-menu__top">
+                <a href="index.html" class="site-menu__logo">
+                    <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
+                </a>
+
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">
+                    ✕
+                </button>
+            </div>
+
+            <p class="site-menu__intro typo-body">
+                Naviguez entre les univers du Flying Tap Fest.
+            </p>
+
+            <ul class="site-menu__list">
+                <li class="site-menu__item">
+                    <a href="index.html" class="site-menu__link">Accueil</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="festival.html" class="site-menu__link">Le festival</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="programme.html" class="site-menu__link">Programme</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="artistes.html" class="site-menu__link">Artistes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="scenes.html" class="site-menu__link">Scènes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="infos-pratiques.html" class="site-menu__link">Infos pratiques</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="contact.html" class="site-menu__link">Contact</a>
+                </li>
+            </ul>
+
+            <p class="site-menu__baseline typo-footer-text">
+                Entre ciel et terre, vivez l’expérience Flying Tap Fest.
+            </p>
+        </div>
+    </nav>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main main--festival main--about">
+
+        <!-- ===== HERO SOUS-PAGE ===== -->
+        <section class="hero hero--subpage hero--about" aria-labelledby="about-title">
+            <div class="hero__background" aria-hidden="true">
+                <!-- Optionnel : fond spécifique (géré en CSS via background-image) -->
+            </div>
+
+            <div class="wrapper hero__inner hero__inner--subpage">
+                <h1 class="hero__subtitle typo-h2" id="about-title">À propos</h1>
+
+                <div class="hero__motif hero__motif--about" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
+                </div>
+            </div>
+
+            <!-- vague en bas, gérée en CSS avec un SVG en background -->
+            <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
+        </section>
+
+        <!-- ===== INTRO FESTIVAL ===== -->
+        <section class="section section--intro-about">
+            <div class="wrapper section__inner">
+                <p class="section__text section__text--lead typo-body">
+                    Le Flying Tap Fest est un festival unique qui mêle la danse, la lumière et l’innovation.
+                    Entre ciel et terre, il réunit claquettes, musique et spectacles de drones pour offrir
+                    une expérience artistique moderne et immersive.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== NOTRE HISTOIRE / TIMELINE ===== -->
+        <section class="section section--timeline" aria-labelledby="timeline-title">
+            <div class="wrapper section__inner section__inner--timeline">
+                <header class="section__header section__header--timeline">
+                    <h2 class="section__title typo-h2-upper" id="timeline-title">
+                        NOTRE HISTOIRE
+                    </h2>
+                    <p class="section__text section__text--small typo-body">
+                        En deux jours, vivez un festival mêlant claquettes, musique, ateliers
+                        et spectacles de drones lumineux.
+                    </p>
+                </header>
+
+                <ol class="timeline">
+                    <li class="timeline__item">
+                        <div class="timeline__year typo-h3">2024</div>
+                        <div class="timeline__content">
+                            <p class="timeline__text typo-body">
+                                Création du concept : associer claquettes, musique live
+                                et spectacles de drones pour réinventer la scène.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="timeline__item">
+                        <div class="timeline__year typo-h3">2025</div>
+                        <div class="timeline__content">
+                            <p class="timeline__text typo-body">
+                                Organisation d’un événement-test réunissant danseurs,
+                                techniciens lumière et pilotes de drones.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="timeline__item">
+                        <div class="timeline__year typo-h3">2026</div>
+                        <div class="timeline__content">
+                            <p class="timeline__text typo-body">
+                                Lancement de la première édition officielle au Parc du Près-la-Rose,
+                                avec ateliers, performances et shows lumineux.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="timeline__item">
+                        <div class="timeline__year typo-h3">2027</div>
+                        <div class="timeline__content">
+                            <p class="timeline__text typo-body">
+                                Développement de nouvelles scènes et collaborations artistiques
+                                mêlant rythme, lumière et innovation.
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ===== CALL TO ACTION VERS PROGRAMME ===== -->
+        <section class="section section--cta-programme" aria-labelledby="cta-programme-title">
+            <div class="wrapper section__inner section__inner--center">
+                <div class="section__motif" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
+                </div>
+
+                <h2 class="section__title section__title--center typo-h2-upper" id="cta-programme-title">
+                    PRÊT À DÉCOUVRIR CE QUI VOUS ATTEND ?
+                </h2>
+
+                <a href="programme.html" class="btn btn--primary section__cta typo-btn">
+                    Voir le programme
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER (nouvelle version, cohérente avec la home) ============ -->
+    <footer class="footer footer--festival" id="contact">
+        <!-- L’image de fond sera ajoutée en CSS sur .footer--festival -->
+
+        <div class="footer__inner">
+
+            <p class="footer__text">
+                Entre ciel et terre,<br>
+                <span class="u-highlight">vivez l’expérience Flying Tap Fest.</span>
+            </p>
+
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="index.html" class="footer__link">Accueil</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="festival.html" class="footer__link">Le festival</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="programme.html" class="footer__link">Programme</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="artistes.html" class="footer__link">Artistes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="scenes.html" class="footer__link">Scènes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="infos-pratiques.html" class="footer__link">Infos pratiques</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__list footer__list--social">
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="#">Instagram</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="#">Facebook</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <address class="footer__infos">
+                <p>
+                    <a class="footer__mail" href="mailto:contact@flyingtapfest.fr">
+                        contact@flyingtapfest.fr
+                    </a>
+                </p>
+                <p class="footer__address">
+                    Montbéliard, France<br>
+                    Site du Flying Tap Fest
+                </p>
+                <p class="footer__copy">
+                    © 2026 Flying Tap Fest
+                </p>
+            </address>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
