@@ -1,67 +1,48 @@
-/* =========================================
-   SECTION — DATES DU FESTIVAL
-   ========================================= */
-
-.section--dates {
-    /* On tire la section vers le bas pour qu’elle rentre
-       dans les vagues blanches sous le hero */
-    margin-top: 2.2rem;
-    /* AJUSTE CETTE VALEUR selon rendu */
-    padding-top: 2.4rem;
-    /* espace interne autour des dates */
-    padding-bottom: 1.8rem;
-
+.festival-dates {
     background-color: var(--secondaire);
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    text-align: center;
 }
 
-/* Conteneur interne (wrapper déjà présent dans le HTML) */
 /* Conteneur interne */
 .festival-dates__inner {
-    display: flex;
-    justify-content: center;
-    /* on centre tout le groupe */
-    align-items: flex-start;
-    column-gap: 5rem;
-    /* espace ENTRE 6 / 7 / JUIN / 2026 */
-}
-
-/* Élément individuel */
-.festival-dates__item {
-    flex: 0 0 auto;
-    /* largeur = contenu, pas étiré */
     position: relative;
-    text-align: center;
-    padding-top: 1.25rem;
-    /* ne joue que sur la verticale */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    /* espace entre les deux lignes */
 }
 
-/* Petit point jaune au-dessus */
-.festival-dates__item::before {
-    content: "";
+/* Rond jaune */
+.festival-dates__dot {
     position: absolute;
-    top: 0;
+    top: -1.6rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
+    width: 18px;
+    height: 18px;
     background-color: var(--jaune-forme);
+    border-radius: 50%;
 }
 
-/* Texte */
-.festival-dates__text {
-    font-size: 0.95rem;
+/* Première ligne : 6 au 7 */
+.festival-dates__line1 {
+    font-size: 2.6rem;
+    /* Ajuste si besoin */
     font-weight: 800;
     color: var(--text-color);
+    line-height: 1.1;
+    letter-spacing: 0.05em;
 }
 
-/* "Juin" */
-.festival-dates__item--month .festival-dates__text {
+/* Deuxième ligne : JUIN 2026 */
+.festival-dates__line2 {
+    font-size: 2.6rem;
+    /* Ajuste selon maquette */
+    font-weight: 800;
+    color: var(--text-color);
     text-transform: uppercase;
-    font-weight: 800;
-}
-
-/* "2026" */
-.festival-dates__item--year .festival-dates__text {
-    font-weight: 800;
+    letter-spacing: 0.06em;
 }
