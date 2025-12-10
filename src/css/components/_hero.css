@@ -1,0 +1,166 @@
+/* ================== HERO FESTIVAL ================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    padding-top: 6rem;
+    /* place pour le header */
+    padding-bottom: 4.5rem;
+    /* place pour les dates + vague */
+    text-align: center;
+}
+
+/* Fond dégradé comme sur la maquette */
+.hero--festival {
+    background: linear-gradient(180deg,
+            var(--gradient-hero) 0%,
+            var(--principal) 100%);
+    color: var(--text-button);
+}
+
+.hero__inner {
+    position: relative;
+}
+
+/* ================== LOGO ================== */
+
+.hero__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+
+.hero__logo-img {
+    width: 110px;
+    /* logo plus gros pour le hero */
+    height: auto;
+}
+
+/* ================== TITRE ================== */
+
+.hero__title {
+    margin: 0 auto;
+    max-width: 18rem;
+    text-align: center;
+    font-weight: 800;
+    line-height: 1.15;
+    /* si la classe typo-header ne suffit pas, on force un peu la taille */
+    font-size: var(--font2xl, 1.75rem);
+}
+
+.hero__title-line {
+    display: block;
+}
+
+.hero__highlight {
+    color: var(--texte-yellow);
+}
+
+/* ================== CTA ================== */
+
+.hero__cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1.6rem;
+    margin-inline: auto;
+
+    padding: 0.7rem 2.3rem;
+    background-color: var(--secondaire);
+    color: var(--principal);
+
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+
+    border-radius: 999px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* ================== MINI-DRONES ================== */
+
+.hero__motifs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* on les place tous AU-DESSUS du bloc logo+texte,
+   de façon un peu organique (pas alignés) */
+.hero__motif {
+    position: absolute;
+    width: 22px;
+    height: auto;
+    opacity: 0.85;
+}
+
+/* Drone haut gauche */
+.hero__motif:nth-child(1) {
+    top: 14%;
+    left: 15%;
+}
+
+/* Drone haut centre-droite */
+.hero__motif:nth-child(2) {
+    top: 10%;
+    right: 20%;
+}
+
+/* Drone un peu plus bas, vers la droite */
+.hero__motif:nth-child(3) {
+    top: 22%;
+    right: 8%;
+}
+
+/* ================== DATES (base) ================== */
+
+.hero-dates {
+    position: relative;
+    margin-top: 2.3rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    max-width: 14rem;
+    margin-inline: auto;
+    z-index: 2;
+    /* au-dessus de la vague */
+}
+
+.hero-dates__item {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 999px;
+    background-color: var(--secondaire);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.hero-dates__item--month,
+.hero-dates__item--year {
+    background-color: var(--text-button);
+    color: var(--principal);
+}
+
+.hero-dates__day,
+.hero-dates__label {
+    margin: 0;
+}
+
+/* ================== VAGUE ================== */
+
+.hero__wave {
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: -1px;
+    height: 4.5rem;
+    /* adapte l’URL au nom réel de ton SVG de vague */
+    background:
+        url('../../assets/img/hero-wave.svg') bottom center / cover no-repeat,
+        var(--secondaire);
+}
