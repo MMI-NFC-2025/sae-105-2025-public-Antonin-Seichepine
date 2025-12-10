@@ -1,0 +1,94 @@
+.artists-tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.4rem;
+    padding: 1.8rem 1.25rem 0.8rem;
+}
+
+.artists-tabs__tab {
+    background: none;
+    border: none;
+    font-size: var(--fontlg);
+    font-weight: 800;
+    color: var(--principal);
+    cursor: pointer;
+    padding: 0;
+}
+
+.artists-tabs__tab[aria-selected="true"] {
+    border-bottom: 3px solid var(--principal);
+    padding-bottom: 0.2rem;
+}
+
+/* ---------------- LISTE DES ARTISTES ---------------- */
+
+.artists-day {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+    padding: 0 1.25rem 3rem;
+}
+
+/* ---------------- CARDS ---------------- */
+
+.artist-card {
+    width: 100%;
+}
+
+.artist-card__figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.artist-card__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+}
+
+/* ----- CAPTION ----- */
+
+.artist-card__caption {
+    text-align: center;
+    margin-top: 0.75rem;
+}
+
+.artist-card__time {
+    font-size: var(--fontbase);
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 0.15rem;
+    text-align: center;
+}
+
+.artist-card__name {
+    font-size: var(--fontlg);
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.4rem;
+}
+
+/* Bouton "En savoir plus" style ruban comme dans Programme */
+
+.artist-card__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--secondaire);
+    color: var(--principal);
+    padding: 0.45rem 1.6rem;
+
+    border-radius: 6px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: var(--fontsm);
+
+    margin-top: 0.45rem;
+}

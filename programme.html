@@ -15,6 +15,8 @@
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/menu.js" defer></script>
+
 
     <!-- Favicons -->
     <link rel="icon" href="assets/favicons/favicon.svg">
@@ -102,13 +104,12 @@
             </div>
 
             <div class="wrapper hero__inner hero__inner--subpage">
-                <h1 class="hero__subtitle typo-h2-upper" id="programme-title">
+                <h1 class="hero__subtitle typo-h2" id="programme-title">
                     Programme
                 </h1>
 
-                <!-- Motif 4 pétales sous le titre -->
-                <div class="hero__motif hero__motif--programme" aria-hidden="true">
-                    <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
+                <div class="section__motif" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
                 </div>
 
                 <p class="hero__intro typo-body">
@@ -322,13 +323,25 @@
                 </section>
 
                 <!-- Motif bas de section (gros 4 pétales) -->
-                <div class="programme__bottom-motif" aria-hidden="true">
-                    <img src="assets/icons/formeorange.svg" alt="" class="programme__bottom-motif-img">
-                </div>
+
 
             </div>
         </section>
+        <section class="section section--cta-programme" aria-labelledby="cta-programme-title">
+            <div class="wrapper section__inner section__inner--center">
+                <div class="section__motif" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
+                </div>
 
+                <h2 class="section__title section__title--center typo-h2-upper" id="cta-programme-title">
+                    Le programme complet ici !
+                </h2>
+
+                <a href="programme.html" class="btn btn--primary section__cta typo-btn">
+                    Télécharger maintenant
+                </a>
+            </div>
+        </section>
     </main>
 
     <!-- ============ FOOTER (version unifiée) ============ -->
