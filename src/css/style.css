@@ -1,15 +1,11 @@
-@import url("./vendors/normalize.css");
-@import url("./utils/variables.css");
+/* ========== VARIABLES ========== */
+@import url('./utils/variables.css');
 
-@import url("./base/base.css");
-@import url("./base/typography.css");
+/* ========== NORMALIZE ========== */
+@import url('./vendors/normalize.css');
 
-@import url("./layout/layout.css");
-@import url("./layout/header.css");
-@import url("./layout/footer.css");
+/* ========== BASE ========== */
+@import url('./base/_global.css');
 
-@import url("./components/menu.css");
-@import url("./components/hero-home.css");
-@import url("./components/home-sections.css");
-
-@import url("./pages/page-home.css");
+/* ========== COMPONENTS ========== */
+@import url('./components/_header.css');

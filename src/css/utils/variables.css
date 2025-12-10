@@ -1,0 +1,27 @@
+/* Colors */
+:root {
+    /* Mode 1 */
+    /* color */
+    --gradient-hero: #e24b2c;
+    --jaune-forme: #f79d09;
+    --principal: #e25d40;
+    --secondaire: #e3ddd3;
+    --text-color: #1b2e4b;
+    --text-button: #f7f7f7;
+    --texte-yellow: #f7c668;
+}
+
+/* Typography */
+:root {
+    /* Mode 1 */
+    /* number */
+    --fontsm: 0.9375rem;
+    --fontbase: 1rem;
+    --fontmd: 1.25rem;
+    --fontlg: 1.375rem;
+    --fontxl: 1.5rem;
+    --font2xl: 1.75rem;
+    --font3xl: 2rem;
+    --font4xl: 3rem;
+    --header: 4rem;
+}
