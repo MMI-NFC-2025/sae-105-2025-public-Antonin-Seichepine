@@ -16,6 +16,9 @@
     <!-- CSS principal -->
     <link rel="stylesheet" href="src/css/style.css">
 
+    <!-- JS menu -->
+    <script src="src/js/menu.js" defer></script>
+
     <!-- Favicons -->
     <link rel="icon" href="assets/favicons/favicon.svg">
     <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
@@ -24,7 +27,7 @@
 
 <body class="page page--festival page--artists" id="top">
 
-    <!-- ============ HEADER (cohérent avec les autres pages) ============ -->
+    <!-- ============ HEADER ============ -->
     <header class="header header--festival">
         <div class="wrapper header__inner">
 
@@ -33,7 +36,7 @@
                 <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
             </a>
 
-            <!-- Menu burger (identique à la home) -->
+            <!-- Menu burger -->
             <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
                 aria-controls="site-menu" aria-expanded="false">
                 <span class="menu-btn__bar menu-btn__bar--top"></span>
@@ -95,9 +98,7 @@
 
         <!-- HERO ARTISTES -->
         <section class="hero hero--subpage hero--artists" aria-labelledby="artists-title">
-            <div class="hero__background" aria-hidden="true">
-                <!-- fond orange + scallops haut gérés en CSS -->
-            </div>
+            <div class="hero__background" aria-hidden="true"></div>
 
             <div class="wrapper hero__inner hero__inner--subpage">
                 <h1 class="hero__subtitle typo-h2" id="artists-title">
@@ -113,18 +114,18 @@
                 </p>
             </div>
 
-            <!-- Vague blanche qui sépare orange / fond beige -->
+            <!-- Vague blanche en bas -->
             <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
         </section>
 
         <!-- TABS (6 JUIN / 7 JUIN) -->
         <nav class="artists-tabs" aria-label="Jours du festival">
-            <button class="artists-tabs__tab typo-h3" aria-selected="true">
-                6 juin
-            </button>
-            <button class="artists-tabs__tab typo-h3">
-                7 juin
-            </button>
+            <a href="artistes.html" class="artists-tabs__tab typo-h3" aria-selected="true">
+                6 JUIN
+            </a>
+            <a href="artistes-7juin.html" class="artists-tabs__tab typo-h3" aria-selected="false">
+                7 JUIN
+            </a>
         </nav>
 
         <!-- JOUR 6 JUIN -->
@@ -134,6 +135,8 @@
             <article class="artist-card">
                 <figure class="artist-card__figure">
                     <img src="assets/img/artiste1.webp" alt="Clara “Moonstep” Devaux" class="artist-card__image">
+
+                    <!-- Texte en haut -->
                     <figcaption class="artist-card__caption">
                         <p class="artist-card__time typo-card-desc">
                             14h00 – Grande scène
@@ -141,10 +144,12 @@
                         <h3 class="artist-card__name typo-card-title">
                             Clara “Moonstep” Devaux
                         </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
                     </figcaption>
+
+                    <!-- Bouton en bas -->
+                    <a href="#" class="artist-card__link typo-btn">
+                        EN SAVOIR PLUS
+                    </a>
                 </figure>
             </article>
 
@@ -152,6 +157,7 @@
             <article class="artist-card">
                 <figure class="artist-card__figure">
                     <img src="assets/img/artiste2.webp" alt="Duo LumenBeat" class="artist-card__image">
+
                     <figcaption class="artist-card__caption">
                         <p class="artist-card__time typo-card-desc">
                             16h00 – Scène Ciel
@@ -159,10 +165,11 @@
                         <h3 class="artist-card__name typo-card-title">
                             Duo LumenBeat
                         </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
                     </figcaption>
+
+                    <a href="#" class="artist-card__link typo-btn">
+                        EN SAVOIR PLUS
+                    </a>
                 </figure>
             </article>
 
@@ -170,6 +177,7 @@
             <article class="artist-card">
                 <figure class="artist-card__figure">
                     <img src="assets/img/artiste3.webp" alt="StepNova Crew" class="artist-card__image">
+
                     <figcaption class="artist-card__caption">
                         <p class="artist-card__time typo-card-desc">
                             21h00 – Scène Lumière
@@ -177,10 +185,11 @@
                         <h3 class="artist-card__name typo-card-title">
                             StepNova Crew
                         </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
                     </figcaption>
+
+                    <a href="#" class="artist-card__link typo-btn">
+                        EN SAVOIR PLUS
+                    </a>
                 </figure>
             </article>
 
@@ -194,22 +203,21 @@
                 </div>
 
                 <h2 class="section__title section__title--center typo-h2-upper" id="cta-programme-title">
-                    Tout ce qu'il faut savoir pour venir
+                    TOUT CE QU’IL FAUT SAVOIR POUR VENIR.
                 </h2>
 
-                <a href="programme.html" class="btn btn--primary section__cta typo-btn">
-                    c'est par ici
+                <a href="infos-pratiques.html" class="btn btn--primary section__cta typo-btn">
+                    VOIR LES INFOS
                 </a>
             </div>
         </section>
 
     </main>
 
-    <!-- ============ FOOTER GLOBAL (version unifiée) ============ -->
+    <!-- ============ FOOTER GLOBAL ============ -->
     <footer class="footer footer--festival" id="footer">
         <div class="footer__inner">
 
-            <!-- Petites formes décoratives au-dessus du footer -->
             <div class="footer__motifs" aria-hidden="true">
                 <span class="footer__motif"></span>
                 <span class="footer__motif"></span>
@@ -231,10 +239,10 @@
                     <li><a class="footer__link" href="infos-pratiques.html">Infos pratiques</a></li>
                     <li><a class="footer__link" href="contact.html">Contact</a></li>
                 </ul>
+
                 <div class="footer__logo">
                     <img src="assets/icons/formebeige.svg" alt="Flying Tap Fest" class="footer__logo-img">
                 </div>
-
 
                 <ul class="footer__list footer__list--social">
                     <li><a class="footer__link footer__link--silent" href="#">Instagram</a></li>

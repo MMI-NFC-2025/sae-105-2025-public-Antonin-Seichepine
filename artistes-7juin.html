@@ -16,6 +16,9 @@
     <!-- CSS principal -->
     <link rel="stylesheet" href="src/css/style.css">
 
+    <!-- JS menu -->
+    <script src="src/js/menu.js" defer></script>
+
     <!-- Favicons -->
     <link rel="icon" href="assets/favicons/favicon.svg">
     <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
@@ -24,16 +27,14 @@
 
 <body class="page page--festival page--artists" id="top">
 
-    <!-- ============ HEADER (cohérent avec les autres pages) ============ -->
+    <!-- ============ HEADER ============ -->
     <header class="header header--festival">
         <div class="wrapper header__inner">
 
-            <!-- Logo dans le header sur les sous-pages -->
             <a class="header__logo-link" href="index.html">
                 <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
             </a>
 
-            <!-- Menu burger (identique à la home) -->
             <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
                 aria-controls="site-menu" aria-expanded="false">
                 <span class="menu-btn__bar menu-btn__bar--top"></span>
@@ -43,7 +44,7 @@
         </div>
     </header>
 
-    <!-- ============== MENU MOBILE GLOBAL ============== -->
+    <!-- ============ MENU MOBILE ============ -->
     <nav class="site-menu menu" id="site-menu" aria-hidden="true" hidden>
         <div class="site-menu__overlay"></div>
 
@@ -53,9 +54,7 @@
                     <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
                 </a>
 
-                <button class="site-menu__close" type="button" aria-label="Fermer le menu">
-                    ✕
-                </button>
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">✕</button>
             </div>
 
             <p class="site-menu__intro typo-body">
@@ -63,27 +62,13 @@
             </p>
 
             <ul class="site-menu__list">
-                <li class="site-menu__item">
-                    <a href="index.html" class="site-menu__link">Accueil</a>
-                </li>
-                <li class="site-menu__item">
-                    <a href="festival.html" class="site-menu__link">Le festival</a>
-                </li>
-                <li class="site-menu__item">
-                    <a href="programme.html" class="site-menu__link">Programme</a>
-                </li>
-                <li class="site-menu__item">
-                    <a href="artistes.html" class="site-menu__link">Artistes</a>
-                </li>
-                <li class="site-menu__item">
-                    <a href="scenes.html" class="site-menu__link">Scènes</a>
-                </li>
-                <li class="site-menu__item">
-                    <a href="infos-pratiques.html" class="site-menu__link">Infos pratiques</a>
-                </li>
-                <li class="site-menu__item">
-                    <a href="contact.html" class="site-menu__link">Contact</a>
-                </li>
+                <li><a href="index.html" class="site-menu__link">Accueil</a></li>
+                <li><a href="festival.html" class="site-menu__link">Le festival</a></li>
+                <li><a href="programme.html" class="site-menu__link">Programme</a></li>
+                <li><a href="artistes.html" class="site-menu__link">Artistes</a></li>
+                <li><a href="scenes.html" class="site-menu__link">Scènes</a></li>
+                <li><a href="infos-pratiques.html" class="site-menu__link">Infos pratiques</a></li>
+                <li><a href="contact.html" class="site-menu__link">Contact</a></li>
             </ul>
 
             <p class="site-menu__baseline typo-footer-text">
@@ -95,19 +80,17 @@
     <!-- ============ MAIN ============ -->
     <main class="main main--festival main--artists">
 
-        <!-- HERO ARTISTES -->
+        <!-- HERO -->
         <section class="hero hero--subpage hero--artists" aria-labelledby="artists-title">
-            <div class="hero__background" aria-hidden="true">
-                <!-- fond orange + scallops haut en CSS -->
-            </div>
+            <div class="hero__background" aria-hidden="true"></div>
 
             <div class="wrapper hero__inner hero__inner--subpage">
-                <h1 class="hero__subtitle typo-h2-upper" id="artists-title">
+                <h1 class="hero__subtitle typo-h2" id="artists-title">
                     Artistes
                 </h1>
 
-                <div class="hero__motif hero__motif--artists" aria-hidden="true">
-                    <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
+                <div class="section__motif" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
                 </div>
 
                 <p class="hero__intro typo-body">
@@ -115,107 +98,97 @@
                 </p>
             </div>
 
-            <!-- vague blanche bas -->
             <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
         </section>
 
         <!-- TABS -->
         <nav class="artists-tabs" aria-label="Jours du festival">
-            <button class="artists-tabs__tab typo-h3">
-                6 juin
-            </button>
-            <button class="artists-tabs__tab typo-h3" aria-selected="true">
-                7 juin
-            </button>
+            <a href="artistes.html" class="artists-tabs__tab typo-h3" aria-selected="false">
+                6 JUIN
+            </a>
+            <a href="artistes-7juin.html" class="artists-tabs__tab typo-h3" aria-selected="true">
+                7 JUIN
+            </a>
         </nav>
 
-        <!-- SECTION ARTISTES 7 JUIN -->
+        <!-- ============ SECTION ARTISTES 7 JUIN ============ -->
         <section class="artists-day" aria-label="Artistes du 7 juin">
 
-            <!-- Elias Turner “SkyTap” -->
+            <!-- ARTISTE 1 -->
             <article class="artist-card">
                 <figure class="artist-card__figure">
-                    <img src="assets/img/artiste4.webp" alt="Elias Turner “SkyTap”" class="artist-card__image">
+
+                    <img src="assets/img/artiste4.webp" alt="Elias Turner SkyTap" class="artist-card__image">
+
+                    <!-- Texte en haut -->
                     <figcaption class="artist-card__caption">
-                        <p class="artist-card__time typo-card-desc">
-                            14h00 – Scène atelier
-                        </p>
-                        <h3 class="artist-card__name typo-card-title">
-                            Elias Turner “SkyTap”
-                        </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
+                        <p class="artist-card__time typo-card-desc">14h00 – Scène atelier</p>
+                        <h3 class="artist-card__name typo-card-title">Elias Turner “SkyTap”</h3>
                     </figcaption>
+
+                    <!-- Bouton en bas -->
+                    <a href="#" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
+
                 </figure>
             </article>
 
-            <!-- The Pulse Trio -->
+            <!-- ARTISTE 2 -->
             <article class="artist-card">
                 <figure class="artist-card__figure">
+
                     <img src="assets/img/artiste5.webp" alt="The Pulse Trio" class="artist-card__image">
+
                     <figcaption class="artist-card__caption">
-                        <p class="artist-card__time typo-card-desc">
-                            17h00 – Grande scène
-                        </p>
-                        <h3 class="artist-card__name typo-card-title">
-                            The Pulse Trio
-                        </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
+                        <p class="artist-card__time typo-card-desc">17h00 – Grande scène</p>
+                        <h3 class="artist-card__name typo-card-title">The Pulse Trio</h3>
                     </figcaption>
+
+                    <a href="#" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
+
                 </figure>
             </article>
 
-            <!-- Aurora Lights Company -->
+            <!-- ARTISTE 3 -->
             <article class="artist-card">
                 <figure class="artist-card__figure">
+
                     <img src="assets/img/artiste6.webp" alt="Aurora Lights Company" class="artist-card__image">
+
                     <figcaption class="artist-card__caption">
-                        <p class="artist-card__time typo-card-desc">
-                            21h00 – Scène Lumière
-                        </p>
-                        <h3 class="artist-card__name typo-card-title">
-                            Aurora Lights Company
-                        </h3>
-                        <a href="#" class="artist-card__link typo-btn">
-                            EN SAVOIR PLUS
-                        </a>
+                        <p class="artist-card__time typo-card-desc">21h00 – Scène Lumière</p>
+                        <h3 class="artist-card__name typo-card-title">Aurora Lights Company</h3>
                     </figcaption>
+
+                    <a href="#" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
+
                 </figure>
             </article>
 
         </section>
 
         <!-- CTA INFOS PRATIQUES -->
-        <section class="section section--cta-infos">
+        <section class="section section--cta-programme" aria-labelledby="cta-programme-title">
             <div class="wrapper section__inner section__inner--center">
                 <div class="section__motif" aria-hidden="true">
-                    <img src="assets/icons/formeorange.svg" alt="">
+                    <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
                 </div>
 
-                <h2 class="cta__title section__title section__title--center typo-h2">
-                    Tout ce qu’il faut savoir pour venir.
+                <h2 class="section__title section__title--center typo-h2-upper" id="cta-programme-title">
+                    TOUT CE QU’IL FAUT SAVOIR POUR VENIR.
                 </h2>
 
-                <a href="infos-pratiques.html" class="btn btn--primary cta__btn typo-btn">
-                    Voir les infos
+                <a href="infos-pratiques.html" class="btn btn--primary section__cta typo-btn">
+                    VOIR LES INFOS
                 </a>
-
-                <div class="section__scallop-bottom" aria-hidden="true">
-                    <!-- optionnel : image scallops bas -->
-                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ============ FOOTER GLOBAL (version unifiée) ============ -->
+    <!-- ============ FOOTER ============ -->
     <footer class="footer footer--festival" id="footer">
         <div class="footer__inner">
 
-            <!-- Petites formes décoratives au-dessus du footer -->
             <div class="footer__motifs" aria-hidden="true">
                 <span class="footer__motif"></span>
                 <span class="footer__motif"></span>
@@ -229,29 +202,29 @@
 
             <nav class="footer__nav" aria-label="Navigation du pied de page">
                 <ul class="footer__list footer__list--pages">
-                    <li><a class="footer__link" href="index.html">Accueil</a></li>
-                    <li><a class="footer__link" href="festival.html">Le festival</a></li>
-                    <li><a class="footer__link" href="programme.html">Programme</a></li>
-                    <li><a class="footer__link" href="artistes.html">Artistes</a></li>
-                    <li><a class="footer__link" href="scenes.html">Scènes</a></li>
-                    <li><a class="footer__link" href="infos-pratiques.html">Infos pratiques</a></li>
-                    <li><a class="footer__link" href="contact.html">Contact</a></li>
+                    <li><a href="index.html" class="footer__link">Accueil</a></li>
+                    <li><a href="festival.html" class="footer__link">Le festival</a></li>
+                    <li><a href="programme.html" class="footer__link">Programme</a></li>
+                    <li><a href="artistes.html" class="footer__link">Artistes</a></li>
+                    <li><a href="scenes.html" class="footer__link">Scènes</a></li>
+                    <li><a href="infos-pratiques.html" class="footer__link">Infos pratiques</a></li>
+                    <li><a href="contact.html" class="footer__link">Contact</a></li>
                 </ul>
+
                 <div class="footer__logo">
                     <img src="assets/icons/formebeige.svg" alt="Flying Tap Fest" class="footer__logo-img">
                 </div>
 
-
                 <ul class="footer__list footer__list--social">
-                    <li><a class="footer__link footer__link--silent" href="#">Instagram</a></li>
-                    <li><a class="footer__link footer__link--silent" href="#">Facebook</a></li>
-                    <li><a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
+                    <li><a href="#" class="footer__link footer__link--silent">Instagram</a></li>
+                    <li><a href="#" class="footer__link footer__link--silent">Facebook</a></li>
+                    <li><a href="mailto:contact@flyingtapfest.fr" class="footer__link footer__link--silent">Email</a>
                     </li>
                 </ul>
             </nav>
 
             <address class="footer__infos">
-                <p><a class="footer__mail" href="mailto:contact@flyingtapfest.fr">contact@flyingtapfest.fr</a></p>
+                <p><a href="mailto:contact@flyingtapfest.fr" class="footer__mail">contact@flyingtapfest.fr</a></p>
                 <p class="footer__address">
                     Montbéliard, France<br>
                     Site du Flying Tap Fest

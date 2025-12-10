@@ -1,0 +1,194 @@
+/* =========================================
+   PAGE CONTACT – Flying Tap Fest
+   ========================================= */
+
+.page--festival.page--contact .main--contact {
+    background-color: var(--secondaire);
+}
+
+/* ---------- HERO CONTACT ---------- */
+
+.hero--contact .hero__inner--subpage {
+    padding-bottom: 2.4rem;
+}
+
+.hero--contact .hero__subtitle {
+    text-transform: lowercase;
+}
+
+.hero--contact .hero__motif-img {
+    width: 90px;
+    height: auto;
+}
+
+.hero--contact .hero__intro {
+    margin-top: 1.4rem;
+    max-width: 18rem;
+}
+
+/* =========================================
+   FORMULAIRE DE CONTACT
+   ========================================= */
+
+.section--contact-form {
+    padding: 2.4rem 0 2.6rem;
+}
+
+.form--contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1.4rem;
+}
+
+.form__label {
+    font-size: var(--fontsm);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--principal);
+}
+
+/* Champs (rubans oranges) */
+.form__input,
+.form__textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.85rem 1.1rem;
+    font-family: inherit;
+    font-size: var(--fontbase);
+    color: var(--text-button);
+    background-color: var(--principal);
+
+    /* forme ruban */
+    clip-path: polygon(0 50%, 3% 0, 97% 0, 100% 50%, 97% 100%, 3% 100%);
+    border-radius: 4px;
+}
+
+.form__textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: rgba(247, 247, 247, 0.8);
+}
+
+/* Bouton ENVOYER – même logique ruban */
+.form--contact .btn--primary {
+    align-self: center;
+    margin-top: 0.4rem;
+
+    padding: 0.7rem 3rem;
+    background: var(--principal);
+    color: var(--text-button);
+    border: none;
+
+    clip-path: polygon(0 50%, 6% 0, 94% 0, 100% 50%, 94% 100%, 6% 100%);
+    border-radius: 4px;
+}
+
+/* petit hover discret */
+.form--contact .btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+    transition: all 0.2s ease;
+}
+
+/* =========================================
+   INFORMATIONS DE CONTACT
+   ========================================= */
+
+.section--contact-infos {
+    padding: 2.4rem 0 1.8rem;
+    text-align: center;
+}
+
+.section--contact-infos .section__subtitle {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--principal);
+    margin-bottom: 1.6rem;
+}
+
+.contact-infos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+.contact-infos__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.contact-infos__icon img {
+    width: 26px;
+    height: auto;
+}
+
+.contact-infos__text {
+    font-size: var(--fontbase);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* =========================================
+   MOTIF CENTRAL
+   ========================================= */
+
+.section--contact-motif {
+    padding: 2.6rem 0 2.2rem;
+    text-align: center;
+}
+
+.motif--section img {
+    width: 90px;
+    height: auto;
+}
+
+/* =========================================
+   RÉSEAUX SOCIAUX
+   ========================================= */
+
+.section--contact-social {
+    padding: 0 0 3rem;
+    text-align: center;
+}
+
+.section--contact-social .section__subtitle {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--principal);
+    margin-bottom: 1.8rem;
+}
+
+.contact-social__icons {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    margin-bottom: 1.3rem;
+}
+
+.contact-social__link img {
+    width: 40px;
+    height: auto;
+}
+
+.contact-social__text {
+    font-size: var(--fontbase);
+    color: var(--text-color);
+}
