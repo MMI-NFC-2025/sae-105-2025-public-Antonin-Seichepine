@@ -3,11 +3,11 @@
 
 À compléter :
 
-- NOM :
-- PRÉNOM :
-- GROUPE :
+- NOM : SEICHEPINE
+- PRÉNOM : Antonin
+- GROUPE : B1
 - URL du site :
-- URL FIGMA :
+- URL FIGMA : https://www.figma.com/design/2reeloNfUYeRF83nFE63Lb/SAE105?node-id=54-1816&m=dev
 
 ## Sujet
 
