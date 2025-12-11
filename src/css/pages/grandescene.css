@@ -1,74 +1,127 @@
 /* =========================================
-   PAGE SCÈNE DÉTAIL – Flying Tap Fest
-   (Grande scène)
-========================================= */
+   PAGES ARTISTES & SCÈNES – Flying Tap Fest
+   ========================================= */
 
+/* Fond global */
+.page--festival.page--artists .main--artists,
 .page--festival.page--scene-detail .main--scene-detail {
     background-color: var(--secondaire);
 }
 
-/* ---------- HERO "GRANDE SCÈNE" ---------- */
 
-.hero--subpage.hero--scene-detail {
+/* =========================================
+   2. CARDS ARTISTES (STYLE GLOBAL)
+   ========================================= */
+
+.artist-card {
+    /* même espace entre toutes les cards (Artistes + Scènes) */
+    margin-bottom: 2.4rem;
+}
+
+.artist-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Bloc image + contenu */
+.artist-card__figure {
     position: relative;
-    padding-top: 6.5rem;
-    /* place pour header + léger espace */
-    padding-bottom: 2rem;
-    /* hero assez compact comme sur la maquette */
-    text-align: center;
-    background-color: var(--principal);
-    color: var(--text-button);
+    border-radius: 18px;
     overflow: hidden;
+    margin: 0;
 }
 
-/* bloc interne */
-.hero--scene-detail .hero__inner--subpage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-/* "Grande scène" */
-.hero--scene-detail .hero__subtitle {
-    font-size: var(--fontlg);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-
-/* motif sous le titre */
-.hero__motif--scene .hero__motif-img {
-    width: 70px;
+/* Image */
+.artist-card__image {
+    width: 100%;
     display: block;
 }
 
-/* vague blanche qui rejoint le beige du contenu */
-.hero--scene-detail .hero__wave.hero__wave--bottom {
+/* Dégradé sombre en haut de l’image */
+.artist-card__figure::after {
+    content: "";
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -20px;
-    height: 40px;
-    background:
-        radial-gradient(circle at 0 0,
-            transparent 20px,
-            var(--secondaire) 20px) 0 0 / 40px 40px repeat-x;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.55) 0%,
+            rgba(0, 0, 0, 0.25) 30%,
+            rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
 }
 
-/* ---------- VISUEL + TEXTE DE LA SCÈNE ---------- */
+/* Texte (heure + nom) en haut de la card */
+.artist-card__caption {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    color: var(--text-button);
+    z-index: 2;
+}
+
+.artist-card__time {
+    font-size: var(--fontbase);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.artist-card__name {
+    font-size: var(--fontlg);
+    font-weight: 800;
+}
+
+/* Bouton ruban en bas de la card */
+.artist-card__link {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.55rem 1.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+
+    background: var(--secondaire);
+    color: var(--principal);
+
+    font-size: var(--fontsm);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    z-index: 3;
+
+    /* UNIFORMISATION & RESPONSIVE */
+    max-width: 150px;
+    /* même largeur partout */
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* =========================================
+   3. PAGES SCÈNES DÉTAIL (mise en page)
+   ========================================= */
+
+
+}
+
+/* ----- Bloc visuel + texte ----- */
 
 .scene-hero {
     padding: 2.3rem 1.25rem 2.4rem;
-    /* bloc assez proche du haut comme sur la maquette */
 }
 
 .scene-hero__inner {
     max-width: 360px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
 }
 
-/* image rectangulaire aux coins très arrondis */
 .scene-hero__image {
     margin: 0 0 1rem;
     border-radius: 20px;
@@ -81,14 +134,13 @@
     height: auto;
 }
 
-/* petit texte sous l’image */
 .scene-hero__text {
     font-size: var(--fontsm);
     line-height: 1.45;
     color: var(--text-color);
 }
 
-/* ---------- BLOC "LISTE DES ARTISTES" + CARDS ---------- */
+/* ----- Liste des artistes de la scène ----- */
 
 .scene-artists {
     padding: 0 1.25rem 3.4rem;
@@ -99,7 +151,6 @@
     margin: 0 auto;
 }
 
-/* Titre LISTE DES ARTISTES en orange, bien collé au premier card */
 .scene-artists__title {
     margin-bottom: 1.1rem;
     text-transform: uppercase;
@@ -108,18 +159,12 @@
     color: var(--principal);
 }
 
-/* Espacement entre chaque card pour coller au visuel */
-.artist-card {
-    margin-bottom: 2.4rem;
-}
+/* On laisse .artist-card gérer l’espacement entre cards */
 
-/* (les styles .artist-card__figure / image / bouton viennent de ta page Artistes) */
-
-/* ---------- BOUTON "RETOUR AUX SCÈNES" ---------- */
+/* ----- Bouton RETOUR AUX SCÈNES ----- */
 
 .scene-back {
     padding: 0 1.25rem 3.2rem;
-    /* gros bloc d’air comme sur la maquette */
 }
 
 .scene-back__inner {
@@ -134,26 +179,28 @@
     text-align: center;
 }
 
-/* ---------- MOTIF CENTRAL ---------- */
+/* ----- Motif central ----- */
 
 .page-decor {
-    padding: 0 1.25rem 3.1rem;
+    padding: 2.4rem 0;
+    /* plus d’espace comme sur la maquette */
 }
 
 .page-decor__inner {
-    max-width: 360px;
-    margin: 0 auto;
+    width: 100%;
+    /* plus de max-width qui écrase le motif */
     display: flex;
     justify-content: center;
 }
 
 .page-decor__img {
-    width: 90px;
+    width: 130px;
+    /* taille fidèle visuellement */
     height: auto;
     display: block;
 }
 
-/* ---------- CTA "TOUT CE QU’IL FAUT SAVOIR..." ---------- */
+/* ----- CTA "VOIR LES INFOS" ----- */
 
 .scene-infos-cta {
     padding: 0 1.25rem 3.8rem;
@@ -165,7 +212,6 @@
     text-align: center;
 }
 
-/* texte orange au-dessus du bouton */
 .scene-infos-cta__text {
     margin-bottom: 1.2rem;
     text-transform: uppercase;
@@ -175,7 +221,6 @@
     font-size: var(--fontsm);
 }
 
-/* bouton ruban orange centré */
 .scene-infos-cta__button {
     display: inline-flex;
     align-items: center;
