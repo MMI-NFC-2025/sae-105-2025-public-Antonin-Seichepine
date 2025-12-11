@@ -1,0 +1,184 @@
+/* =========================================
+   PAGE SCÈNE DÉTAIL – Flying Tap Fest
+   (Grande scène)
+========================================= */
+
+.page--festival.page--scene-detail .main--scene-detail {
+    background-color: var(--secondaire);
+}
+
+/* ---------- HERO "GRANDE SCÈNE" ---------- */
+
+.hero--subpage.hero--scene-detail {
+    position: relative;
+    padding-top: 6.5rem;
+    /* place pour header + léger espace */
+    padding-bottom: 2rem;
+    /* hero assez compact comme sur la maquette */
+    text-align: center;
+    background-color: var(--principal);
+    color: var(--text-button);
+    overflow: hidden;
+}
+
+/* bloc interne */
+.hero--scene-detail .hero__inner--subpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* "Grande scène" */
+.hero--scene-detail .hero__subtitle {
+    font-size: var(--fontlg);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* motif sous le titre */
+.hero__motif--scene .hero__motif-img {
+    width: 70px;
+    display: block;
+}
+
+/* vague blanche qui rejoint le beige du contenu */
+.hero--scene-detail .hero__wave.hero__wave--bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    height: 40px;
+    background:
+        radial-gradient(circle at 0 0,
+            transparent 20px,
+            var(--secondaire) 20px) 0 0 / 40px 40px repeat-x;
+}
+
+/* ---------- VISUEL + TEXTE DE LA SCÈNE ---------- */
+
+.scene-hero {
+    padding: 2.3rem 1.25rem 2.4rem;
+    /* bloc assez proche du haut comme sur la maquette */
+}
+
+.scene-hero__inner {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+/* image rectangulaire aux coins très arrondis */
+.scene-hero__image {
+    margin: 0 0 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.scene-hero__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* petit texte sous l’image */
+.scene-hero__text {
+    font-size: var(--fontsm);
+    line-height: 1.45;
+    color: var(--text-color);
+}
+
+/* ---------- BLOC "LISTE DES ARTISTES" + CARDS ---------- */
+
+.scene-artists {
+    padding: 0 1.25rem 3.4rem;
+}
+
+.scene-artists__inner {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+/* Titre LISTE DES ARTISTES en orange, bien collé au premier card */
+.scene-artists__title {
+    margin-bottom: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--principal);
+}
+
+/* Espacement entre chaque card pour coller au visuel */
+.artist-card {
+    margin-bottom: 2.4rem;
+}
+
+/* (les styles .artist-card__figure / image / bouton viennent de ta page Artistes) */
+
+/* ---------- BOUTON "RETOUR AUX SCÈNES" ---------- */
+
+.scene-back {
+    padding: 0 1.25rem 3.2rem;
+    /* gros bloc d’air comme sur la maquette */
+}
+
+.scene-back__inner {
+    max-width: 360px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.scene-back__button {
+    width: 100%;
+    text-align: center;
+}
+
+/* ---------- MOTIF CENTRAL ---------- */
+
+.page-decor {
+    padding: 0 1.25rem 3.1rem;
+}
+
+.page-decor__inner {
+    max-width: 360px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.page-decor__img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+/* ---------- CTA "TOUT CE QU’IL FAUT SAVOIR..." ---------- */
+
+.scene-infos-cta {
+    padding: 0 1.25rem 3.8rem;
+}
+
+.scene-infos-cta__inner {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* texte orange au-dessus du bouton */
+.scene-infos-cta__text {
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--principal);
+    font-size: var(--fontsm);
+}
+
+/* bouton ruban orange centré */
+.scene-infos-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+}

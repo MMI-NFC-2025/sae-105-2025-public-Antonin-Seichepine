@@ -40,3 +40,44 @@ if (menuBtn && siteMenu) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Sélecteurs des éléments interactifs
+    const interactiveElements = document.querySelectorAll(`
+        button,
+        .btn,
+        .infos-card,
+        .faq-item__button,
+        .header__menu-btn,
+        .site-menu__close
+    `);
+
+    interactiveElements.forEach(el => {
+        // Valeur du grow
+        const scaleUp = 1.03;
+        const scaleDown = 1;
+
+        // On prépare la transition directement en JS
+        el.style.transition = "transform 0.15s ease";
+
+        // GROW
+        el.addEventListener("mouseenter", () => {
+            el.style.transform = `scale(${scaleUp})`;
+        });
+
+        // RETOUR À NORMAL
+        el.addEventListener("mouseleave", () => {
+            el.style.transform = `scale(${scaleDown})`;
+        });
+
+        // Sur mobile : effet au clic
+        el.addEventListener("touchstart", () => {
+            el.style.transform = `scale(${scaleUp})`;
+        });
+
+        el.addEventListener("touchend", () => {
+            el.style.transform = `scale(${scaleDown})`;
+        });
+    });
+
+});

@@ -153,11 +153,10 @@
     color: var(--principal);
 }
 
-/* ---------- MOTIF + CTA FINAL ---------- */
-
-/* ===============================
-   SECTION CTA – Infos pratiques
-   =============================== */
+.faq-item__answer p {
+    font-size: var(--fontsm);
+    line-height: 1.5;
+}
 
 /* ===============================
    SECTION CTA – Infos pratiques
