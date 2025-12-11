@@ -1,0 +1,52 @@
+/* =========================================
+   FAQ (Infos pratiques)
+   ========================================= */
+
+.faq {
+    margin-top: 0.8rem;
+    border-top: 1px solid rgba(27, 46, 75, 0.15);
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(27, 46, 75, 0.15);
+}
+
+.faq-item__button {
+    width: 100%;
+    padding: 0.55rem 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-item__question {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    max-width: 80%;
+    text-align: left;
+}
+
+.faq-item__icon {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--principal);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.faq-item--open .faq-item__icon {
+    transform: rotate(45deg);
+    color: var(--text-color);
+}
+
+.faq-item--open .faq-item__question {
+    color: var(--principal);
+}
+
+.faq-item__answer p {
+    font-size: var(--fontsm);
+    line-height: 1.5;
+}

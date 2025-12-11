@@ -1,0 +1,35 @@
+/* ================================
+   GLOBAL BASE STYLES
+   ================================ */
+
+/* Reset simple */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    font-family: "Barlow", sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondaire);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* ================================
+   UTILS
+   ================================ */
+
+.u-highlight {
+    color: var(--texte-yellow);
+}

@@ -1,0 +1,73 @@
+/* =========================
+   BOUTONS GÉNÉRIQUES
+   ========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Bouton principal type ruban */
+.btn--primary {
+    position: relative;
+    padding: 0.55rem 2.4rem;
+    background-color: var(--principal);
+    color: var(--text-button);
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: var(--fontsm);
+    overflow: hidden;
+}
+
+/* Petites formes arrondies sur les côtés du ruban */
+.btn--primary::before,
+.btn--primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    background-color: var(--principal);
+}
+
+.btn--primary::before {
+    left: -9px;
+    border-radius: 50% 0 0 50%;
+}
+
+.btn--primary::after {
+    right: -9px;
+    border-radius: 0 50% 50% 0;
+}
+
+/* Tag compact posé sur les visuels (programme) */
+.btn--tag {
+    position: absolute;
+    left: 50%;
+    bottom: 0.7rem;
+    transform: translateX(-50%);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.55rem 1.35rem;
+    background-color: var(--secondaire);
+    color: var(--principal);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+}

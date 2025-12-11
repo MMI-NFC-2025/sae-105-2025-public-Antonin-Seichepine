@@ -1,0 +1,157 @@
+/* =========================================
+   CARDS GÉNÉRIQUES
+   ========================================= */
+
+/* ---------- CARDS ARTISTES ---------- */
+
+.artist-card {
+    margin-bottom: 2.4rem;
+}
+
+.artist-card:last-child {
+    margin-bottom: 0;
+}
+
+.artist-card__figure {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.artist-card__image {
+    width: 100%;
+    display: block;
+}
+
+.artist-card__figure::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.55) 0%,
+            rgba(0, 0, 0, 0.25) 30%,
+            rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+}
+
+.artist-card__caption {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    color: var(--text-button);
+    z-index: 2;
+}
+
+.artist-card__time {
+    font-size: var(--fontbase);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.artist-card__name {
+    font-size: var(--fontlg);
+    font-weight: 800;
+}
+
+.artist-card__link {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.55rem 1.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+
+    background: var(--secondaire);
+    color: var(--principal);
+
+    font-size: var(--fontsm);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    z-index: 3;
+
+    max-width: 150px;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* ---------- CARDS SCÈNES ---------- */
+
+.scene-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.scene-card__figure {
+    margin: 0 0 0.9rem;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.scene-card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.scene-description {
+    color: var(--text-color);
+    font-size: var(--fontbase);
+    line-height: 1.45;
+    margin-bottom: 1.4rem;
+}
+
+.scene-cta {
+    margin-bottom: 0.8rem;
+}
+
+/* ---------- CARDS PROGRAMME ---------- */
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card__image {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+}
+
+.event-card__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.event-card__body {
+    text-align: center;
+}
+
+.event-card__title {
+    font-size: var(--fontlg);
+    font-weight: 700;
+    color: var(--principal);
+    margin-bottom: 0.15rem;
+}
+
+.event-card__meta {
+    font-size: var(--fontbase);
+    font-weight: 400;
+    color: var(--principal);
+    opacity: 0.9;
+}

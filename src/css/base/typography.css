@@ -71,3 +71,15 @@
     font-weight: 800;
     text-transform: uppercase;
 }
+
+/* H3 / sous-titres */
+.typo-h3 {
+    font-size: var(--fontmd);
+    font-weight: 700;
+}
+
+/* Titres de cartes */
+.typo-card-title {
+    font-size: var(--fontxl);
+    font-weight: 700;
+}

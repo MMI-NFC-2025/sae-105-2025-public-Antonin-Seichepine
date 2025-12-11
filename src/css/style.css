@@ -5,19 +5,31 @@
 @import url('./vendors/normalize.css');
 
 /* ========== BASE ========== */
-@import url('./base/_global.css');
+@import url('./base/global.css');
 @import url('./base/typography.css');
 
+/* ========== LAYOUT ========== */
+@import url('./layout/layout.css');
+@import url('./layout/sections.css');
+
 /* ========== COMPONENTS ========== */
-@import url('./components/_header.css');
-@import url('./components/_menu.css');
-@import url('./components/_hero.css');
+@import url('./components/header.css');
+@import url('./components/menu.css');
+@import url('./components/hero.css');
 @import url('./components/date.css');
 @import url('./components/intro.css');
+@import url('./components/buttons.css');
 @import url('./components/nav-cards.css');
+@import url('./components/cards.css');
+@import url('./components/tabs.css');
+@import url('./components/forms.css');
+@import url('./components/faq.css');
+@import url('./components/motifs.css');
+@import url('./components/cta.css');
 @import url('./components/partenaires.css');
 @import url('./components/footer.css');
 
+/* ========== PAGES ========== */
 @import url('./pages/about.css');
 @import url('./pages/programme.css');
 @import url('./pages/artistes.css');

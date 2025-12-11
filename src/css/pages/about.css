@@ -94,31 +94,3 @@
     background-color: var(--text-color);
     border-radius: 2px;
 }
-
-/* ---------- CTA final vers le programme ---------- */
-
-.section--cta-programme {
-    padding-top: 0.5rem;
-    padding-bottom: 4rem;
-}
-
-.section--cta-programme .section__inner--center {
-    text-align: center;
-}
-
-.section--cta-programme .section__motif {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.section--cta-programme .section__title {
-    color: var(--principal);
-    max-width: 18rem;
-    margin-inline: auto;
-    margin-bottom: 1.8rem;
-}
-
-.section--cta-programme .section__cta {
-    display: inline-block;
-}

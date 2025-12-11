@@ -1,0 +1,59 @@
+/* =========================================
+   TABS (ex : Artistes 6/7 juin)
+   ========================================= */
+
+.artists-tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.2rem;
+    padding: 1.6rem 1.25rem 1rem;
+}
+
+.artists-tabs__tab {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+
+    font-size: var(--fontlg);
+    font-weight: 800;
+    text-transform: uppercase;
+
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: 0.5;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.artists-tabs__tab::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    height: 2px;
+    width: 0;
+    background: var(--principal);
+    transition: width 0.25s ease;
+}
+
+.artists-tabs__tab[aria-selected="true"] {
+    color: var(--principal);
+    opacity: 1;
+}
+
+.artists-tabs__tab[aria-selected="true"]::after {
+    width: 100%;
+}
+
+.artists-tabs__tab:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.artists-tabs__tab:hover::after {
+    width: 60%;
+}

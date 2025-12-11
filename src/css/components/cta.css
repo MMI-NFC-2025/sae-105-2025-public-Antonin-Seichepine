@@ -1,0 +1,154 @@
+/* =========================================
+   BLOCS CTA / RAPPELS
+   ========================================= */
+
+.section--cta-programme {
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+}
+
+.section--cta-programme .section__inner--center {
+    text-align: center;
+}
+
+.section--cta-programme .section__motif {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.section--cta-programme .section__title {
+    color: var(--principal);
+    max-width: 18rem;
+    margin-inline: auto;
+    margin-bottom: 1.8rem;
+}
+
+.section--cta-programme .section__cta {
+    display: inline-block;
+}
+
+.cta-artistes {
+    padding: 0 0 3.2rem;
+}
+
+.cta-artistes__inner {
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+.cta-artistes__title {
+    color: var(--principal);
+    margin-bottom: 1.4rem;
+}
+
+.cta-button .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scene-infos-cta {
+    padding: 0 1.25rem 3.8rem;
+}
+
+.scene-infos-cta__inner {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.scene-infos-cta__text {
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--principal);
+    font-size: var(--fontsm);
+}
+
+.scene-infos-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+}
+
+.section--cta-infos {
+    padding: 0 1.25rem 3.8rem;
+}
+
+.section--cta-infos .section__inner--center {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-infos__title {
+    margin-bottom: 1.2rem;
+    color: var(--principal);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: var(--fontsm);
+}
+
+.cta-infos__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+}
+
+/* CTA Infos pratiques (motif + bouton) */
+.infos-section--cta {
+    padding: 3rem 0 3.2rem;
+}
+
+.infos-section--cta .section-wrapper {
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+.infos-section--cta .infos-section__motif {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+.infos-section--cta .infos-section__motif img {
+    width: 110px;
+    height: auto;
+}
+
+.infos-section--cta .infos-section__cta-text {
+    font-size: var(--fontsm);
+    color: var(--text-color);
+    max-width: 360px;
+    margin: 0 auto 1.4rem;
+    line-height: 1.4;
+}
+
+.infos-section--cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+}
+
+.page--infos .infos-section--cta .cta-button {
+    display: flex;
+    justify-content: center;
+}
+
+.page--infos .infos-section--cta .cta-button .btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2.4rem;
+    border-radius: 999px;
+    width: auto !important;
+    min-width: 11rem;
+    margin: 0 auto;
+    text-align: center;
+}

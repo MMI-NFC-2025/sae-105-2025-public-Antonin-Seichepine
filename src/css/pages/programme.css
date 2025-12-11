@@ -41,77 +41,6 @@
     /* rien de spécial, on garde le flux */
 }
 
-/* ---------- Cards événements ---------- */
-
-.event-card {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Image de l’événement */
-.event-card__image {
-    position: relative;
-    border-radius: 18px;
-    overflow: hidden;
-    margin-bottom: 0.85rem;
-}
-
-.event-card__image img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* Tag "EN SAVOIR PLUS" posé sur l’image
-   → version compacte du CTA hero */
-.btn--tag {
-    position: absolute;
-    left: 50%;
-    bottom: 0.7rem;
-    transform: translateX(-50%);
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0.55rem 1.35rem;
-    /* plus compact que le hero mais même style */
-    background-color: var(--secondaire);
-    color: var(--principal);
-
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.075em;
-
-    border: none;
-    border-radius: 6px;
-    /* même arrondi que le CTA hero */
-    overflow: hidden;
-    cursor: pointer;
-}
-
-/* Texte de la card */
-.event-card__body {
-    text-align: center;
-}
-
-.event-card__title {
-    font-size: var(--fontlg);
-    font-weight: 700;
-    color: var(--principal);
-    /* ORANGE comme la maquette */
-    margin-bottom: 0.15rem;
-}
-
-.event-card__meta {
-    font-size: var(--fontbase);
-    font-weight: 400;
-    color: var(--principal);
-    /* ORANGE aussi */
-    opacity: 0.9;
-}
-
 /* ---------- Séparateur entre les deux jours (3 petits motifs) ---------- */
 
 .programme__separator {
@@ -133,7 +62,7 @@
     margin-top: 3.8rem;
     display: flex;
     justify-content: center;
-    
+
 }
 
 .programme__bottom-motif-img {

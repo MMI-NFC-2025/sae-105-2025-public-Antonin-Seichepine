@@ -1,0 +1,40 @@
+/* =========================================
+   MOTIFS / DÉCORS CENTRÉS
+   ========================================= */
+
+.motif-section {
+    padding: 3rem 0 2.2rem;
+}
+
+.motif-section__inner {
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.motif--center .motif__img {
+    width: 110px;
+    height: auto;
+}
+
+.page-decor,
+.decor-section {
+    padding: 2.4rem 0;
+}
+
+.page-decor__inner,
+.decor-section__inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.page-decor__img,
+.motif--center .motif__img {
+    height: auto;
+}
+
+.page-decor__img {
+    width: 130px;
+    display: block;
+}

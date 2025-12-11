@@ -1,0 +1,26 @@
+/* ================================
+   SECTIONS GÉNÉRIQUES
+   ================================ */
+
+.section {
+    padding: 3rem 0;
+}
+
+.section__title {
+    margin-bottom: 0.5rem;
+}
+
+.section__title--center {
+    text-align: center;
+}
+
+.section__text {
+    margin-top: 0.75rem;
+    max-width: 25rem;
+}
+
+.section__text--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
