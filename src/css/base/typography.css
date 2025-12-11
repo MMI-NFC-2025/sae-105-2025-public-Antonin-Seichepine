@@ -13,7 +13,7 @@
 
 /* H2 classiques (intro, etc.) */
 .typo-h2 {
-    font-size: var(--font3 xl);
+    font-size: var(--font3xl);
     /* 1.75rem */
     font-weight: 700;
     line-height: 1.2;

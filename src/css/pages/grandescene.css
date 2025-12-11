@@ -1,0 +1,220 @@
+/* =========================================
+   PAGE SCÈNE DÉTAIL – Grande scène
+   ========================================= */
+
+.page--festival.page--scene-detail .main--scene-detail {
+    background-color: var(--secondaire);
+}
+
+/* -------- HERO TITRE SCÈNE -------- */
+
+.hero--scene-detail .hero__inner--subpage {
+    padding-bottom: 2.4rem;
+}
+
+.hero--scene-detail .hero__subtitle {
+    text-transform: none;
+}
+
+.hero__motif--scene {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__motif--scene .hero__motif-img {
+    width: 78px;
+    height: auto;
+}
+
+/* -------- VISUEL + TEXTE INTRO SCÈNE -------- */
+
+.scene-hero {
+    padding: 0 0 2.8rem;
+}
+
+.scene-hero__inner {
+    padding: 0 1.25rem;
+}
+
+.scene-hero__image {
+    margin: 0 0 1rem;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.scene-hero__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.scene-hero__text {
+    font-size: var(--fontbase);
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+/* -------- LISTE DES ARTISTES DE LA SCÈNE -------- */
+
+.scene-artists {
+    padding: 0 0 2.6rem;
+}
+
+.scene-artists__inner {
+    padding: 0 1.25rem;
+}
+
+.scene-artists__title {
+    margin-bottom: 1.4rem;
+    color: var(--principal);
+    text-transform: uppercase;
+    font-size: var(--fontlg);
+}
+
+/* Cards artistes (même logique que page Artistes) */
+
+.scene-artist-card {
+    margin-bottom: 1.9rem;
+}
+
+.scene-artist-card__link {
+    position: relative;
+    display: block;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* image */
+.scene-artist-card__image {
+    margin: 0;
+}
+
+.scene-artist-card__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* dégradé au-dessus de l'image */
+.scene-artist-card__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.55) 0%,
+            rgba(0, 0, 0, 0.25) 30%,
+            rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+}
+
+/* texte en haut */
+.scene-artist-card__content {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    z-index: 2;
+    color: var(--text-button);
+}
+
+.scene-artist-card__info {
+    font-size: var(--fontbase);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* ruban EN SAVOIR PLUS */
+.scene-artist-card__cta {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.55rem 2.1rem;
+    border-radius: 6px;
+    background: var(--secondaire);
+    color: var(--principal);
+
+    font-size: var(--fontsm);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* -------- BOUTON RETOUR AUX SCÈNES -------- */
+
+.scene-back {
+    padding: 0 0 3rem;
+}
+
+.scene-back__inner {
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.scene-back__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 2.6rem;
+}
+
+/* tu peux réutiliser .btn--primary ou créer une variante secondaire */
+.btn.btn--secondary {
+    background: var(--principal);
+    color: var(--text-button);
+}
+
+/* -------- MOTIF CENTRAL -------- */
+
+.page-decor {
+    padding-bottom: 2.6rem;
+}
+
+.page-decor__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.page-decor__img {
+    width: 90px;
+    height: auto;
+}
+
+/* -------- CTA INFOS PRATIQUES -------- */
+
+.scene-infos-cta {
+    padding: 0 0 3.6rem;
+}
+
+.scene-infos-cta__inner {
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+.scene-infos-cta__text {
+    font-size: var(--fontlg);
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--principal);
+    margin-bottom: 1.4rem;
+}
+
+.scene-infos-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 2.6rem;
+}

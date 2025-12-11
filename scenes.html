@@ -16,6 +16,9 @@
     <!-- CSS principal -->
     <link rel="stylesheet" href="src/css/style.css">
 
+    <!-- JS menu -->
+    <script src="src/js/menu.js" defer></script>
+
     <!-- Favicons -->
     <link rel="icon" href="assets/favicons/favicon.svg">
     <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
@@ -97,17 +100,15 @@
 
         <!-- HERO SCÈNES -->
         <section class="hero hero--subpage hero--scenes" aria-labelledby="scenes-title">
-            <div class="hero__background" aria-hidden="true">
-                <!-- fond orange + déco gérés en CSS -->
-            </div>
+            <div class="hero__background" aria-hidden="true"></div>
 
             <div class="wrapper hero__inner hero__inner--subpage">
                 <h1 id="scenes-title" class="hero__subtitle typo-h2">
                     Scènes
                 </h1>
 
-                <div class="hero__motif hero__motif--scenes" aria-hidden="true">
-                    <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
+                <div class="section__motif" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
                 </div>
 
                 <p class="hero__intro typo-body">
@@ -203,8 +204,8 @@
         <!-- CTA ARTISTES -->
         <section class="cta-artistes">
             <div class="wrapper cta-artistes__inner">
-                <h2 class="cta-artistes__title typo-h2">
-                    Prêt à découvrir ce qui vous attend&nbsp;?
+                <h2 class="cta-artistes__title typo-h2-upper">
+                    PRÊT À DÉCOUVRIR CE QUI VOUS ATTEND ?
                 </h2>
 
                 <p class="cta-button">
@@ -246,7 +247,6 @@
                 <div class="footer__logo">
                     <img src="assets/icons/formebeige.svg" alt="Flying Tap Fest" class="footer__logo-img">
                 </div>
-
 
                 <ul class="footer__list footer__list--social">
                     <li><a class="footer__link footer__link--silent" href="#">Instagram</a></li>

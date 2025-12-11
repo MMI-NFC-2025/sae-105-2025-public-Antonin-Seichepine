@@ -16,6 +16,9 @@
     <!-- CSS principal -->
     <link rel="stylesheet" href="src/css/style.css">
 
+    <!-- JS menu -->
+    <script src="src/js/menu.js" defer></script>
+
     <!-- Favicons -->
     <link rel="icon" href="assets/favicons/favicon.svg">
     <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
@@ -28,12 +31,10 @@
     <header class="header header--festival">
         <div class="wrapper header__inner">
 
-            <!-- Logo dans le header sur les sous-pages -->
             <a class="header__logo-link" href="index.html">
                 <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
             </a>
 
-            <!-- Menu burger (identique à la home) -->
             <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
                 aria-controls="site-menu" aria-expanded="false">
                 <span class="menu-btn__bar menu-btn__bar--top"></span>
@@ -53,9 +54,7 @@
                     <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
                 </a>
 
-                <button class="site-menu__close" type="button" aria-label="Fermer le menu">
-                    ✕
-                </button>
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">✕</button>
             </div>
 
             <p class="site-menu__intro typo-body">
@@ -97,26 +96,22 @@
 
         <!-- HERO / TITRE SCÈNE -->
         <section class="hero hero--subpage hero--scene-detail" aria-labelledby="scene-title">
-            <div class="hero__background" aria-hidden="true">
-                <!-- fond orange + déco gérés en CSS -->
-            </div>
+            <div class="hero__background" aria-hidden="true"></div>
 
             <div class="wrapper hero__inner hero__inner--subpage">
                 <h1 id="scene-title" class="hero__subtitle typo-h2">
                     Grande scène
                 </h1>
 
-                <!-- Motif décoratif principal -->
                 <div class="hero__motif hero__motif--scene" aria-hidden="true">
                     <img src="assets/icons/formeorange.svg" alt="" class="hero__motif-img">
                 </div>
             </div>
 
-            <!-- Vague de séparation -->
             <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
         </section>
 
-        <!-- SCÈNE : VISUEL + DESCRIPTION -->
+        <!-- VISUEL + DESCRIPTION SCÈNE -->
         <section class="scene-hero">
             <div class="wrapper scene-hero__inner">
                 <figure class="scene-hero__image">
@@ -129,75 +124,80 @@
             </div>
         </section>
 
-        <!-- LISTE DES ARTISTES DE CETTE SCÈNE -->
+        <!-- LISTE DES ARTISTES (même pattern que page Artistes) -->
         <section class="scene-artists">
             <div class="wrapper scene-artists__inner">
-                <h2 class="scene-artists__title typo-h2">Liste des artistes</h2>
+                <h2 class="scene-artists__title typo-h2-upper">
+                    Liste des artistes
+                </h2>
 
-                <!-- Carte artiste 1 -->
-                <article class="scene-artist-card">
-                    <a href="artiste-moonstep.html" class="scene-artist-card__link">
-                        <figure class="scene-artist-card__image">
-                            <img src="assets/img/artiste1.webp" alt="Clara “Moonstep” Devaux sur scène">
-                        </figure>
+                <!-- Clara Moonstep -->
+                <article class="artist-card">
+                    <figure class="artist-card__figure">
+                        <img src="assets/img/artiste1.webp" alt="Clara “Moonstep” Devaux" class="artist-card__image">
 
-                        <div class="scene-artist-card__content">
-                            <p class="scene-artist-card__info typo-card-desc">
-                                14h00 – Grande scène<br>
+                        <figcaption class="artist-card__caption">
+                            <p class="artist-card__time typo-card-desc">
+                                14h00 – Grande scène
+                            </p>
+                            <h3 class="artist-card__name typo-card-title">
                                 Clara “Moonstep” Devaux
-                            </p>
-                            <div class="scene-artist-card__cta">
-                                <span class="typo-btn">En savoir plus</span>
-                            </div>
-                        </div>
-                    </a>
+                            </h3>
+                        </figcaption>
+
+                        <a href="artiste-moonstep.html" class="artist-card__link typo-btn">
+                            EN SAVOIR PLUS
+                        </a>
+                    </figure>
                 </article>
 
-                <!-- Carte artiste 2 -->
-                <article class="scene-artist-card">
-                    <a href="artiste-pulse-trio.html" class="scene-artist-card__link">
-                        <figure class="scene-artist-card__image">
-                            <img src="assets/img/artiste2.webp" alt="The Pulse Trio sur la grande scène">
-                        </figure>
+                <!-- The Pulse Trio -->
+                <article class="artist-card">
+                    <figure class="artist-card__figure">
+                        <img src="assets/img/artiste2.webp" alt="The Pulse Trio" class="artist-card__image">
 
-                        <div class="scene-artist-card__content">
-                            <p class="scene-artist-card__info typo-card-desc">
-                                17h00 – Grande scène<br>
+                        <figcaption class="artist-card__caption">
+                            <p class="artist-card__time typo-card-desc">
+                                17h00 – Grande scène
+                            </p>
+                            <h3 class="artist-card__name typo-card-title">
                                 The Pulse Trio
-                            </p>
-                            <div class="scene-artist-card__cta">
-                                <span class="typo-btn">En savoir plus</span>
-                            </div>
-                        </div>
-                    </a>
+                            </h3>
+                        </figcaption>
+
+                        <a href="artiste-pulse-trio.html" class="artist-card__link typo-btn">
+                            EN SAVOIR PLUS
+                        </a>
+                    </figure>
                 </article>
 
-                <!-- Carte artiste 3 -->
-                <article class="scene-artist-card">
-                    <a href="artiste-aurora-lights.html" class="scene-artist-card__link">
-                        <figure class="scene-artist-card__image">
-                            <img src="assets/img/artiste3.webp" alt="Aurora Lights Company en performance lumineuse">
-                        </figure>
+                <!-- Aurora Lights Company -->
+                <article class="artist-card">
+                    <figure class="artist-card__figure">
+                        <img src="assets/img/artiste3.webp" alt="Aurora Lights Company" class="artist-card__image">
 
-                        <div class="scene-artist-card__content">
-                            <p class="scene-artist-card__info typo-card-desc">
-                                21h00 – Grande scène<br>
-                                Aurora Lights Company
+                        <figcaption class="artist-card__caption">
+                            <p class="artist-card__time typo-card-desc">
+                                21h00 – Grande scène
                             </p>
-                            <div class="scene-artist-card__cta">
-                                <span class="typo-btn">En savoir plus</span>
-                            </div>
-                        </div>
-                    </a>
+                            <h3 class="artist-card__name typo-card-title">
+                                Aurora Lights Company
+                            </h3>
+                        </figcaption>
+
+                        <a href="artiste-aurora-lights.html" class="artist-card__link typo-btn">
+                            EN SAVOIR PLUS
+                        </a>
+                    </figure>
                 </article>
             </div>
         </section>
 
-        <!-- BOUTON RETOUR AUX SCÈNES -->
+        <!-- RETOUR AUX SCÈNES -->
         <section class="scene-back">
             <div class="wrapper scene-back__inner">
-                <a href="scenes.html" class="scene-back__button btn btn--secondary typo-btn">
-                    Retour aux scènes
+                <a href="scenes.html" class="scene-back__button btn btn--primary typo-btn">
+                    RETOUR AUX SCÈNES
                 </a>
             </div>
         </section>
@@ -212,22 +212,21 @@
         <!-- CTA INFOS PRATIQUES -->
         <section class="scene-infos-cta">
             <div class="wrapper scene-infos-cta__inner">
-                <p class="scene-infos-cta__text typo-body">
+                <p class="scene-infos-cta__text typo-h2-upper">
                     Tout ce qu’il faut savoir pour venir.
                 </p>
                 <a href="infos-pratiques.html" class="scene-infos-cta__button btn btn--primary typo-btn">
-                    Voir les infos
+                    VOIR LES INFOS
                 </a>
             </div>
         </section>
 
     </main>
 
-    <!-- ============ FOOTER GLOBAL (version unifiée) ============ -->
+    <!-- ============ FOOTER GLOBAL ============ -->
     <footer class="footer footer--festival" id="footer">
         <div class="footer__inner">
 
-            <!-- Petites formes décoratives au-dessus du footer -->
             <div class="footer__motifs" aria-hidden="true">
                 <span class="footer__motif"></span>
                 <span class="footer__motif"></span>
@@ -252,7 +251,6 @@
                 <div class="footer__logo">
                     <img src="assets/icons/formebeige.svg" alt="Flying Tap Fest" class="footer__logo-img">
                 </div>
-
 
                 <ul class="footer__list footer__list--social">
                     <li><a class="footer__link footer__link--silent" href="#">Instagram</a></li>
