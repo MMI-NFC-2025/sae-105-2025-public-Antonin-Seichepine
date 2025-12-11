@@ -1,0 +1,208 @@
+/* =========================================
+   PAGE INFOS PRATIQUES – Flying Tap Fest
+========================================= */
+
+/* Fond global de la page */
+.page--festival.page--infos,
+.page--festival.page--infos .main--infos {
+    background-color: var(--secondaire);
+}
+
+/* ---------- HERO ---------- */
+
+.hero--infos .hero__background {
+    /* ton système de hero/wave continue à gérer le haut ; 
+       ici on laisse la couleur gérée globalement */
+}
+
+.hero--infos .hero__subtitle {
+    text-align: left;
+    color: var(--principal);
+    margin-bottom: 0.4rem;
+}
+
+.hero--infos .section__motif {
+    margin: 0.2rem 0 0.8rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hero--infos .section__motif-img {
+    width: 60px;
+    display: block;
+}
+
+.hero--infos .hero__intro {
+    max-width: 16rem;
+    color: var(--text-color);
+}
+
+/* ---------- SECTIONS GÉNÉRALES ---------- */
+
+.infos-section {
+    padding: 2.2rem 1.25rem 0;
+}
+
+.section-wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+/* Icône de section centrée */
+.infos-section__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.infos-section__icon img {
+    width: 72px;
+    display: block;
+}
+
+/* Titre + texte de section */
+.infos-section__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--principal);
+    margin-bottom: 0.5rem;
+}
+
+.infos-section__text {
+    text-align: left;
+    font-size: var(--fontsm);
+    line-height: 1.4;
+    color: var(--text-color);
+    margin-bottom: 1.4rem;
+}
+
+/* ---------- CARTES ORANGES (Tarifs / Hébergements / Transport) ---------- */
+
+.infos-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.infos-card {
+    background-color: var(--principal);
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+    color: var(--text-button);
+    text-align: center;
+}
+
+/* Tarifs : titre + prix blanc */
+.infos-card__title {
+    font-size: var(--fontbase);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.infos-card__value {
+    font-size: var(--fontsm);
+    font-weight: 600;
+}
+
+/* Hébergements / Transport : titre blanc + sous-texte plus petit */
+.infos-card__description {
+    font-size: var(--fontsm);
+    margin-top: 0.1rem;
+}
+
+/* ---------- SECTION TRANSPORT : léger espace supplémentaire ---------- */
+
+.infos-section--transport {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- FAQ ---------- */
+
+.infos-section--faq .infos-section__title {
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.faq {
+    margin-top: 0.8rem;
+    border-top: 1px solid rgba(27, 46, 75, 0.15);
+}
+
+/* Chaque question */
+.faq-item {
+    border-bottom: 1px solid rgba(27, 46, 75, 0.15);
+}
+
+.faq-item__button {
+    width: 100%;
+    padding: 0.55rem 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Texte question à gauche */
+.faq-item__question {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    max-width: 80%;
+    text-align: left;
+}
+
+/* + à droite */
+.faq-item__icon {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--principal);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* ÉTAT OUVERT (pour l’animation uniquement) */
+.faq-item--open .faq-item__icon {
+    transform: rotate(45deg);
+    color: var(--text-color);
+}
+
+.faq-item--open .faq-item__question {
+    color: var(--principal);
+}
+
+/* ---------- MOTIF + CTA FINAL ---------- */
+
+.infos-section--cta {
+    padding-bottom: 3rem;
+}
+
+.infos-section--cta .infos-section__motif {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.1rem;
+}
+
+.infos-section--cta .infos-section__motif img {
+    width: 70px;
+    display: block;
+}
+
+.infos-section--cta .infos-section__cta-text {
+    text-align: left;
+    font-size: var(--fontsm);
+    color: var(--text-color);
+    margin-bottom: 1.4rem;
+}
+
+/* Bouton centré comme sur la maquette */
+.infos-section--cta .btn {
+    display: block;
+    margin: 0 auto;
+    min-width: 11rem;
+    text-align: center;
+}
