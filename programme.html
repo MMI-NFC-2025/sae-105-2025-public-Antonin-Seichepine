@@ -123,34 +123,21 @@
             <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
         </section>
 
-        <!-- BARRE DE RECHERCHE -->
-        <div class="header__search-shell">
-            <div class="wrapper">
-                <form class="site-search" id="site-search" role="search" hidden>
-                    <label class="site-search__label" for="site-search-input">Rechercher un événement</label>
-                    <div class="site-search__field">
-                        <input class="site-search__input" type="search" name="q" id="site-search-input"
-                            placeholder="Nom, scène ou horaire" autocomplete="off">
-                    </div>
-                </form>
-            </div>
-        </div>
-
         <!-- SECTION PROGRAMME -->
         <section class="section section--programme">
             <div class="wrapper section__inner">
 
                 <nav class="artists-tabs programme-tabs" aria-label="Filtrer les événements par jour"
                     data-programme-tabs>
-                    <a href="#programme-title" class="artists-tabs__tab typo-h3" data-day="all" aria-selected="true">
+                    <button type="button" class="artists-tabs__tab typo-h3" data-day="all" aria-selected="true">
                         TOUT
-                    </a>
-                    <a href="#programme-6-juin" class="artists-tabs__tab typo-h3" data-day="6" aria-selected="false">
+                    </button>
+                    <button type="button" class="artists-tabs__tab typo-h3" data-day="6" aria-selected="false">
                         6 JUIN
-                    </a>
-                    <a href="#programme-7-juin" class="artists-tabs__tab typo-h3" data-day="7" aria-selected="false">
+                    </button>
+                    <button type="button" class="artists-tabs__tab typo-h3" data-day="7" aria-selected="false">
                         7 JUIN
-                    </a>
+                    </button>
                 </nav>
 
                 <!-- JOUR 1 : 6 JUIN -->

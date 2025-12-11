@@ -202,10 +202,9 @@ function initSiteSearch() {
 
     const searchForm = document.querySelector('.site-search');
     const searchInput = searchForm ? searchForm.querySelector('.site-search__input') : null;
+    const clearBtn = searchForm ? searchForm.querySelector('.site-search__clear') : null;
     if (!searchForm || !searchInput) return;
-
-    const searchBtn = ensureSearchButton(searchForm);
-    if (!searchBtn) return;
+    searchForm.removeAttribute('hidden');
 
     let searchableItems = [];
 
@@ -222,15 +221,32 @@ function initSiteSearch() {
     status.setAttribute('aria-live', 'polite');
     searchForm.appendChild(status);
 
+    const feedback = document.createElement('p');
+    feedback.className = 'site-search__feedback';
+    feedback.setAttribute('aria-live', 'polite');
+    feedback.hidden = true;
+    searchForm.appendChild(feedback);
+
     const updateStatus = (visibleCount) => {
         const total = searchableItems.length;
         if (visibleCount === total) {
             status.textContent = 'Tous les résultats sont affichés.';
+            feedback.hidden = true;
+            feedback.textContent = '';
         } else if (visibleCount === 0) {
-            status.textContent = 'Aucun résultat pour cette recherche.';
+            status.textContent = 'Aucun artiste trouvé ici, continue l\'exploration du Flying Tap Fest !';
+            feedback.hidden = false;
+            feedback.textContent = 'Aucun artiste trouvé ici, continue l\'exploration du Flying Tap Fest !';
         } else {
             status.textContent = `${visibleCount} résultat${visibleCount > 1 ? 's' : ''} sur ${total} affiché${visibleCount > 1 ? 's' : ''}.`;
+            feedback.hidden = true;
+            feedback.textContent = '';
         }
+    };
+
+    const toggleClear = () => {
+        if (!clearBtn) return;
+        clearBtn.hidden = !searchInput.value;
     };
 
     const applyFilter = (value) => {
@@ -248,37 +264,34 @@ function initSiteSearch() {
         updateStatus(visibleCount);
     };
 
-    const toggleSearch = () => {
-        const isHidden = searchForm.hasAttribute('hidden');
-        if (isHidden) {
-            searchForm.removeAttribute('hidden');
-            searchBtn.setAttribute('aria-expanded', 'true');
-            searchInput.focus();
-        } else {
-            searchForm.setAttribute('hidden', '');
-            searchBtn.setAttribute('aria-expanded', 'false');
-        }
-    };
-
-    searchBtn.addEventListener('click', toggleSearch);
-    searchBtn.setAttribute('aria-expanded', searchForm.hasAttribute('hidden') ? 'false' : 'true');
-
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
     });
 
     searchInput.addEventListener('input', (e) => {
         applyFilter(e.target.value);
+        toggleClear();
     });
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            applyFilter('');
+            toggleClear();
+            searchInput.focus();
+        });
+    }
 
     document.addEventListener('artists:content-updated', () => {
         refreshItems();
         applyFilter(searchInput.value);
+        toggleClear();
     });
 
     if (!searchableItems.length) return;
 
     applyFilter('');
+    toggleClear();
 }
 
 // URL: artistes.html / artistes-7juin.html – Switch des onglets sans rechargement
@@ -389,9 +402,7 @@ function initProgrammeSearch() {
     const tabs = tabsNav ? Array.from(tabsNav.querySelectorAll('.artists-tabs__tab')) : [];
     const dayRadios = Array.from(document.querySelectorAll('.programme-filters input[name="programme-day"]'));
     if (!searchForm || !searchInput) return;
-
-    const searchBtn = ensureSearchButton(searchForm);
-    if (!searchBtn) return;
+    searchForm.removeAttribute('hidden');
 
     const eventCards = Array.from(document.querySelectorAll('.event-card'));
     if (!eventCards.length) return;
@@ -482,21 +493,6 @@ function initProgrammeSearch() {
         refreshDaySections();
         updateStatus(visibleCount, query, day);
     };
-
-    const toggleSearch = () => {
-        const isHidden = searchForm.hasAttribute('hidden');
-        if (isHidden) {
-            searchForm.removeAttribute('hidden');
-            searchBtn.setAttribute('aria-expanded', 'true');
-            searchInput.focus();
-        } else {
-            searchForm.setAttribute('hidden', '');
-            searchBtn.setAttribute('aria-expanded', 'false');
-        }
-    };
-
-    searchBtn.addEventListener('click', toggleSearch);
-    searchBtn.setAttribute('aria-expanded', searchForm.hasAttribute('hidden') ? 'false' : 'true');
 
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();

@@ -194,37 +194,52 @@
     background: transparent;
     border: none;
     border-radius: 0;
-    box-shadow: none;
+    color: inherit;
 }
 
 .site-search--compact {
     padding: 0;
     gap: 0.3rem;
+    font-family: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .site-search__label {
-    font-size: var(--fontsm);
+    opacity: 0.9;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--text-color);
+    opacity: 0.8;
 }
 
 .site-search__field {
     display: block;
+    position: relative;
 }
 
 .site-search__input {
     width: 100%;
     border: 1px solid rgba(27, 46, 75, 0.16);
-    border-radius: 16px;
     padding: 0.8rem 1rem;
+    padding-right: 2.6rem;
     font-family: inherit;
     font-size: var(--fontbase);
     background: rgba(27, 46, 75, 0.05);
     color: var(--text-color);
     outline: none;
     transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.site-search__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+.site-search__input::-ms-clear {
+    display: none;
 }
 
 .site-search--compact .site-search__input {
@@ -243,8 +258,41 @@
     background: rgba(27, 46, 75, 0.08);
 }
 
+.site-search__clear {
+    position: absolute;
+    right: 0.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--principal);
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1;
+    padding: 0.2rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.site-search__clear:hover {
+    opacity: 0.9;
+}
+
+.site-search__clear:active {
+    opacity: 0.8;
+}
+
 .search-empty {
     margin: 0.35rem 0 0;
+    font-size: var(--fontsm);
+    font-weight: 700;
+    color: var(--principal);
+}
+
+.site-search__feedback {
+    margin: 0.2rem 0 0;
     font-size: var(--fontsm);
     font-weight: 700;
     color: var(--principal);

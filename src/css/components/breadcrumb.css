@@ -34,9 +34,22 @@
 }
 
 .breadcrumb__separator {
-    color: rgba(0, 0, 0, 0.35);
+    color: var(--principal);
     display: inline-block;
     margin: 0 0.2rem;
+    font-size: 0;
+    line-height: 1;
+}
+
+.breadcrumb__separator::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 1.8px solid currentColor;
+    border-right: 1.8px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: 0.5px;
 }
 
 @media (max-width: 640px) {
