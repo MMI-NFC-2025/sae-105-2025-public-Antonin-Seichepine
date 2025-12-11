@@ -127,9 +127,14 @@
 /* Image */
 .menu__img {
     width: 100%;
+    height: auto;
+    max-height: 320px;
     border-radius: 12px;
     overflow: hidden;
     margin-top: 1.5rem;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
     transform: translateY(0);
     opacity: 1;
     transition: transform 0.2s ease, opacity 0.2s ease;

@@ -207,8 +207,14 @@ function initSiteSearch() {
     const searchBtn = ensureSearchButton(searchForm);
     if (!searchBtn) return;
 
-    const searchableItems = Array.from(document.querySelectorAll('.artist-card'));
-    if (!searchableItems.length) return;
+    let searchableItems = [];
+
+    const refreshItems = () => {
+        searchableItems = Array.from(document.querySelectorAll('.artist-card'));
+        return searchableItems.length;
+    };
+
+    refreshItems();
 
     const status = document.createElement('div');
     status.className = 'sr-only site-search__status';
@@ -265,7 +271,112 @@ function initSiteSearch() {
         applyFilter(e.target.value);
     });
 
+    document.addEventListener('artists:content-updated', () => {
+        refreshItems();
+        applyFilter(searchInput.value);
+    });
+
+    if (!searchableItems.length) return;
+
     applyFilter('');
+}
+
+// URL: artistes.html / artistes-7juin.html – Switch des onglets sans rechargement
+function initArtistsTabsSwitcher() {
+    if (!document.body.classList.contains('page--artists')) return;
+
+    const tabsNav = document.querySelector('[data-artists-tabs]');
+    const tabs = tabsNav ? Array.from(tabsNav.querySelectorAll('.artists-tabs__tab')) : [];
+    let contentSection = document.querySelector('[data-artists-content]') || document.querySelector('.artists-day');
+
+    if (!tabsNav || !tabs.length || !contentSection) return;
+
+    const normalizeHref = (href) => new URL(href, window.location.href).pathname;
+
+    const setActive = (path) => {
+        tabs.forEach((tab) => {
+            const isActive = normalizeHref(tab.getAttribute('href')) === path;
+            tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+    };
+
+    const fetchSection = async (href) => {
+        const response = await fetch(href, { credentials: 'same-origin' });
+        if (!response.ok) throw new Error('Impossible de récupérer la page');
+        const html = await response.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const section = doc.querySelector('[data-artists-content]') || doc.querySelector('.artists-day');
+        const title = doc.querySelector('title');
+        return { section, title: title ? title.textContent : null };
+    };
+
+    const swapContent = (newSection) => {
+        newSection.classList.add('artists-day--entering');
+        newSection.setAttribute('data-artists-content', '');
+        contentSection.replaceWith(newSection);
+        contentSection = newSection;
+        requestAnimationFrame(() => {
+            newSection.classList.add('artists-day--visible');
+            newSection.classList.remove('artists-day--entering');
+        });
+    };
+
+    let isLoading = false;
+
+    const loadTab = async (href, { pushState = true } = {}) => {
+        if (!href || isLoading) return;
+
+        const targetPath = normalizeHref(href);
+        const currentTab = tabs.find((tab) => tab.getAttribute('aria-selected') === 'true');
+        const currentPath = currentTab ? normalizeHref(currentTab.getAttribute('href')) : normalizeHref(location.href);
+        if (targetPath === currentPath) return;
+
+        isLoading = true;
+        tabsNav.setAttribute('aria-busy', 'true');
+        contentSection.classList.add('artists-day--switching');
+
+        try {
+            const { section, title } = await fetchSection(href);
+            if (!section) throw new Error('Section introuvable');
+
+            swapContent(section);
+            setActive(targetPath);
+            if (title) document.title = title;
+            if (pushState) window.history.pushState({ artistsPath: targetPath }, '', href);
+            document.dispatchEvent(new CustomEvent('artists:content-updated'));
+        } catch (error) {
+            window.location.href = href;
+        } finally {
+            contentSection.classList.remove('artists-day--switching');
+            tabsNav.removeAttribute('aria-busy');
+            isLoading = false;
+        }
+    };
+
+    const initialPath = normalizeHref(location.href);
+    setActive(initialPath);
+    if (!history.state || !history.state.artistsPath) {
+        history.replaceState({ artistsPath: initialPath }, '', location.href);
+    }
+
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', (event) => {
+            const href = tab.getAttribute('href');
+            if (!href) return;
+            event.preventDefault();
+            loadTab(href);
+        });
+    });
+
+    window.addEventListener('popstate', (event) => {
+        const targetPath = (event.state && event.state.artistsPath) || normalizeHref(location.href);
+        const targetTab = tabs.find((tab) => normalizeHref(tab.getAttribute('href')) === targetPath);
+        if (!targetTab) {
+            window.location.reload();
+            return;
+        }
+        loadTab(targetTab.getAttribute('href'), { pushState: false });
+    });
 }
 
 // URL: programme.html – Barre de recherche par jour
@@ -486,6 +597,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMenuBurger();
     initCarousel();
     initSiteSearch();
+    initArtistsTabsSwitcher();
     initProgrammeSearch();
     initExtraInteractions();
     initLazyMedia();

@@ -57,3 +57,24 @@
 .artists-tabs__tab:hover::after {
     width: 60%;
 }
+
+/* Transition sur le contenu des artistes lors du switch JS */
+.artists-day {
+    transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.artists-day--switching {
+    opacity: 0.1;
+    transform: translateY(12px);
+    pointer-events: none;
+}
+
+.artists-day--entering {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+.artists-day--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
