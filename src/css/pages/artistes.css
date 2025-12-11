@@ -6,6 +6,30 @@
     background-color: var(--secondaire);
 }
 
+.artists-tools {
+    margin: 0 0 1.8rem;
+}
+
+.artists-tools__inner {
+    display: grid;
+    gap: 1rem;
+}
+
+.artists-tools .site-search {
+    width: 100%;
+    max-width: 480px;
+    margin: 0;
+    justify-self: end;
+}
+
+@media (min-width: 768px) {
+    .artists-tools__inner {
+        grid-template-columns: auto minmax(240px, 1fr);
+        align-items: end;
+        column-gap: 1.2rem;
+    }
+}
+
 /* ---------- LISTE D'ARTISTES ---------- */
 
 .artists-day {

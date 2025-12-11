@@ -385,6 +385,8 @@ function initProgrammeSearch() {
 
     const searchForm = document.querySelector('.site-search');
     const searchInput = searchForm ? searchForm.querySelector('.site-search__input') : null;
+    const tabsNav = document.querySelector('[data-programme-tabs]');
+    const tabs = tabsNav ? Array.from(tabsNav.querySelectorAll('.artists-tabs__tab')) : [];
     const dayRadios = Array.from(document.querySelectorAll('.programme-filters input[name="programme-day"]'));
     if (!searchForm || !searchInput) return;
 
@@ -404,9 +406,32 @@ function initProgrammeSearch() {
     searchForm.appendChild(status);
 
     const getActiveDay = () => {
-        if (!dayRadios.length) return 'all';
-        const checked = dayRadios.find((radio) => radio.checked);
-        return checked ? checked.value : 'all';
+        if (tabs.length) {
+            const activeTab = tabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || tabs[0];
+            return activeTab ? activeTab.dataset.day || 'all' : 'all';
+        }
+
+        if (dayRadios.length) {
+            const checked = dayRadios.find((radio) => radio.checked);
+            if (checked) return checked.value;
+        }
+
+        return 'all';
+    };
+
+    const setActiveDay = (day) => {
+        if (tabs.length) {
+            tabs.forEach((tab) => {
+                const isActive = (tab.dataset.day || 'all') === day;
+                tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+        }
+
+        if (dayRadios.length) {
+            dayRadios.forEach((radio) => {
+                radio.checked = radio.value === day;
+            });
+        }
     };
 
     const updateStatus = (visibleCount, query, day) => {
@@ -481,13 +506,89 @@ function initProgrammeSearch() {
         applyFilter(e.target.value);
     });
 
-    dayRadios.forEach((radio) => {
-        radio.addEventListener('change', () => {
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetDay = tab.dataset.day || 'all';
+            setActiveDay(targetDay);
             applyFilter(searchInput.value);
         });
     });
 
+    dayRadios.forEach((radio) => {
+        radio.addEventListener('change', () => {
+            setActiveDay(radio.value);
+            applyFilter(searchInput.value);
+        });
+    });
+
+    setActiveDay(getActiveDay());
     applyFilter('');
+}
+
+// Fil d'ariane simple sur toutes les pages sauf home et erreur
+function initBreadcrumbs() {
+    const body = document.body;
+    if (body.classList.contains('page--home') || body.classList.contains('page--error')) return;
+
+    const main = document.querySelector('main');
+    const heading = main ? main.querySelector('h1') : null;
+    if (!heading) return;
+
+    const existingBreadcrumb = heading.nextElementSibling && heading.nextElementSibling.classList.contains('breadcrumb');
+    if (existingBreadcrumb) return;
+
+    const crumbs = [{ label: 'Accueil', href: 'index.html' }];
+
+    if (body.classList.contains('page--artist-detail')) {
+        crumbs.push({ label: 'Artistes', href: 'artistes.html' });
+    } else if (body.classList.contains('page--scene-detail')) {
+        crumbs.push({ label: 'Scènes', href: 'scenes.html' });
+    }
+
+    const currentLabel = heading.textContent.trim();
+    if (currentLabel) {
+        crumbs.push({ label: currentLabel, current: true });
+    }
+
+    const nav = document.createElement('nav');
+    nav.className = 'breadcrumb';
+    nav.setAttribute('aria-label', "Fil d'ariane");
+
+    const list = document.createElement('ol');
+    list.className = 'breadcrumb__list';
+
+    crumbs.forEach((crumb, index) => {
+        const item = document.createElement('li');
+        item.className = 'breadcrumb__item';
+
+        if (!crumb.current && crumb.href) {
+            const link = document.createElement('a');
+            link.className = 'breadcrumb__link';
+            link.href = crumb.href;
+            link.textContent = crumb.label;
+            item.appendChild(link);
+        } else {
+            const span = document.createElement('span');
+            span.className = 'breadcrumb__current';
+            span.setAttribute('aria-current', 'page');
+            span.textContent = crumb.label;
+            item.appendChild(span);
+        }
+
+        if (index < crumbs.length - 1) {
+            const sep = document.createElement('span');
+            sep.className = 'breadcrumb__separator';
+            sep.setAttribute('aria-hidden', 'true');
+            sep.textContent = '›';
+            item.appendChild(sep);
+        }
+
+        list.appendChild(item);
+    });
+
+    nav.appendChild(list);
+    heading.insertAdjacentElement('afterend', nav);
 }
 
 // URL: index.html – Scroll fluide + retour en haut + FAQ accordéon + header scrolled
@@ -495,6 +596,7 @@ function initExtraInteractions() {
     // Scroll fluide sur les ancres internes
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach((link) => {
+        if (link.closest('[data-programme-tabs], [data-artists-tabs]')) return;
         const href = link.getAttribute('href');
         if (!href || href === '#' || href === '#0') return;
         link.addEventListener('click', (e) => {
@@ -599,6 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSiteSearch();
     initArtistsTabsSwitcher();
     initProgrammeSearch();
+    initBreadcrumbs();
     initExtraInteractions();
     initLazyMedia();
 });

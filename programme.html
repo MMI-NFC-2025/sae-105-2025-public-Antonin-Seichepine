@@ -140,23 +140,18 @@
         <section class="section section--programme">
             <div class="wrapper section__inner">
 
-                <div class="programme-filters" aria-label="Filtrer les événements par jour">
-                    <p class="programme-filters__label typo-card-desc">Filtrer par jour</p>
-                    <div class="programme-filters__options">
-                        <label class="programme-filters__option">
-                            <input type="radio" name="programme-day" value="all" checked>
-                            <span>Tout</span>
-                        </label>
-                        <label class="programme-filters__option">
-                            <input type="radio" name="programme-day" value="6">
-                            <span>6 juin</span>
-                        </label>
-                        <label class="programme-filters__option">
-                            <input type="radio" name="programme-day" value="7">
-                            <span>7 juin</span>
-                        </label>
-                    </div>
-                </div>
+                <nav class="artists-tabs programme-tabs" aria-label="Filtrer les événements par jour"
+                    data-programme-tabs>
+                    <a href="#programme-title" class="artists-tabs__tab typo-h3" data-day="all" aria-selected="true">
+                        TOUT
+                    </a>
+                    <a href="#programme-6-juin" class="artists-tabs__tab typo-h3" data-day="6" aria-selected="false">
+                        6 JUIN
+                    </a>
+                    <a href="#programme-7-juin" class="artists-tabs__tab typo-h3" data-day="7" aria-selected="false">
+                        7 JUIN
+                    </a>
+                </nav>
 
                 <!-- JOUR 1 : 6 JUIN -->
                 <section class="programme-day" aria-labelledby="programme-6-juin">

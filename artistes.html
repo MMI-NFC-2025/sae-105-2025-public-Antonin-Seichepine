@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artistes – Flying Tap Fest</title>
+    <meta name="description" content="Artistes du Flying Tap Fest : découvrez les talents présents les 6 et 7 juin." />
 
     <!-- Font Barlow -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,6 +88,9 @@
                 <li class="site-menu__item">
                     <a href="contact.html" class="site-menu__link">Contact</a>
                 </li>
+                <li class="site-menu__item">
+                    <a href="mentions.html" class="site-menu__link">Mentions légales</a>
+                </li>
             </ul>
 
             <p class="site-menu__baseline typo-footer-text">
@@ -107,6 +111,18 @@
                     Artistes
                 </h1>
 
+                <nav class="breadcrumb breadcrumb--inline" aria-label="Fil d'Ariane">
+                    <ol class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="index.html">Accueil</a>
+                        </li>
+                        <li class="breadcrumb__separator" aria-hidden="true"></li>
+                        <li class="breadcrumb__item">
+                            <span class="breadcrumb__current" aria-current="page">Artistes</span>
+                        </li>
+                    </ol>
+                </nav>
+
                 <div class="section__motif" aria-hidden="true">
                     <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
                 </div>
@@ -120,23 +136,22 @@
             <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
         </section>
 
-        <!-- TABS (6 JUIN / 7 JUIN) -->
-        <nav class="artists-tabs" aria-label="Jours du festival" data-artists-tabs>
-            <a href="artistes.html" class="artists-tabs__tab typo-h3" aria-selected="true" data-day="6">
-                6 JUIN
-            </a>
-            <a href="artistes-7juin.html" class="artists-tabs__tab typo-h3" aria-selected="false" data-day="7">
-                7 JUIN
-            </a>
-        </nav>
+        <!-- TABS + BARRE DE RECHERCHE -->
+        <div class="artists-tools">
+            <div class="wrapper artists-tools__inner">
+                <nav class="artists-tabs" aria-label="Jours du festival" data-artists-tabs>
+                    <a href="artistes.html" class="artists-tabs__tab typo-h3" aria-selected="true" data-day="6">
+                        6 JUIN
+                    </a>
+                    <a href="artistes-7juin.html" class="artists-tabs__tab typo-h3" aria-selected="false" data-day="7">
+                        7 JUIN
+                    </a>
+                </nav>
 
-        <!-- BARRE DE RECHERCHE -->
-        <div class="header__search-shell">
-            <div class="wrapper">
-                <form class="site-search" id="site-search" role="search" hidden>
-                    <label class="site-search__label" for="site-search-input">Rechercher un artiste</label>
+                <form class="site-search site-search--compact" id="artists-search" role="search">
+                    <label class="site-search__label" for="artists-search-input">Rechercher un artiste</label>
                     <div class="site-search__field">
-                        <input class="site-search__input" type="search" name="q" id="site-search-input"
+                        <input class="site-search__input" type="search" name="q" id="artists-search-input"
                             placeholder="Tapez un nom ou une scène" autocomplete="off">
                     </div>
                 </form>
@@ -262,6 +277,7 @@
                     <li><a class="footer__link" href="scenes.html">Scènes</a></li>
                     <li><a class="footer__link" href="infos-pratiques.html">Infos pratiques</a></li>
                     <li><a class="footer__link" href="contact.html">Contact</a></li>
+                    <li><a class="footer__link" href="mentions.html">Mentions légales</a></li>
                 </ul>
 
                 <div class="footer__logo">
