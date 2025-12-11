@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Scènes – Flying Tap Fest</title>
+    <title>Flying Tap Fest — StepNova Crew</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Font Barlow -->
@@ -15,7 +15,6 @@
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="src/css/style.css">
-
     <!-- JS menu -->
     <script src="src/js/main.js" defer></script>
 
@@ -25,18 +24,16 @@
     <link rel="manifest" href="assets/favicons/site.webmanifest">
 </head>
 
-<body class="page page--festival page--scenes" id="top">
+<body class="page page--festival page--artist-detail" id="top">
 
     <!-- ============ HEADER GLOBAL ============ -->
     <header class="header header--festival">
         <div class="wrapper header__inner">
 
-            <!-- Logo dans le header sur les sous-pages -->
             <a class="header__logo-link" href="index.html">
                 <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
             </a>
 
-            <!-- Menu burger (identique à la home) -->
             <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
                 aria-controls="site-menu" aria-expanded="false">
                 <span class="menu-btn__bar menu-btn__bar--top"></span>
@@ -56,9 +53,7 @@
                     <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
                 </a>
 
-                <button class="site-menu__close" type="button" aria-label="Fermer le menu">
-                    ✕
-                </button>
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">✕</button>
             </div>
 
             <p class="site-menu__intro typo-body">
@@ -79,7 +74,7 @@
                     <a href="artistes.html" class="site-menu__link">Artistes</a>
                 </li>
                 <li class="site-menu__item">
-                    <a href="scenes.html" class="site-menu__link" aria-current="page">Scènes</a>
+                    <a href="scenes.html" class="site-menu__link">Scènes</a>
                 </li>
                 <li class="site-menu__item">
                     <a href="infos-pratiques.html" class="site-menu__link">Infos pratiques</a>
@@ -96,123 +91,67 @@
     </nav>
 
     <!-- ============ MAIN ============ -->
-    <main class="main main--festival main--scenes">
+    <main class="main main--festival main--artist-detail">
 
-        <!-- HERO SCÈNES -->
-        <section class="hero hero--subpage hero--scenes" aria-labelledby="scenes-title">
-            <div class="hero__background" aria-hidden="true"></div>
+        <!-- TITRE + VISUEL ARTISTE -->
+        <section class="artist-hero" aria-labelledby="artist-title">
+            <div class="wrapper artist-hero__inner">
+                <h1 id="artist-title" class="artist-hero__title typo-h2-upper">StepNova Crew</h1>
 
-            <div class="wrapper hero__inner hero__inner--subpage">
-                <h1 id="scenes-title" class="hero__subtitle typo-h2">
-                    Scènes
-                </h1>
+                <figure class="artist-hero__image">
+                    <img src="assets/img/artiste3.webp" alt="StepNova Crew sur la Scène Lumière"
+                        class="artist-hero__img">
+                </figure>
 
-                <div class="section__motif" aria-hidden="true">
-                    <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
-                </div>
-
-                <p class="hero__intro typo-body">
-                    Découvrez les différentes scènes du festival.
+                <p class="artist-hero__meta typo-card-desc">
+                    6&nbsp;juin - 21h00 - Scène Lumière
                 </p>
             </div>
-
-            <!-- Vague de séparation -->
-            <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
         </section>
 
-        <!-- SCÈNE 1 : GRANDE SCÈNE -->
-        <section class="scene" aria-labelledby="scene-grande">
-            <div class="wrapper scene__inner">
-                <h2 id="scene-grande" class="scene__title typo-h2-upper">Grande scène</h2>
+        <!-- DESCRIPTION ARTISTE -->
+        <section class="artist-description">
+            <div class="wrapper artist-description__inner">
+                <p class="typo-body">
+                    StepNova Crew combine claquettes percussives et danse urbaine, avec des séquences lumineuses qui
+                    rythment leurs breaks.
+                </p>
+                <p class="typo-body">
+                    Leur show met en valeur les reliefs de la Scène Lumière avec des silhouettes énergiques et une
+                    bande-son électro.
+                </p>
 
-                <div class="scene-card">
-                    <figure class="scene-card__figure">
-                        <img src="assets/img/scene_grande.webp" alt="Grande scène du Flying Tap Fest"
-                            class="scene-card__image">
-                    </figure>
-
-                    <p class="scene-description typo-body">
-                        La scène principale du festival, dédiée aux grandes performances et aux shows dynamiques.
-                    </p>
-
-                    <p class="scene-cta">
-                        <a href="scene-grande.html" class="btn btn--primary typo-btn">
-                            Voir la scène
+                <div class="artist-description__back">
+                    <div class="wrapper scene-back__inner">
+                        <a href="artistes.html" class="scene-back__button btn btn--primary typo-btn">
+                            RETOUR AUX ARTISTES
                         </a>
-                    </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SCÈNE 2 : SCÈNE LUMIÈRE -->
-        <section class="scene" aria-labelledby="scene-lumiere">
-            <div class="wrapper scene__inner">
-                <h2 id="scene-lumiere" class="scene__title typo-h2-upper">Scène lumière</h2>
-
-                <div class="scene-card">
-                    <figure class="scene-card__figure">
-                        <img src="assets/img/scene_lum.webp" alt="Scène lumière du Flying Tap Fest"
-                            class="scene-card__image">
-                    </figure>
-
-                    <p class="scene-description typo-body">
-                        Un espace pensé pour les spectacles lumineux, projections et performances technologiques.
-                    </p>
-
-                    <p class="scene-cta">
-                        <a href="scene-lumiere.html" class="btn btn--primary typo-btn">
-                            Voir la scène
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SCÈNE 3 : SCÈNE CIEL -->
-        <section class="scene" aria-labelledby="scene-ciel">
-            <div class="wrapper scene__inner">
-                <h2 id="scene-ciel" class="scene__title typo-h2-upper">Scène ciel</h2>
-
-                <div class="scene-card">
-                    <figure class="scene-card__figure">
-                        <img src="assets/img/scene_ciel.webp" alt="Scène ciel du Flying Tap Fest"
-                            class="scene-card__image">
-                    </figure>
-
-                    <p class="scene-description typo-body">
-                        La zone nocturne consacrée aux shows de drones et performances immersives.
-                    </p>
-
-                    <p class="scene-cta">
-                        <a href="scene-ciel.html" class="btn btn--primary typo-btn">
-                            Voir la scène
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </section>
 
         <!-- MOTIF CENTRAL -->
-        <section class="motif-section">
-            <div class="wrapper motif-section__inner">
+        <section class="decor-section">
+            <div class="wrapper decor-section__inner">
                 <div class="motif motif--center" aria-hidden="true">
                     <img src="assets/icons/formeorange.svg" alt="" class="motif__img">
                 </div>
             </div>
         </section>
 
-        <!-- CTA ARTISTES -->
-        <section class="cta-artistes">
-            <div class="wrapper cta-artistes__inner">
-                <h2 class="cta-artistes__title typo-h2-upper">
-                    PRÊT À DÉCOUVRIR CE QUI VOUS ATTEND ?
+        <!-- CTA INFOS PRATIQUES -->
+        <section class="section section--cta-infos">
+            <div class="wrapper section__inner section__inner--center">
+                <h2 class="cta-infos__title section__title section__title--center typo-h2-upper">
+                    TOUT CE QU’IL FAUT<br>
+                    SAVOIR POUR VENIR.
                 </h2>
 
-                <p class="cta-button">
-                    <a href="artistes.html" class="btn btn--primary typo-btn">
-                        Voir les artistes
-                    </a>
-                </p>
+                <a href="infos-pratiques.html" class="btn btn--primary cta-infos__btn typo-btn">
+                    VOIR LES INFOS
+                </a>
             </div>
         </section>
 
@@ -222,7 +161,6 @@
     <footer class="footer footer--festival" id="footer">
         <div class="footer__inner">
 
-            <!-- Petites formes décoratives au-dessus du footer -->
             <div class="footer__motifs" aria-hidden="true">
                 <span class="footer__motif"></span>
                 <span class="footer__motif"></span>

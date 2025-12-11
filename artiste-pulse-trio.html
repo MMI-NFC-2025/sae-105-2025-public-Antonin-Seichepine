@@ -3,13 +3,209 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Redirection…</title>
-    <meta http-equiv="refresh" content="0; url=404.html">
-    <link rel="canonical" href="404.html">
+    <title>Flying Tap Fest — The Pulse Trio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Barlow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- JS menu -->
+    <script src="src/js/main.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/favicons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
 </head>
 
-<body>
-    <p>Redirection vers <a href="404.html">404.html</a>…</p>
+<body class="page page--festival page--artist-detail" id="top">
+
+    <!-- ============ HEADER GLOBAL ============ -->
+    <header class="header header--festival">
+        <div class="wrapper header__inner">
+
+            <a class="header__logo-link" href="index.html">
+                <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
+            </a>
+
+            <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
+                aria-controls="site-menu" aria-expanded="false">
+                <span class="menu-btn__bar menu-btn__bar--top"></span>
+                <span class="menu-btn__bar menu-btn__bar--bottom"></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ============== MENU MOBILE GLOBAL ============== -->
+    <nav class="site-menu menu" id="site-menu" aria-hidden="true" hidden>
+        <div class="site-menu__overlay"></div>
+
+        <div class="site-menu__panel">
+            <div class="site-menu__top">
+                <a href="index.html" class="site-menu__logo">
+                    <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
+                </a>
+
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">✕</button>
+            </div>
+
+            <p class="site-menu__intro typo-body">
+                Naviguez entre les univers du Flying Tap Fest.
+            </p>
+
+            <ul class="site-menu__list">
+                <li class="site-menu__item">
+                    <a href="index.html" class="site-menu__link">Accueil</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="festival.html" class="site-menu__link">Le festival</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="programme.html" class="site-menu__link">Programme</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="artistes.html" class="site-menu__link">Artistes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="scenes.html" class="site-menu__link">Scènes</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="infos-pratiques.html" class="site-menu__link">Infos pratiques</a>
+                </li>
+                <li class="site-menu__item">
+                    <a href="contact.html" class="site-menu__link">Contact</a>
+                </li>
+            </ul>
+
+            <p class="site-menu__baseline typo-footer-text">
+                Entre ciel et terre, vivez l’expérience Flying Tap Fest.
+            </p>
+        </div>
+    </nav>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main main--festival main--artist-detail">
+
+        <!-- TITRE + VISUEL ARTISTE -->
+        <section class="artist-hero" aria-labelledby="artist-title">
+            <div class="wrapper artist-hero__inner">
+                <h1 id="artist-title" class="artist-hero__title typo-h2-upper">The Pulse Trio</h1>
+
+                <figure class="artist-hero__image">
+                    <img src="assets/img/artiste5.webp" alt="The Pulse Trio sur scène" class="artist-hero__img">
+                </figure>
+
+                <p class="artist-hero__meta typo-card-desc">
+                    7&nbsp;juin - 17h00 - Grande scène
+                </p>
+            </div>
+        </section>
+
+        <!-- DESCRIPTION ARTISTE -->
+        <section class="artist-description">
+            <div class="wrapper artist-description__inner">
+                <p class="typo-body">
+                    The Pulse Trio fusionne percussions, claquettes et nappes électroniques pour un set à la fois
+                    rythmique et immersif.
+                </p>
+                <p class="typo-body">
+                    Leur performance joue sur les accents lumineux et les variations de tempo, parfaite pour la Grande
+                    scène du Flying Tap Fest.
+                </p>
+
+                <div class="artist-description__back">
+                    <div class="wrapper scene-back__inner">
+                        <a href="artistes.html" class="scene-back__button btn btn--primary typo-btn">
+                            RETOUR AUX ARTISTES
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MOTIF CENTRAL -->
+        <section class="decor-section">
+            <div class="wrapper decor-section__inner">
+                <div class="motif motif--center" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="motif__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA INFOS PRATIQUES -->
+        <section class="section section--cta-infos">
+            <div class="wrapper section__inner section__inner--center">
+                <h2 class="cta-infos__title section__title section__title--center typo-h2-upper">
+                    TOUT CE QU’IL FAUT<br>
+                    SAVOIR POUR VENIR.
+                </h2>
+
+                <a href="infos-pratiques.html" class="btn btn--primary cta-infos__btn typo-btn">
+                    VOIR LES INFOS
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER GLOBAL (version unifiée) ============ -->
+    <footer class="footer footer--festival" id="footer">
+        <div class="footer__inner">
+
+            <div class="footer__motifs" aria-hidden="true">
+                <span class="footer__motif"></span>
+                <span class="footer__motif"></span>
+                <span class="footer__motif"></span>
+            </div>
+
+            <p class="footer__text">
+                Entre ciel et terre,<br>
+                <span class="u-highlight">vivez l’expérience Flying Tap Fest.</span>
+            </p>
+
+            <nav class="footer__nav" aria-label="Navigation du pied de page">
+                <ul class="footer__list footer__list--pages">
+                    <li><a class="footer__link" href="index.html">Accueil</a></li>
+                    <li><a class="footer__link" href="festival.html">Le festival</a></li>
+                    <li><a class="footer__link" href="programme.html">Programme</a></li>
+                    <li><a class="footer__link" href="artistes.html">Artistes</a></li>
+                    <li><a class="footer__link" href="scenes.html">Scènes</a></li>
+                    <li><a class="footer__link" href="infos-pratiques.html">Infos pratiques</a></li>
+                    <li><a class="footer__link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="footer__logo">
+                    <img src="assets/icons/formebeige.svg" alt="Flying Tap Fest" class="footer__logo-img">
+                </div>
+
+                <ul class="footer__list footer__list--social">
+                    <li><a class="footer__link footer__link--silent" href="#">Instagram</a></li>
+                    <li><a class="footer__link footer__link--silent" href="#">Facebook</a></li>
+                    <li><a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <address class="footer__infos">
+                <p><a class="footer__mail" href="mailto:contact@flyingtapfest.fr">contact@flyingtapfest.fr</a></p>
+                <p class="footer__address">
+                    Montbéliard, France<br>
+                    Site du Flying Tap Fest
+                </p>
+                <p class="footer__copy">© 2026 Flying Tap Fest</p>
+            </address>
+
+        </div>
+    </footer>
+
 </body>
 
 </html>

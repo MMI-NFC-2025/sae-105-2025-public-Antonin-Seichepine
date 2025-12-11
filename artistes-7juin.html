@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="src/css/style.css">
 
     <!-- JS menu -->
-    <script src="src/js/menu.js" defer></script>
+    <script src="src/js/main.js" defer></script>
 
     <!-- Favicons -->
     <link rel="icon" href="assets/favicons/favicon.svg">
@@ -35,11 +35,13 @@
                 <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
             </a>
 
-            <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
-                aria-controls="site-menu" aria-expanded="false">
-                <span class="menu-btn__bar menu-btn__bar--top"></span>
-                <span class="menu-btn__bar menu-btn__bar--bottom"></span>
-            </button>
+            <div class="header__actions">
+                <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
+                    aria-controls="site-menu" aria-expanded="false">
+                    <span class="menu-btn__bar menu-btn__bar--top"></span>
+                    <span class="menu-btn__bar menu-btn__bar--bottom"></span>
+                </button>
+            </div>
 
         </div>
     </header>
@@ -111,6 +113,19 @@
             </a>
         </nav>
 
+        <!-- BARRE DE RECHERCHE -->
+        <div class="header__search-shell">
+            <div class="wrapper">
+                <form class="site-search" id="site-search" role="search" hidden>
+                    <label class="site-search__label" for="site-search-input">Rechercher un artiste</label>
+                    <div class="site-search__field">
+                        <input class="site-search__input" type="search" name="q" id="site-search-input"
+                            placeholder="Tapez un nom ou une scène" autocomplete="off">
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <!-- ============ SECTION ARTISTES 7 JUIN ============ -->
         <section class="artists-day" aria-label="Artistes du 7 juin">
 
@@ -127,7 +142,7 @@
                     </figcaption>
 
                     <!-- Bouton en bas -->
-                    <a href="#" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
+                    <a href="artiste-eliasskytap.html" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
 
                 </figure>
             </article>
@@ -143,7 +158,7 @@
                         <h3 class="artist-card__name typo-card-title">The Pulse Trio</h3>
                     </figcaption>
 
-                    <a href="#" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
+                    <a href="artiste-pulse-trio.html" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
 
                 </figure>
             </article>
@@ -159,7 +174,7 @@
                         <h3 class="artist-card__name typo-card-title">Aurora Lights Company</h3>
                     </figcaption>
 
-                    <a href="#" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
+                    <a href="artiste-aurora-lights.html" class="artist-card__link typo-btn">EN SAVOIR PLUS</a>
 
                 </figure>
             </article>

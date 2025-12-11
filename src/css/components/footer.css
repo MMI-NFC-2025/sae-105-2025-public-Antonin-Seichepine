@@ -7,14 +7,16 @@
     background-color: var(--principal);
     color: var(--text-button);
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
 }
+
+
 
 /* Contenu interne */
 
 .footer__inner {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 420px;
     margin-inline: auto;
     padding: 4rem 1.5rem 2.5rem;
@@ -26,24 +28,7 @@
    (petites formes losange comme sur la maquette)
    ========================================= */
 
-.footer__motifs {
-    position: absolute;
-    top: -80px;
-    /* remonte dans la zone beige */
-    left: 0;
-    right: 0;
-    height: 70px;
-    pointer-events: none;
-}
 
-.footer__motif {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: var(--principal);
-    transform: rotate(45deg);
-    border-radius: 2px;
-}
 
 /* Positionnement des trois motifs (ajuste si besoin) */
 .footer__motif:nth-child(1) {

@@ -15,7 +15,7 @@
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="src/css/style.css">
-    <script src="src/js/menu.js" defer></script>
+    <script src="src/js/main.js" defer></script>
 
 
     <!-- Favicons -->
@@ -35,12 +35,14 @@
                 <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
             </a>
 
-            <!-- Menu burger (identique à la home) -->
-            <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
-                aria-controls="site-menu" aria-expanded="false">
-                <span class="menu-btn__bar menu-btn__bar--top"></span>
-                <span class="menu-btn__bar menu-btn__bar--bottom"></span>
-            </button>
+            <div class="header__actions">
+                <!-- Menu burger (identique à la home) -->
+                <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
+                    aria-controls="site-menu" aria-expanded="false">
+                    <span class="menu-btn__bar menu-btn__bar--top"></span>
+                    <span class="menu-btn__bar menu-btn__bar--bottom"></span>
+                </button>
+            </div>
 
         </div>
     </header>
@@ -120,6 +122,20 @@
             <!-- Vague blanche qui sépare orange / fond beige (CSS, background SVG) -->
             <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
         </section>
+
+        <!-- BARRE DE RECHERCHE -->
+        <div class="header__search-shell">
+            <div class="wrapper">
+                <form class="site-search" id="site-search" role="search" hidden>
+                    <label class="site-search__label" for="site-search-input">Rechercher un artiste ou un
+                        événement</label>
+                    <div class="site-search__field">
+                        <input class="site-search__input" type="search" name="q" id="site-search-input"
+                            placeholder="Tapez un nom, une scène ou un horaire" autocomplete="off">
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <!-- SECTION PROGRAMME -->
         <section class="section section--programme">
