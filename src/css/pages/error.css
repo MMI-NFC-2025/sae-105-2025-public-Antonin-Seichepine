@@ -1,0 +1,71 @@
+/* =========================================
+   PAGE ERREUR 404 – Flying Tap Fest
+   ========================================= */
+
+/* ----- Fond de la sous-page (comme scènes / à propos) ----- */
+.page--festival.page--error .main--error {
+    background-color: var(--secondaire);
+}
+
+
+
+/* =========================================
+   SECTION CONTENU 404
+   ========================================= */
+
+.section--error {
+    padding: 2.8rem 0 3.2rem;
+}
+
+.section--error .section__inner {
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+/* Texte principal (lead) */
+.section--error .section__text--lead {
+    font-size: var(--fontmd);
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 1.4rem;
+}
+
+/* Texte secondaire */
+.section--error .section__text {
+    color: var(--text-color);
+    font-size: var(--fontbase);
+    margin-bottom: 1rem;
+    line-height: 1.45;
+}
+
+.section--error .u-highlight {
+    color: var(--principal);
+    font-weight: 700;
+}
+
+/* CTA — identique à toutes les sous-pages */
+.section--error .section__cta {
+    margin-top: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (min-width: 768px) {
+    .section--error {
+        padding: 3.4rem 0 3.6rem;
+    }
+
+    .section--error .section__inner {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    .section--error .section__text--lead {
+        margin-bottom: 1.6rem;
+    }
+}

@@ -7,75 +7,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Font Barlow -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="src/css/style.css" />
+
+    <!-- JS menu (comme sur la home) -->
+    <script src="src/js/menu.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/favicons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
 </head>
 
-<body class="page page--error">
+<body class="page page--festival page--error" id="top">
 
-    <!-- ========== HEADER GLOBAL ========== -->
-    <!-- Colle ici ton header déjà utilisé sur les autres pages -->
+    <!-- ================= HEADER (SOUS-PAGE AVEC LOGO) ================= -->
     <header class="header header--festival">
         <div class="wrapper header__inner">
-            <!-- PAS de logo ici si tu le gardes dans le hero de la home -->
-            <button class="header__menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="site-menu"
-                aria-expanded="false">
-                <span class="header__menu-line"></span>
-                <span class="header__menu-line"></span>
-                <span class="header__menu-line"></span>
+
+            <!-- Logo dans le header sur les sous-pages -->
+            <a class="header__logo-link" href="index.html">
+                <img class="header__logo" src="assets/icons/logo.svg" alt="Flying Tap Fest">
+            </a>
+
+            <!-- Menu burger (identique à la home) -->
+            <button class="header__menu-btn menu-btn" type="button" aria-label="Ouvrir le menu"
+                aria-controls="site-menu" aria-expanded="false">
+                <span class="menu-btn__bar menu-btn__bar--top"></span>
+                <span class="menu-btn__bar menu-btn__bar--bottom"></span>
             </button>
+
         </div>
     </header>
 
-    <!-- ========== CONTENU PRINCIPAL ========== -->
-    <main id="main-content">
-        <section class="section section--error" aria-labelledby="error-title">
-            <div class="wrapper section__inner section__inner--center">
-                <p class="error__code typo-h2-upper">Erreur 404</p>
+    <!-- ============== MENU MOBILE GLOBAL (strictement identique à la home) ============== -->
+    <nav class="site-menu menu" id="site-menu" aria-hidden="true" hidden>
+        <div class="site-menu__overlay"></div>
 
-                <h1 class="error__title typo-header" id="error-title">
-                    Oups, on a perdu le signal…
+        <div class="site-menu__panel">
+            <div class="site-menu__top">
+                <a href="index.html" class="site-menu__logo">
+                    <img src="assets/icons/logo.svg" alt="Flying Tap Fest">
+                </a>
+
+                <button class="site-menu__close" type="button" aria-label="Fermer le menu">✕</button>
+            </div>
+
+            <p class="site-menu__intro typo-body">
+                Naviguez entre les univers du Flying Tap Fest.
+            </p>
+
+            <ul class="site-menu__list">
+                <li><a class="site-menu__link" href="index.html">Accueil</a></li>
+                <li><a class="site-menu__link" href="festival.html">Le festival</a></li>
+                <li><a class="site-menu__link" href="programme.html">Programme</a></li>
+                <li><a class="site-menu__link" href="artistes.html">Artistes</a></li>
+                <li><a class="site-menu__link" href="scenes.html">Scènes</a></li>
+                <li><a class="site-menu__link" href="infos-pratiques.html">Infos pratiques</a></li>
+                <li><a class="site-menu__link" href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- IMAGE DU MENU (comme sur la home) -->
+            <img src="assets/img/menu.webp" alt="Show de drones lumineux" class="menu__img">
+
+            <p class="site-menu__baseline typo-footer-text">
+                Entre ciel et terre, vivez l’expérience Flying Tap Fest.
+            </p>
+        </div>
+    </nav>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main main--festival main--error">
+
+        <!-- ===== HERO SOUS-PAGE 404 ===== -->
+        <section class="hero hero--subpage hero--error" aria-labelledby="error-title">
+            <div class="hero__background" aria-hidden="true">
+                <!-- Optionnel : fond spécifique via CSS -->
+            </div>
+
+            <div class="wrapper hero__inner hero__inner--subpage">
+                <h1 class="hero__subtitle typo-h2" id="error-title">
+                    Erreur 404
                 </h1>
 
-                <p class="error__text typo-body">
-                    La page que vous cherchez a dû s’envoler avec les drones du festival
+                <div class="section__motif" aria-hidden="true">
+                    <img src="assets/icons/formeorange.svg" alt="" class="section__motif-img">
+                </div>
+            </div>
+
+            <!-- Vague en bas, gérée en CSS -->
+            <div class="hero__wave hero__wave--bottom" aria-hidden="true"></div>
+        </section>
+
+        <!-- ===== CONTENU ERREUR ===== -->
+        <section class="section section--error">
+            <div class="wrapper section__inner section__inner--center">
+                <p class="section__text section__text--lead typo-body">
+                    Oups, on a perdu le signal… La page que vous cherchez a dû s’envoler avec les drones du festival
                     ou n’existe tout simplement pas.
                 </p>
 
-                <p class="error__text typo-body">
-                    Retournez vers la page d’accueil ou découvrez le programme pour
+                <p class="section__text typo-body">
+                    Retournez vers la page d’accueil pour redécouvrir le festival, ou consultez le programme pour
                     continuer l’expérience <span class="u-highlight">Flying Tap Fest</span>.
                 </p>
 
-                <div class="error__actions">
-                    <a href="index.html" class="btn btn--primary">
-                        Revenir à l’accueil
-                    </a>
-                    <a href="programme.html" class="btn btn--secondary">
-                        Voir le programme
-                    </a>
-                </div>
-
-                <!-- Petit motif décoratif si tu veux une image / icône de drone -->
-                <!-- <img src="assets/icons/dronebeige.svg" alt="" class="error__motif" aria-hidden="true"> -->
+                <a href="index.html" class="btn btn--primary section__cta typo-btn">
+                    Revenir à l’accueil
+                </a>
             </div>
         </section>
+
     </main>
 
-    <!-- ========== FOOTER GLOBAL ========== -->
-    <!-- Colle ici ton footer déjà utilisé sur les autres pages -->
+    <!-- ============ FOOTER (STRICTEMENT IDENTIQUE À LA HOME) ============ -->
     <footer class="footer footer--festival" id="footer">
-        <div class="footer__wave" aria-hidden="true"></div>
+        <div class="footer__inner">
 
-        <div class="footer__inner wrapper">
+            <!-- Petites formes décoratives au-dessus du footer -->
+            <div class="footer__motifs" aria-hidden="true">
+                <span class="footer__motif"></span>
+                <span class="footer__motif"></span>
+                <span class="footer__motif"></span>
+            </div>
+
             <p class="footer__text">
-                Entre ciel et terre,<br />
+                Entre ciel et terre,<br>
                 <span class="u-highlight">vivez l’expérience Flying Tap Fest.</span>
             </p>
 
@@ -89,16 +152,31 @@
                     <li><a class="footer__link" href="infos-pratiques.html">Infos pratiques</a></li>
                     <li><a class="footer__link" href="contact.html">Contact</a></li>
                 </ul>
+
+                <div class="footer__logo">
+                    <img src="assets/icons/formebeige.svg" alt="Flying Tap Fest" class="footer__logo-img">
+                </div>
+
+                <ul class="footer__list footer__list--social">
+                    <li><a class="footer__link footer__link--silent" href="#">Instagram</a></li>
+                    <li><a class="footer__link footer__link--silent" href="#">Facebook</a></li>
+                    <li><a class="footer__link footer__link--silent" href="mailto:contact@flyingtapfest.fr">Email</a>
+                    </li>
+                </ul>
             </nav>
 
-            <p class="footer__legal">
-                © 2025 Flying Tap Fest – Projet étudiant BUT MMI.
-            </p>
+            <address class="footer__infos">
+                <p><a class="footer__mail" href="mailto:contact@flyingtapfest.fr">contact@flyingtapfest.fr</a></p>
+                <p class="footer__address">
+                    Montbéliard, France<br>
+                    Site du Flying Tap Fest
+                </p>
+                <p class="footer__copy">© 2026 Flying Tap Fest</p>
+            </address>
+
         </div>
     </footer>
 
-    <!-- JS menu -->
-    <script src="src/js/menu.js"></script>
 </body>
 
 </html>
