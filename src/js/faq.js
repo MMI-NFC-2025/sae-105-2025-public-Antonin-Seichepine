@@ -1,13 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const faqButtons = document.querySelectorAll(".faq-item__button");
+    const faqItems = document.querySelectorAll(".faq-item");
 
-    faqButtons.forEach((button) => {
+    faqItems.forEach((item) => {
+        const button = item.querySelector(".faq-item__button");
+        const answer = item.querySelector(".faq-item__answer");
+
+        if (!button || !answer) return;
+
         button.addEventListener("click", () => {
-            const item = button.closest(".faq-item");
-            if (!item) return;
+            const isOpen = item.classList.toggle("faq-item--open");
 
-            // on toggle juste une classe pour l’animation du +
-            item.classList.toggle("faq-item--open");
+            // on montre / cache la réponse
+            if (isOpen) {
+                answer.hidden = false;
+            } else {
+                answer.hidden = true;
+            }
         });
     });
 });
