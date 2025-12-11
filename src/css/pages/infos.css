@@ -8,34 +8,6 @@
     background-color: var(--secondaire);
 }
 
-/* ---------- HERO ---------- */
-
-.hero--infos .hero__background {
-    /* ton système de hero/wave continue à gérer le haut ; 
-       ici on laisse la couleur gérée globalement */
-}
-
-.hero--infos .hero__subtitle {
-    text-align: left;
-    color: var(--principal);
-    margin-bottom: 0.4rem;
-}
-
-.hero--infos .section__motif {
-    margin: 0.2rem 0 0.8rem;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.hero--infos .section__motif-img {
-    width: 60px;
-    display: block;
-}
-
-.hero--infos .hero__intro {
-    max-width: 16rem;
-    color: var(--text-color);
-}
 
 /* ---------- SECTIONS GÉNÉRALES ---------- */
 
@@ -56,7 +28,7 @@
 }
 
 .infos-section__icon img {
-    width: 72px;
+    width: 75px;
     display: block;
 }
 
@@ -80,6 +52,12 @@
 
 /* ---------- CARTES ORANGES (Tarifs / Hébergements / Transport) ---------- */
 
+/* Espacement vertical entre les sections Infos pratiques */
+.main--infos .infos-section+.infos-section {
+    margin-top: 5rem;
+    /* ajuste la valeur selon ce que tu vois dans ta maquette (2rem / 2.8rem, etc.) */
+}
+
 .infos-cards {
     display: flex;
     flex-direction: column;
@@ -90,7 +68,7 @@
     background-color: var(--principal);
     border-radius: 16px;
     padding: 1rem 1.25rem;
-    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+
     color: var(--text-button);
     text-align: center;
 }
@@ -177,32 +155,82 @@
 
 /* ---------- MOTIF + CTA FINAL ---------- */
 
+/* ===============================
+   SECTION CTA – Infos pratiques
+   =============================== */
+
+/* ===============================
+   SECTION CTA – Infos pratiques
+   (équivalent motif-section + cta-artistes)
+   =============================== */
+
 .infos-section--cta {
-    padding-bottom: 3rem;
+    padding: 3rem 0 3.2rem;
+    /* 3rem en haut (motif), 3.2rem en bas (CTA) */
 }
 
+.infos-section--cta .section-wrapper {
+    padding: 0 1.25rem;
+    /* comme motif-section__inner et cta-artistes__inner */
+    text-align: center;
+    /* comme .cta-artistes__inner */
+}
+
+/* Motif centré */
 .infos-section--cta .infos-section__motif {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1.4rem;
+    /* proche de ce que donne motif-section */
 }
 
 .infos-section--cta .infos-section__motif img {
-    width: 70px;
-    display: block;
+    width: 110px;
+    /* comme .motif--center .motif__img */
+    height: auto;
 }
 
+/* Texte CTA */
 .infos-section--cta .infos-section__cta-text {
-    text-align: left;
     font-size: var(--fontsm);
     color: var(--text-color);
-    margin-bottom: 1.4rem;
+    max-width: 360px;
+    /* cohérent avec .section-wrapper */
+    margin: 0 auto 1.4rem;
+    /* centré + espace avant le bouton */
+    line-height: 1.4;
 }
 
-/* Bouton centré comme sur la maquette */
+/* Bouton centré comme "Voir les artistes" */
 .infos-section--cta .btn {
-    display: block;
-    margin: 0 auto;
+    display: inline-flex;
+    /* comme .cta-button .btn */
+    align-items: center;
+    justify-content: center;
     min-width: 11rem;
+}
+
+/* =========================================
+   Bouton CTA – section Infos pratiques
+   ========================================= */
+
+.page--infos .infos-section--cta .cta-button {
+    display: flex;
+    justify-content: center;
+}
+
+.page--infos .infos-section--cta .cta-button .btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    /* Gabarit du bouton */
+    padding: 0.85rem 2.4rem;
+    border-radius: 999px;
+
+    /* On neutralise les éventuels width/min-width globaux */
+    width: auto !important;
+    min-width: 11rem;
+    margin: 0 auto;
     text-align: center;
 }
