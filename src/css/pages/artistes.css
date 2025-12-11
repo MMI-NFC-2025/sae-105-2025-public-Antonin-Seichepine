@@ -77,6 +77,16 @@
 
 /* ---------- CARDS ARTISTES ---------- */
 
+.artist-card {
+    /* même espace entre toutes les cards (Artistes + Scènes) */
+    margin-bottom: 2.4rem;
+}
+
+.artist-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Bloc image + contenu */
 .artist-card__figure {
     position: relative;
     border-radius: 18px;
@@ -90,7 +100,7 @@
     display: block;
 }
 
-/* Dégradé pour le texte en haut */
+/* Dégradé sombre en haut de l’image */
 .artist-card__figure::after {
     content: "";
     position: absolute;
@@ -102,7 +112,7 @@
     z-index: 1;
 }
 
-/* Texte en haut de la card */
+/* Texte (heure + nom) en haut de la card */
 .artist-card__caption {
     position: absolute;
     top: 1rem;
@@ -125,7 +135,7 @@
     font-weight: 800;
 }
 
-/* Bouton en bas de la card (ruban beige/orange) */
+/* Bouton ruban en bas de la card */
 .artist-card__link {
     position: absolute;
     bottom: 1rem;
@@ -136,7 +146,7 @@
     align-items: center;
     justify-content: center;
 
-    padding: 0.55rem 2.1rem;
+    padding: 0.55rem 1.6rem;
     border-radius: 6px;
     text-decoration: none;
 
@@ -149,4 +159,11 @@
     text-transform: uppercase;
 
     z-index: 3;
+
+    /* UNIFORMISATION & RESPONSIVE */
+    max-width: 150px;
+    /* même largeur partout */
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
 }

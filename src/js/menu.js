@@ -81,3 +81,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const artistCards = document.querySelectorAll(".artist-card");
+
+    artistCards.forEach((card) => {
+        const link = card.querySelector(".artist-card__link");
+        if (!link) return;
+
+        // Cible qu’on va faire "grow" (la figure entière)
+        const target = card.querySelector(".artist-card__figure") || card;
+
+        const scaleUp = 1.03;
+        const scaleDown = 1;
+
+        // Transition + curseur en JS pour ne rien toucher au CSS
+        target.style.transition = "transform 0.15s ease";
+        card.style.cursor = "pointer";
+
+        // GROW au survol
+        card.addEventListener("mouseenter", () => {
+            target.style.transform = `scale(${scaleUp})`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+            target.style.transform = `scale(${scaleDown})`;
+        });
+
+        // Mobile : petit effet au touch
+        card.addEventListener("touchstart", () => {
+            target.style.transform = `scale(${scaleUp})`;
+        });
+
+        card.addEventListener("touchend", () => {
+            target.style.transform = `scale(${scaleDown})`;
+        });
+
+        // Clic sur TOUTE la card => redirige vers le lien interne
+        card.addEventListener("click", (event) => {
+            // si on clique déjà sur le vrai <a>, on laisse le comportement normal
+            if (event.target.closest(".artist-card__link")) return;
+
+            link.click();
+        });
+    });
+});

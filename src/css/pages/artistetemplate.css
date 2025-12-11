@@ -1,0 +1,128 @@
+/* =========================================
+   PAGE ARTISTE DÉTAIL – "Moonstep"
+   ========================================= */
+
+.page--festival.page--artist-detail .main--artist-detail {
+    background-color: var(--secondaire);
+}
+
+/* ---------- HERO ARTISTE (titre + visuel) ---------- */
+
+.artist-hero {
+    padding: 10rem 1.25rem 2.2rem;
+}
+
+.artist-hero__inner {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* "Moonstep" en orange entre guillemets */
+.artist-hero__title {
+    margin-bottom: 1.3rem;
+    color: var(--principal);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Image artiste, grande avec angles bien arrondis */
+.artist-hero__image {
+    margin: 0 0 0.9rem;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.artist-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Ligne méta (date / heure / scène) */
+.artist-hero__meta {
+    font-size: var(--fontsm);
+    color: var(--text-color);
+}
+
+/* ---------- DESCRIPTION ARTISTE + BOUTON RETOUR ---------- */
+
+.artist-description {
+    padding: 0 1.25rem 3rem;
+}
+
+.artist-description__inner {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+/* Paragraphes description, alignés à gauche */
+.artist-description__inner .typo-body {
+    font-size: var(--fontsm);
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-bottom: 0.9rem;
+}
+
+/* Wrapper du bouton RETOUR AUX ARTISTES */
+.artist-description__back {
+    margin-top: 1.8rem;
+    text-align: center;
+}
+
+/* On élargit le bouton comme sur les autres rubans */
+.artist-description__back .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+}
+
+/* ---------- MOTIF CENTRAL (même logique que page-decor) ---------- */
+
+.decor-section {
+    padding: 2.4rem 0;
+}
+
+.decor-section__inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.motif--center .motif__img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
+
+/* ---------- CTA INFOS PRATIQUES ---------- */
+
+.section--cta-infos {
+    padding: 0 1.25rem 3.8rem;
+}
+
+.section--cta-infos .section__inner--center {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Texte "TOUT CE QU’IL FAUT SAVOIR POUR VENIR." */
+.cta-infos__title {
+    margin-bottom: 1.2rem;
+    color: var(--principal);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: var(--fontsm);
+}
+
+/* Bouton VOIR LES INFOS (ruban orange) */
+.cta-infos__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+}
