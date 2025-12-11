@@ -127,11 +127,10 @@
         <div class="header__search-shell">
             <div class="wrapper">
                 <form class="site-search" id="site-search" role="search" hidden>
-                    <label class="site-search__label" for="site-search-input">Rechercher un artiste ou un
-                        événement</label>
+                    <label class="site-search__label" for="site-search-input">Rechercher un événement</label>
                     <div class="site-search__field">
                         <input class="site-search__input" type="search" name="q" id="site-search-input"
-                            placeholder="Tapez un nom, une scène ou un horaire" autocomplete="off">
+                            placeholder="Nom, scène ou horaire" autocomplete="off">
                     </div>
                 </form>
             </div>
@@ -140,6 +139,24 @@
         <!-- SECTION PROGRAMME -->
         <section class="section section--programme">
             <div class="wrapper section__inner">
+
+                <div class="programme-filters" aria-label="Filtrer les événements par jour">
+                    <p class="programme-filters__label typo-card-desc">Filtrer par jour</p>
+                    <div class="programme-filters__options">
+                        <label class="programme-filters__option">
+                            <input type="radio" name="programme-day" value="all" checked>
+                            <span>Tout</span>
+                        </label>
+                        <label class="programme-filters__option">
+                            <input type="radio" name="programme-day" value="6">
+                            <span>6 juin</span>
+                        </label>
+                        <label class="programme-filters__option">
+                            <input type="radio" name="programme-day" value="7">
+                            <span>7 juin</span>
+                        </label>
+                    </div>
+                </div>
 
                 <!-- JOUR 1 : 6 JUIN -->
                 <section class="programme-day" aria-labelledby="programme-6-juin">
@@ -151,7 +168,7 @@
 
                         <!-- Carte 1 -->
                         <li class="programme-day__item">
-                            <article class="event-card">
+                            <article class="event-card" data-day="6">
                                 <div class="event-card__image">
                                     <img src="assets/img/illu5.webp" alt="Initiation aux claquettes">
                                     <button class="btn btn--tag typo-btn" type="button">
@@ -172,7 +189,7 @@
 
                         <!-- Carte 2 -->
                         <li class="programme-day__item">
-                            <article class="event-card">
+                            <article class="event-card" data-day="6">
                                 <div class="event-card__image">
                                     <img src="assets/img/illu7.webp" alt="Démonstration de claquettes">
                                     <button class="btn btn--tag typo-btn" type="button">
@@ -193,7 +210,7 @@
 
                         <!-- Carte 3 -->
                         <li class="programme-day__item">
-                            <article class="event-card">
+                            <article class="event-card" data-day="6">
                                 <div class="event-card__image">
                                     <img src="assets/img/illu8.webp" alt="Concert acoustique">
                                     <button class="btn btn--tag typo-btn" type="button">
@@ -214,7 +231,7 @@
 
                         <!-- Carte 4 -->
                         <li class="programme-day__item">
-                            <article class="event-card">
+                            <article class="event-card" data-day="6">
                                 <div class="event-card__image">
                                     <img src="assets/img/illu6.webp" alt="Spectacle de drones">
                                     <button class="btn btn--tag typo-btn" type="button">
@@ -253,7 +270,7 @@
 
                         <!-- Carte 5 -->
                         <li class="programme-day__item">
-                            <article class="event-card">
+                            <article class="event-card" data-day="7">
                                 <div class="event-card__image">
                                     <img src="assets/img/illu4.webp" alt="Tap X Electro Lights">
                                     <button class="btn btn--tag typo-btn" type="button">
@@ -274,7 +291,7 @@
 
                         <!-- Carte 6 -->
                         <li class="programme-day__item">
-                            <article class="event-card">
+                            <article class="event-card" data-day="7">
                                 <div class="event-card__image">
                                     <img src="assets/img/illu3.webp" alt="Showcase Tap Masters">
                                     <button class="btn btn--tag typo-btn" type="button">
@@ -295,7 +312,7 @@
 
                         <!-- Carte 7 -->
                         <li class="programme-day__item">
-                            <article class="event-card">
+                            <article class="event-card" data-day="7">
                                 <div class="event-card__image">
                                     <img src="assets/img/illu2.webp" alt="The Beatmakers Live">
                                     <button class="btn btn--tag typo-btn" type="button">
@@ -316,7 +333,7 @@
 
                         <!-- Carte 8 -->
                         <li class="programme-day__item">
-                            <article class="event-card">
+                            <article class="event-card" data-day="7">
                                 <div class="event-card__image">
                                     <img src="assets/img/illu1.webp" alt="Grand show lumineux">
                                     <button class="btn btn--tag typo-btn" type="button">

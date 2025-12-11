@@ -39,6 +39,14 @@
     z-index: 1;
 }
 
+.artist-card__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    text-indent: -9999px;
+    background: transparent;
+}
+
 .artist-card__caption {
     position: absolute;
     top: 1rem;
@@ -47,7 +55,7 @@
     width: 90%;
     text-align: center;
     color: var(--text-button);
-    z-index: 2;
+    z-index: 3;
 }
 
 .artist-card__time {
@@ -83,7 +91,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
-    z-index: 3;
+    z-index: 4;
 
     max-width: 150px;
     width: 100%;

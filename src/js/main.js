@@ -196,8 +196,10 @@ function initCarousel() {
     });
 }
 
-// URL: artistes.html, programme.html – Barre de recherche (toggle)
+// URL: artistes.html – Barre de recherche (toggle)
 function initSiteSearch() {
+    if (!document.body.classList.contains('page--artists')) return;
+
     const searchForm = document.querySelector('.site-search');
     const searchInput = searchForm ? searchForm.querySelector('.site-search__input') : null;
     if (!searchForm || !searchInput) return;
@@ -205,15 +207,7 @@ function initSiteSearch() {
     const searchBtn = ensureSearchButton(searchForm);
     if (!searchBtn) return;
 
-    const searchableItems = (() => {
-        if (document.body.classList.contains('page--artists')) {
-            return Array.from(document.querySelectorAll('.artist-card'));
-        }
-        if (document.body.classList.contains('page--programme')) {
-            return Array.from(document.querySelectorAll('.event-card'));
-        }
-        return [];
-    })();
+    const searchableItems = Array.from(document.querySelectorAll('.artist-card'));
     if (!searchableItems.length) return;
 
     const status = document.createElement('div');
@@ -269,6 +263,117 @@ function initSiteSearch() {
 
     searchInput.addEventListener('input', (e) => {
         applyFilter(e.target.value);
+    });
+
+    applyFilter('');
+}
+
+// URL: programme.html – Barre de recherche par jour
+function initProgrammeSearch() {
+    if (!document.body.classList.contains('page--programme')) return;
+
+    const searchForm = document.querySelector('.site-search');
+    const searchInput = searchForm ? searchForm.querySelector('.site-search__input') : null;
+    const dayRadios = Array.from(document.querySelectorAll('.programme-filters input[name="programme-day"]'));
+    if (!searchForm || !searchInput) return;
+
+    const searchBtn = ensureSearchButton(searchForm);
+    if (!searchBtn) return;
+
+    const eventCards = Array.from(document.querySelectorAll('.event-card'));
+    if (!eventCards.length) return;
+
+    const daySections = Array.from(document.querySelectorAll('.programme-day'));
+    const separator = document.querySelector('.programme__separator');
+
+    const status = document.createElement('div');
+    status.className = 'sr-only site-search__status';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    searchForm.appendChild(status);
+
+    const getActiveDay = () => {
+        if (!dayRadios.length) return 'all';
+        const checked = dayRadios.find((radio) => radio.checked);
+        return checked ? checked.value : 'all';
+    };
+
+    const updateStatus = (visibleCount, query, day) => {
+        if (!query && day === 'all') {
+            status.textContent = 'Tous les événements sont affichés.';
+            return;
+        }
+        if (!visibleCount) {
+            status.textContent = 'Aucun événement trouvé.';
+            return;
+        }
+
+        const dayLabel = day === 'all' ? 'tous les jours' : `${day} juin`;
+        status.textContent = `${visibleCount} événement${visibleCount > 1 ? 's' : ''} pour ${dayLabel}${query ? ` correspondant à "${query}"` : ''}.`;
+    };
+
+    const refreshDaySections = () => {
+        const visibleSections = [];
+
+        daySections.forEach((section) => {
+            const items = Array.from(section.querySelectorAll('.programme-day__item'));
+            const hasVisible = items.some((item) => item.style.display !== 'none');
+            section.style.display = hasVisible ? '' : 'none';
+            if (hasVisible) visibleSections.push(section);
+        });
+
+        if (separator) {
+            separator.style.display = visibleSections.length > 1 ? '' : 'none';
+        }
+    };
+
+    const applyFilter = (value) => {
+        const query = value.trim().toLowerCase();
+        const day = getActiveDay();
+        let visibleCount = 0;
+
+        eventCards.forEach((card) => {
+            const container = card.closest('li') || card;
+            const cardDay = card.dataset.day || (card.closest('[data-day]') ? card.closest('[data-day]').dataset.day : '');
+            const matchesDay = day === 'all' || cardDay === day;
+            const text = card.textContent.toLowerCase();
+            const matchesQuery = !query || text.includes(query);
+            const match = matchesDay && matchesQuery;
+            container.style.display = match ? '' : 'none';
+            if (match) visibleCount += 1;
+        });
+
+        refreshDaySections();
+        updateStatus(visibleCount, query, day);
+    };
+
+    const toggleSearch = () => {
+        const isHidden = searchForm.hasAttribute('hidden');
+        if (isHidden) {
+            searchForm.removeAttribute('hidden');
+            searchBtn.setAttribute('aria-expanded', 'true');
+            searchInput.focus();
+        } else {
+            searchForm.setAttribute('hidden', '');
+            searchBtn.setAttribute('aria-expanded', 'false');
+        }
+    };
+
+    searchBtn.addEventListener('click', toggleSearch);
+    searchBtn.setAttribute('aria-expanded', searchForm.hasAttribute('hidden') ? 'false' : 'true');
+
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        applyFilter(e.target.value);
+    });
+
+    dayRadios.forEach((radio) => {
+        radio.addEventListener('change', () => {
+            applyFilter(searchInput.value);
+        });
     });
 
     applyFilter('');
@@ -381,6 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMenuBurger();
     initCarousel();
     initSiteSearch();
+    initProgrammeSearch();
     initExtraInteractions();
     initLazyMedia();
 });

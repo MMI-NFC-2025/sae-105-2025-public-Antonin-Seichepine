@@ -69,3 +69,62 @@
     width: 120px;
     height: auto;
 }
+
+/* ---------- Filtres jour ---------- */
+
+.programme-filters {
+    margin: 0 0 2rem;
+    padding: 1.1rem 1.25rem;
+    border-radius: 16px;
+    border: none;
+    box-shadow: none;
+}
+
+.programme-filters__label {
+    margin: 0 0 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    color: var(--principal);
+}
+
+.programme-filters__options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.programme-filters__option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 12px;
+    background: rgba(227, 221, 211, 0.55);
+    border: 1px solid transparent;
+    font-weight: 700;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.programme-filters__option input {
+    accent-color: var(--principal);
+}
+
+.programme-filters__option:hover {
+    border-color: transparent;
+    background: rgba(226, 93, 64, 0.14);
+    box-shadow: none;
+}
+
+.programme-filters__option input:checked+span {
+    color: var(--principal);
+    font-weight: 800;
+}
+
+@media (max-width: 480px) {
+    .programme-filters__options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

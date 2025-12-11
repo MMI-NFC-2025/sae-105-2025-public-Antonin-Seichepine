@@ -15,7 +15,7 @@
 }
 
 .scene-hero__inner {
-    max-width: 360px;
+    max-width: 420px;
     margin: 0 auto 2rem;
 }
 
@@ -54,6 +54,7 @@
     font-weight: 800;
     letter-spacing: 0.06em;
     color: var(--principal);
+    text-align: center;
 }
 
 /* On laisse .artist-card gérer l’espacement entre cards */
