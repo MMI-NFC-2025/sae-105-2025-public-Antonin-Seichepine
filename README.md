@@ -5,7 +5,7 @@
 
 - NOM : SEICHEPINE
 - PRÉNOM : Antonin
-- GROUPE : B1
+- GROUPE :  B1 
 - URL du site : https://flyingtapfest.netlify.app/ et domaineperso : http://flyingtapfest.antonin-seichepine.fr/
 - URL FIGMA : https://www.figma.com/design/2reeloNfUYeRF83nFE63Lb/SAE105?node-id=2-91&t=kI2dxR1e32R7Gqru-1
 
