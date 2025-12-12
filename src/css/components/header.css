@@ -95,26 +95,6 @@
     transform: rotate(-45deg) translateY(-4px);
 }
 
-/* ================== HEADER SCROLLED ================== */
-
-.header--scrolled {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, rgba(226, 93, 64, 0.96) 0%, rgba(247, 157, 9, 0.92) 100%);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
-    transition: background 180ms ease, box-shadow 180ms ease, padding 180ms ease;
-}
-
-.header--scrolled .header__inner {
-    padding-block: 1rem;
-}
-
-.header--home.header--scrolled {
-    background: rgba(226, 93, 64, 0.96);
-}
-
 /* ================== HEADER ACTIONS ================== */
 
 .header__actions {
@@ -126,65 +106,8 @@
 
 /* ================== SEARCH BAR ================== */
 
-.header__search-shell {
-    padding: 0 1rem;
-    margin-top: 0.75rem;
-}
-
 #site-search[hidden] {
     display: none !important;
-}
-
-.header__search-btn {
-    border: none;
-    background: transparent;
-    padding: 0.4rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-button);
-    cursor: pointer;
-    transition: transform 0.16s ease, opacity 0.16s ease;
-}
-
-.header__search-btn:hover {
-    transform: translateY(-1px);
-}
-
-.header__search-btn:active {
-    transform: translateY(0);
-}
-
-.header__search-glyph {
-    position: relative;
-    display: block;
-    width: 20px;
-    height: 20px;
-}
-
-.header__search-glyph::before,
-.header__search-glyph::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    color: currentColor;
-}
-
-.header__search-glyph::before {
-    width: 13px;
-    height: 13px;
-    border: 2px solid currentColor;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-}
-
-.header__search-glyph::after {
-    width: 9px;
-    height: 2px;
-    background: currentColor;
-    transform: translate(11px, 11px) rotate(45deg);
-    border-radius: 2px;
 }
 
 .site-search {
@@ -284,13 +207,6 @@
     opacity: 0.8;
 }
 
-.search-empty {
-    margin: 0.35rem 0 0;
-    font-size: var(--fontsm);
-    font-weight: 700;
-    color: var(--principal);
-}
-
 .site-search__feedback {
     margin: 0.2rem 0 0;
     font-size: var(--fontsm);
@@ -319,11 +235,6 @@
 
 .site-search__submit:active {
     transform: translateY(0);
-}
-
-.site-search__hint {
-    margin: 0;
-    color: rgba(27, 46, 75, 0.75);
 }
 
 /* ================== BACK TO TOP ================== */

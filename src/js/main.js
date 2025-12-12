@@ -1,5 +1,5 @@
+// Visible sur : index.html, festival.html, programme.html, artistes.html, artistes-7juin.html, artistes-* (pages artistes), scenes.html, scene-*.html, infos-pratiques.html, contact.html, mentions.html, 404.html.
 /*
-SAE rule: chaque interaction liste les pages où elle est visible.
 - Menu burger + site menu: index.html, festival.html, programme.html, artistes.html, artistes-7juin.html, artistes-* (pages artistes), scenes.html, scene-*.html, infos-pratiques.html, contact.html, mentions.html, 404.html.
 - Carrousel partenaires: index.html.
 - Recherche + onglets artistes: artistes.html, artistes-7juin.html.
@@ -109,28 +109,6 @@ function initMenuBurger() {
     if (overlay) overlay.addEventListener('click', closeMenu);
     navLinks.forEach((link) => link.addEventListener('click', closeMenu));
     document.addEventListener('keydown', handleKeydown);
-}
-
-function ensureSearchButton(searchForm) {
-    const menuBtn = document.querySelector('.header__menu-btn');
-    if (!menuBtn || !searchForm) return null;
-
-    let searchBtn = document.querySelector('.header__search-btn');
-    if (searchBtn) return searchBtn;
-
-    searchBtn = document.createElement('button');
-    searchBtn.type = 'button';
-    searchBtn.className = 'header__search-btn';
-    searchBtn.setAttribute('aria-label', 'Afficher la recherche');
-    if (searchForm.id) searchBtn.setAttribute('aria-controls', searchForm.id);
-
-    const glyph = document.createElement('span');
-    glyph.className = 'header__search-glyph';
-    glyph.setAttribute('aria-hidden', 'true');
-    searchBtn.appendChild(glyph);
-
-    menuBtn.parentNode.insertBefore(searchBtn, menuBtn);
-    return searchBtn;
 }
 
 // URL: artistes.html – Carrousel partenaires
