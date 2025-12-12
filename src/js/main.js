@@ -1,3 +1,13 @@
+/*
+SAE rule: chaque interaction liste les pages où elle est visible.
+- Menu burger + site menu: index.html, festival.html, programme.html, artistes.html, artistes-7juin.html, artistes-* (pages artistes), scenes.html, scene-*.html, infos-pratiques.html, contact.html, mentions.html, 404.html.
+- Carrousel partenaires: index.html.
+- Recherche + onglets artistes: artistes.html, artistes-7juin.html.
+- Filtres programme / onglets jours: programme.html.
+- Breadcrumb auto: toutes les sous-pages sauf home/error (festival.html, programme.html, artistes.html, artistes-7juin.html, artistes-*, scenes.html, scene-*.html, infos-pratiques.html, contact.html, mentions.html).
+- Extra interactions (scroll doux, retour haut, FAQ accordéon si présent): index.html et toute page contenant .faq-item (ex: infos-pratiques.html si ajoutée).
+- Lazy media: toutes les pages.
+*/
 // URL: index.html, festival.html – Menu burger
 function initMenuBurger() {
     const menuBtn = document.querySelector('.header__menu-btn');
@@ -687,7 +697,7 @@ function initExtraInteractions() {
     });
 }
 
-// Applique le lazy-loading sur les images hors zone critique (header/hero)
+// Applique le lazy-loading sur les images (header/hero)
 function initLazyMedia() {
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
