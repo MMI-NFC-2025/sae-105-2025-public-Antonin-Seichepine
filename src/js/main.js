@@ -401,8 +401,6 @@ function initProgrammeSearch() {
     const tabsNav = document.querySelector('[data-programme-tabs]');
     const tabs = tabsNav ? Array.from(tabsNav.querySelectorAll('.artists-tabs__tab')) : [];
     const dayRadios = Array.from(document.querySelectorAll('.programme-filters input[name="programme-day"]'));
-    if (!searchForm || !searchInput) return;
-    searchForm.removeAttribute('hidden');
 
     const eventCards = Array.from(document.querySelectorAll('.event-card'));
     if (!eventCards.length) return;
@@ -410,11 +408,15 @@ function initProgrammeSearch() {
     const daySections = Array.from(document.querySelectorAll('.programme-day'));
     const separator = document.querySelector('.programme__separator');
 
-    const status = document.createElement('div');
-    status.className = 'sr-only site-search__status';
-    status.setAttribute('role', 'status');
-    status.setAttribute('aria-live', 'polite');
-    searchForm.appendChild(status);
+    // Status live region uniquement si un formulaire de recherche est présent.
+    const status = searchForm ? document.createElement('div') : null;
+    if (status && searchForm) {
+        status.className = 'sr-only site-search__status';
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+        searchForm.appendChild(status);
+        searchForm.removeAttribute('hidden');
+    }
 
     const getActiveDay = () => {
         if (tabs.length) {
@@ -446,6 +448,7 @@ function initProgrammeSearch() {
     };
 
     const updateStatus = (visibleCount, query, day) => {
+        if (!status) return;
         if (!query && day === 'all') {
             status.textContent = 'Tous les événements sont affichés.';
             return;
@@ -474,8 +477,8 @@ function initProgrammeSearch() {
         }
     };
 
-    const applyFilter = (value) => {
-        const query = value.trim().toLowerCase();
+    const applyFilter = (value = '') => {
+        const query = (value || '').trim().toLowerCase();
         const day = getActiveDay();
         let visibleCount = 0;
 
@@ -494,32 +497,36 @@ function initProgrammeSearch() {
         updateStatus(visibleCount, query, day);
     };
 
-    searchForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-    });
+    if (searchForm) {
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+        });
+    }
 
-    searchInput.addEventListener('input', (e) => {
-        applyFilter(e.target.value);
-    });
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            applyFilter(e.target.value);
+        });
+    }
 
     tabs.forEach((tab) => {
         tab.addEventListener('click', (event) => {
             event.preventDefault();
             const targetDay = tab.dataset.day || 'all';
             setActiveDay(targetDay);
-            applyFilter(searchInput.value);
+            applyFilter(searchInput ? searchInput.value : '');
         });
     });
 
     dayRadios.forEach((radio) => {
         radio.addEventListener('change', () => {
             setActiveDay(radio.value);
-            applyFilter(searchInput.value);
+            applyFilter(searchInput ? searchInput.value : '');
         });
     });
 
     setActiveDay(getActiveDay());
-    applyFilter('');
+    applyFilter(searchInput ? searchInput.value : '');
 }
 
 // Fil d'ariane simple sur toutes les pages sauf home et erreur
