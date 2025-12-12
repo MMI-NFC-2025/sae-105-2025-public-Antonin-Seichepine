@@ -22,7 +22,7 @@
 }
 
 .hero--contact .hero__intro {
-    margin-top: 1.4rem;
+    margin: 1.4rem auto 0;
     max-width: 18rem;
 }
 

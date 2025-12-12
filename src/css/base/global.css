@@ -50,3 +50,19 @@ body {
 .u-highlight {
     color: var(--texte-yellow);
 }
+
+/* Transition douce entre pages */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: var(--secondaire);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 120ms ease;
+    z-index: 120;
+}
+
+.page-transition--leaving .page-transition {
+    opacity: 1;
+    pointer-events: auto;
+}

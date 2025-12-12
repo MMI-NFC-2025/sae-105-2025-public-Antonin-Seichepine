@@ -686,6 +686,57 @@ function initLazyMedia() {
     });
 }
 
+// Visible sur : toutes les pages – Transition de page douce
+function initPageTransitions() {
+    const body = document.body;
+    const transition = document.createElement('div');
+    transition.className = 'page-transition';
+    transition.setAttribute('aria-hidden', 'true');
+    body.appendChild(transition);
+
+    const isSamePageAnchor = (href) => {
+        if (!href) return true;
+        if (href.startsWith('#')) return true;
+        try {
+            const url = new URL(href, window.location.href);
+            return url.pathname === window.location.pathname && url.hash && url.hash !== '#';
+        } catch (error) {
+            return false;
+        }
+    };
+
+    const shouldIgnore = (link) => {
+        if (!link) return true;
+        if (link.target && link.target !== '_self') return true;
+        if (link.hasAttribute('download')) return true;
+        if (link.getAttribute('rel') === 'external') return true;
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('mailto:') || href.startsWith('tel:')) return true;
+        if (isSamePageAnchor(href)) return true;
+        try {
+            const url = new URL(href, window.location.href);
+            return url.origin !== window.location.origin;
+        } catch (error) {
+            return true;
+        }
+    };
+
+    const fadeOutAndNavigate = (href) => {
+        body.classList.add('page-transition--leaving');
+        setTimeout(() => {
+            window.location.href = href;
+        }, 120);
+    };
+
+    document.addEventListener('click', (event) => {
+        if (event.defaultPrevented) return;
+        const link = event.target.closest('a');
+        if (!link || shouldIgnore(link)) return;
+        event.preventDefault();
+        fadeOutAndNavigate(link.href);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initMenuBurger();
     initCarousel();
@@ -695,4 +746,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initBreadcrumbs();
     initExtraInteractions();
     initLazyMedia();
+    initPageTransitions();
 });
